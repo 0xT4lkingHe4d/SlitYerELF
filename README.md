@@ -7,8 +7,9 @@ Containing a x86_64 disassembler, ELF parser, `pack`(split an elf into patches, 
 ##### "Shut up and look at the code" ;)
 
 #### Run
-`make
+```
+make
 ./main
-./output`
+./output```
 
 The goal is so it works even though code / stuff is scrambled around.
