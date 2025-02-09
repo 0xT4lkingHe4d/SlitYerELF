@@ -10,6 +10,7 @@ Containing a x86_64 disassembler, ELF parser, `pack`(split an elf into patches, 
 ```
 make
 ./main
-./output```
+./output
+```
 
 The goal is so it works even though code / stuff is scrambled around.
