@@ -13,4 +13,4 @@ make
 ./output
 ```
 
-The goal is so it works even though code / stuff is scrambled around.
+The goal is so it works even though instructions / headers are scrambled around.
