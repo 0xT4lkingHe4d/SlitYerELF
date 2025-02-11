@@ -18,6 +18,12 @@ void pack_reloc(pack_t *pack) {
 	}
 }
 
+#define sym_each_reverse(elf, stab, sym)				\
+	for (__u64 i = 0; !i; i=1)							\
+		elf_each_sym64((elf), stab, _s_)				\
+			if (++i) elf_each_sym64((elf), stab, sym)	\
+				if ((void*)s - stab->ptr + (stab->count - i-1) * sizeof(Elf64_Sym) == stab->count * sizeof(Elf64_Sym))
+
 void main() {
 	pack_t pack = {0};
 	pack_load_elf(&pack, "./specimen/xx");
@@ -46,20 +52,20 @@ void pack_test_plugin(pack_t *pack) {
 	__u16 align = 3;
 
 	elf_each_symtab(elf, stab) {
-		if (stab->t == SHT_SYMTAB)
-			elf_each_sym64(&elf, stab, s) {
+		if (stab->t == SHT_SYMTAB) {
+			sym_each_reverse(&elf, stab, s) {
 				if (!!s->st_value && !!(s->st_info & STT_FUNC)) {
 					elf_sym_obj *sym = make_sym_obj(elf, s);
-					if (_contain_(p_exec->p_offset, p_exec->p_filesz, sym->off)) {
-						prf(BBLUE"%s"CRST"\t\t%lx %lx - NOW @0x%lx\n",
-							elf_sym_name(stab, s), sym->off, p_exec->p_offset,
-							sym->off-p_exec->p_offset+align);
-						rel_insn(rel, elf, elf->map+sym->off, sym->off, sym->off-p_exec->p_offset+align, sym->size);
-					}
+
+					/* Symbol is within the executable segment */
+					if (_contain_(p_exec->p_offset, p_exec->p_filesz, sym->off))
+						rel_insn(rel, elf, elf->map+sym->off, sym->off, sym->off-p_exec->p_offset, sym->size);
 				}
 			}
+		}
 	}
 
+
 	// PLT stubs
-	rel_insn(rel, elf, elf->map+0x1020, 0x1020, 0x1020 - p_exec->p_offset+align, 0X30);
+	rel_insn(rel, elf, elf->map+0x1020, 0x1020, 0x1020 - 0x1000, 0x1250 -0x1020);
 }
