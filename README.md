@@ -1,5 +1,5 @@
 # SlitYerELF
-A (so far PoC) Linux ELF binary instrumentation engine for x86_64 ELFs.
+A (PoC) Binary Instrumentation Engine for x86_64 ELFs.
 
 ### Run
 ```
