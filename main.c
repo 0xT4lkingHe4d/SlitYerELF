@@ -67,5 +67,5 @@ void pack_test_plugin(pack_t *pack) {
 
 
 	// PLT stubs
-	rel_insn(rel, elf, elf->map+0x1020, 0x1020, p_exec->p_offset - 0x1000, 0x30);
+	rel_insn(rel, elf, elf->map+0x1020, 0x1020, 0x1020 - p_exec->p_offset, 0x30);
 }
