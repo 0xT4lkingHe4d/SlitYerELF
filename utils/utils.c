@@ -109,7 +109,6 @@ __s8 is_string(void *addr) {
 	return 0;
 }
 
-
 mmsz_t *new_mmsz(__u8 t, __u64 size) {
 	mmsz_t *ret = xmalloc(sizeof(mmsz_t));
 	make_mmsz(ret, t, size);
@@ -117,24 +116,24 @@ mmsz_t *new_mmsz(__u8 t, __u64 size) {
 }
 
 void make_mmsz(mmsz_t *mm, __u8 t, __u64 size) {
-	*mm = (mmsz_t){ .t=t, .size=size };
-	switch (t) {
+	*mm = (mmsz_t){ .t=MMSZ_TYPE(t, size), .size=size };
+	switch (mm->t) {
 		case MEM_HEAP: mm->mem = xmalloc(size);	break;
-		case MEM_MMAP: mm->mem = map_anon(size);	break;
+		case MEM_MMAP: mm->mem = map_anon(size);break;
 	}
 }
 
 void mmsz_alloc(mmsz_t *mm) {
-	void *ptr = NULL;
-	if (mm->size < 0x1000) {
-		ptr		= xmalloc(mm->size);
-		mm->t	= MEM_HEAP;
-	} else {
-		ptr		= map_anon(mm->size);
-		mm->t	= MEM_MMAP;
-	}
-	memcpy(ptr, mm->mem, mm->size);
+	if (mm->t != MEM_NONE) return;
 
+	void *ptr = NULL;
+	mm->t = MMSZ_TYPE(MEM_ANY, mm->size);
+	switch (mm->t) {
+		case MEM_HEAP: ptr = xmalloc(mm->size);		break;
+		case MEM_MMAP: ptr = map_anon(mm->size);	break;
+	}
+
+	memcpy(ptr, mm->mem, mm->size);
 	mm->mem	= ptr;
 }
 

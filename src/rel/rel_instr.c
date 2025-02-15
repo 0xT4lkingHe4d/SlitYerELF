@@ -16,25 +16,33 @@ __s64 patches_align(rel_t *rel, __u64 base, __u64 size);
 
 void rel_init(rel_t *rel) {
 	llist_new(&rel->patches, sizeof(rel_patch_t));
-	// llist_new(&rel->ll_hijack, sizeof(rel_hijack_t));
+	llist_new(&rel->ll_hijack, sizeof(rel_hijack_t));
 }
 
 
-rel_patch_t *_rel_ll_(llist_t *ll, __u16 patch_type, __u8 rel_type, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 orig_size, __u64 dst_size) {
+rel_patch_t *
+_rel_ll_(	llist_t *ll, __u16 ptx_type, __u8 rel_type, elf_t *elf,
+			void *ptr, __u64 src, __u64 dst, __u64 orig_size, __u64 dst_size)
+{
 	Elf64_Phdr *p = NULL;
 	if (!!elf) p = elf_off_to_phdr(elf, src);
 
 	rel_patch_t ptx = {
-		.type		= (patch_type << 4) | rel_type,
-		.elf	= elf,
+		.type	= (ptx_type << 4) | (rel_type),
+		.elf	= elf,	// Source ELF if any
 		.mm		= {
 			.mem	= (!elf) ? ptr : elf->map + src,
 			.size	= orig_size,
 		},
+		// Originally at & of size
 		.orig_off	= src,
 		.orig_size	= orig_size,
+
+		// Now Shall be at
 		.dst_off	= dst,
 		.dst_size	= dst_size,
+
+		// base
 		.base_virt	= (!!elf) ? p->p_vaddr	: 0,
 		.base_off	= (!!elf) ? p->p_offset	: 0,
 	};
@@ -44,18 +52,22 @@ rel_patch_t *_rel_ll_(llist_t *ll, __u16 patch_type, __u8 rel_type, elf_t *elf, 
 	return (!e) ? NULL : e->dat;
 }
 
-rel_patch_t *_rel_(rel_t *rel, __u8 t, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
-	return _rel_ll_(&rel->patches, PATCH_REL, t, elf, ptr, src, dst, sz, sz);
+rel_patch_t *_rel_(rel_t *rel, __u8 pt, __u8 dt, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
+	return _rel_ll_(&rel->patches, pt, dt, elf, ptr, src, dst, sz, sz);
 }
 
-rel_patch_t *rel_insn(rel_t *rel, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
-	return _rel_(rel, REL_T_INSN, elf, ptr, src, dst, sz);
+rel_patch_t *rel_insn(rel_t *rel, __u8 t, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
+	return _rel_(rel, t, REL_T_INSN, elf, ptr, src, dst, sz);
 }
 
-rel_patch_t *rel_buff(rel_t *rel, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
-	return _rel_(rel, REL_T_DAT, elf, ptr, src, dst, sz);
+rel_patch_t *rel_buff(rel_t *rel, __u8 t, elf_t *elf, void *ptr, __u64 src, __u64 dst, __u64 sz) {
+	return _rel_(rel, t, REL_T_DAT, elf, ptr, src, dst, sz);
 }
 
+/**
+ * @do_reloc
+ * ~ Relocate each `rel` patch
+**/
 mmsz_t *do_reloc(rel_t *rel) {
 	rel_patch_imm_in(rel);
 	
@@ -82,6 +94,10 @@ void rel_buf(rel_t *rel, mmsz_t *mm, rel_patch_t *p) {
 	memcpy(mm->mem + off, p->ptr, p->dst_size);
 }
 
+/**
+ *  @rel_instr
+ * ~ The instr relocation engine
+**/
 void rel_instr(rel_t *rel, mmsz_t *mm, rel_patch_t *p) {
 	__u64 i = 0;
 	foreach_instr_off(X86_64, in, i, p->ptr, p->dst_size) {
@@ -99,19 +115,24 @@ void rel_instr(rel_t *rel, mmsz_t *mm, rel_patch_t *p) {
 		__u64 orig_imm	= rel_rip_ptr(&in, p, i);
 		__u64 imm		= orig_imm + patches_align(rel, p->dst_off + i, in.in_sz);// - align; 
 		
+		// if (hijack.ok) imm = hijack.v;
+
 		rel_patch_t *patch = get_orig_patch(rel, imm); // + align
 		switch (REL_TYPE_PATCH(p->type)) {
 			case PATCH_REL:
 			{
+				ok_t hijack = rel_get_hijack(rel, p, i, orig_imm);
 				if (!patch) {
+					if (hijack.ok) imm = hijack.v;
 					// Where is the pointing IMM phdr now
-					imm = rel->hook_fn(rel->plugin, rel, p, orig_imm);
-					ptr += stick_in_instr(&in, ptr, (imm - rel->off_fn(rel->plugin, p, p->base_off)), off, CHNG_REL);
+					imm	=	rel->plugin.virt(rel->plugin.dat, rel, p, orig_imm);
+					imm	-=	rel->plugin.off(rel->plugin.dat, rel, p, p->base_off);
+					ptr += stick_in_instr(&in, ptr, (imm), off, CHNG_REL);
 					break;
 				}
 
 				// Jumps in the Patched area
-				imm = rel_get_off(rel, orig_imm);
+				imm = (hijack.ok) ? hijack.v : rel_get_off(rel, orig_imm);
 				rel_patch_t *p_sc = pin_dst_patch(rel, p->dst_off + i);
 				if (!p_sc) {
 					ptr += stick_in_instr(&in, ptr, imm, off, CHNG_REL);
@@ -131,7 +152,6 @@ void rel_instr(rel_t *rel, mmsz_t *mm, rel_patch_t *p) {
 			break;
 		}
 	}
-	pr(PR_INFO "DONE");
 }
 
 __u64 rel_get_off(rel_t *rel, __u64 imm) {
@@ -148,7 +168,7 @@ __u64 rel_get_off(rel_t *rel, __u64 imm) {
 static rel_patch_t *get_orig_patch(rel_t *rel, __u64 v) {
 	rel_each_patch(rel, p)
 		if (p->orig_off != -1)
-			if (_contain_(p->orig_off, p->orig_size+1, v))
+			if (_contain_(p->orig_off, p->orig_size, v))
 				return p;
 
 	return NULL;
@@ -212,11 +232,8 @@ static rel_patch_t *pin_dst_patch(rel_t *rel, __u64 off) {
 }
 
 __s64 pin_align(rel_t *rel, __u64 base, __u64 size) {
-	__u64 x =  get_patch_align(&rel->pin.ll, base, size);
-	// prf("(%lx, %lx) - %lx\n", base, size, x);
-	return x;
+	return get_patch_align(&rel->pin.ll, base, size);
 }
-
 __s64 patches_align(rel_t *rel, __u64 base, __u64 size) {
 	return get_patch_align(&rel->patches, base, size);
 }
@@ -225,10 +242,9 @@ __s64 patches_align(rel_t *rel, __u64 base, __u64 size) {
 static __s64 get_patch_align(llist_t *ll, __u64 src, __u64 dst) {
 	__u64 base = ((src > dst) ? dst : src);
 	__u64 size = ((src > dst) ? src : dst) - base;
-
 	__s64 align = 0;
+
 	llist_each_dat(ll, rel_patch_t, p) {
-		// prf("%lx;%lx ; %lx\n", base, size, p->dst_off);
 		if (_contain_(base, size, p->dst_off))
 			switch (REL_TYPE_PATCH(p->type)) {
 				case PATCH_REPLACE:

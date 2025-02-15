@@ -385,6 +385,12 @@ __u8 *elf_sym_name(elf_symtab_t *stab, Elf64_Sym *sym) {
 	return &stab->str.tab[sym->st_name];
 }
 
+__u8 *elf_any_sym_name(elf_t *elf, Elf64_Sym *sym) {
+	elf_each_symtab_sym64(elf, stab, s)
+		if (s == sym) return &stab->str.tab[sym->st_name];
+	return NULL;
+}
+
 // Go through each symbol table to find the symbol
 // elf_symtab_t *elf_find_symtab(elf_t *elf, Elf64_Sym *sym) {
 // 	elf_each_symtab_sym64(elf, stab, i)

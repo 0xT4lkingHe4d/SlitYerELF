@@ -5,7 +5,7 @@ X86BINARY = -L$(PWD)/lib-x86-binary/build/ $(PWD)/lib-x86-binary/build/*.o -lx86
 LDFLAGS = $(X86BINARY)
 
 all: libx86binary
-	@gcc $(X86BINARY) ./main.c ./src/instr/xtc.c ./src/pack/*.c ./src/rel/*.c ./utils/*.c -w -o ./main
+	gcc $(X86BINARY) ./main.c ./cfg/cfg.c ./src/instr/xtc.c ./src/pack/*.c ./src/rel/*.c ./utils/*.c -w -o ./main
 
 library: libx86binary libslityerelf
 

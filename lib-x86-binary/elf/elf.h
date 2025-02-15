@@ -5,6 +5,10 @@
 
 #ifndef ELF_H
 #define ELF_H
+
+#define ELF_VIRT	1
+#define ELF_OFF		2
+
 /**
  * Supported Architectures */
 typedef enum {
@@ -213,6 +217,7 @@ __u8 *elf_rela_name(elf_symtab_t *stab, Elf64_Rela *rela);
 __u8 *elf_rel_name(elf_symtab_t *stab, Elf64_Rel *rel);
 __u8 *elf_sec_name(elf_t *elf, Elf64_Shdr *sec);
 __u8 *elf_sym_name(elf_symtab_t *stab, Elf64_Sym *sym);
+__u8 *elf_any_sym_name(elf_t *elf, Elf64_Sym *sym);
 
 elf_symtab_t *elf_find_symtab(elf_t *elf, Elf64_Sym *sym);
 Elf64_Dyn *elf_get_got_plt(elf_t *elf);

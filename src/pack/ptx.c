@@ -14,38 +14,6 @@ void ptx_init(ptx_engine_t *ptx) {
 	llist_new(&ptx->patches, sizeof(ptx_patch_t));
 }
 
-// __s8 ptx_stick_in(pack_t *pack, ptx_patch_tup *ret, __u64 off, __u64 size) {
-// 	llist_t *ll	= NULL;
-// 	lle *e		= NULL;
-// 	ptx_header_t new = {
-// 		.off = off,
-// 		.src = { .size=size },
-// 	};
-// 	ptx_each_any_ll(pack, ll, t, e) {
-// 		ptx_patch_t *px = e->dat;
-// 		lle *e_new = NULL;
-// 		if (_contain_(px->off, px->src.size, off)) {
-// 			if (px->off == off) {
-// 				ptx_shift(pack, px->off, size);
-// 				e_new = llist_twine(ll, e->prev, e, &new);
-// 			// } else if (px->off + px->src.size == off) {
-// 			// 	ptx_shift(pack, px->off + px->src.size, size);
-// 			// 	e_new = llist_twine(ll, e, e->next, &new);
-// 			} else {
-// 				if (t == PTX_T_FILL) {
-// 					pack_split_chunk(pack, off);
-// 				} else return -1;
-// 			}
-// 		}
-// 		if (!!e_new) {
-// 			pr("YEP");
-// 			*ret = (ptx_patch_tup){ .type=t, .list_elem=e_new };
-// 			return 0;
-// 		}
-// 	}
-// 	return -1;
-// }
-
 void ptx_add_fill(pack_t *p, elf_t *elf, __u64 off, __u64 size) {
 	ptx_fill_t f = {
 		.src = {
@@ -63,8 +31,9 @@ void ptx_add_fill(pack_t *p, elf_t *elf, __u64 off, __u64 size) {
 }
 
 /**
- * Stick in fills between headers
- */
+ * @ptx_fill
+ * ~ Stick in fill patches between headers
+**/
 void ptx_fill(pack_t *p, elf_t *elf, __u64 s_off, __u64 s_sz) {
 	__u64 i = 0;
 	ptx_each_header(&p->ptx, hdr)
@@ -87,6 +56,10 @@ void ptx_fill(pack_t *p, elf_t *elf, __u64 s_off, __u64 s_sz) {
 		}
 }
 
+/**
+ * @pack_split_chunk
+ * ~ split a header or fill at off
+**/
 void pack_split_chunk(pack_t *pack, __u64 off) {
 	llist_t *ll = NULL;
 	lle *e = NULL;
@@ -103,8 +76,8 @@ void pack_split_chunk(pack_t *pack, __u64 off) {
 				.off	= off,
 			};
 			if (!!f->mm.t) {	// If patch has allocated memory - 
-				make_mmsz(&a.mm, MEM_HEAP, a.src.size);
-				make_mmsz(&b.mm, MEM_HEAP, b.src.size);
+				make_mmsz(&a.mm, MEM_ANY, a.src.size);
+				make_mmsz(&b.mm, MEM_ANY, b.src.size);
 				memcpy(a.mm.mem, f->mm.mem, a.src.size);
 				memcpy(b.mm.mem, f->mm.mem + (off - f->off), b.src.size);
 				mmsz_free(&f->mm);
@@ -120,10 +93,10 @@ void pack_split_chunk(pack_t *pack, __u64 off) {
 	}
 }
 
-void ptx_add_header(ptx_engine_t *ptx, __u8 t, elf_t *elf, void *ptr, __u64 count, __u64 hdr_sz) {
+ptx_header_t *ptx_add_header(ptx_engine_t *ptx, __u8 t, elf_t *elf, void *ptr, __u64 count, __u64 hdr_sz) {
 	void *mem = xmalloc(count * hdr_sz);
 	memcpy(mem, ptr, count * hdr_sz);
-	llist_add(&ptx->headers, &(ptx_header_t){
+	lle *e = llist_add(&ptx->headers, &(ptx_header_t){
 		.type	= t,
 		.src = {
 			.elf 	= elf,
@@ -140,6 +113,8 @@ void ptx_add_header(ptx_engine_t *ptx, __u8 t, elf_t *elf, void *ptr, __u64 coun
 		.count	= count,
 		.entry_size = hdr_sz,
 	});
+
+	return (!!e) ? e->dat : NULL;
 }
 
 ptx_header_t *ptx_header_next(ptx_engine_t *ptx, ptx_header_t *min) {
@@ -156,8 +131,9 @@ void ptx_shift(pack_t *pack, __u64 off, __s64 size) {
 
 	ptx_each_any(pack, f) {
 		if (f->off > off) f->off += size;
-		else if (_contain_(f->off, f->src.size, off))
+		else if (_contain_(f->off, f->src.size, off)) {
 			pack_split_chunk(pack, off); // next iter shall be the other half of this patch
+		}
 	}
 
 	elf_align(pack, off, size);
@@ -247,7 +223,7 @@ __u64 pack_get_addr(pack_t *pack, elf_t *elf, __u8 st, __u64 v) {
 void patch_elf(pack_t *p) {
 	Elf64_Ehdr *ehdr = (ptx_type(&p->ptx, ELF_T_EHDR))->mm.mem;
 	ehdr->e_entry = pack_get_addr(p, p->out_elf, ELF_VIRT, ehdr->e_entry);
-	// prf("The fucking entry 0x%lx\n", ehdr->e_entry);
+	prf("The fucking entry 0x%lx\n", ehdr->e_entry);
 
 	/* Patch Dynamic Headers */
 	patch_each_x(p, DYN, Elf64_Dyn, dyn, hdr)
@@ -271,7 +247,7 @@ void patch_elf(pack_t *p) {
 		pack_get_patch(p, &ptup, r_off);
 		ptx_patch_t *px = ptup.list_elem->dat;
 		if (!!px) {
-			if (r_off - px->off > px->mm.size) _die("F#UCK!");
+			if (r_off - px->off > px->mm.size) goto fail;
 			dst = px->mm.mem + (r_off - px->off);
 		}
 
@@ -280,14 +256,19 @@ void patch_elf(pack_t *p) {
 				r->r_addend = rA;
 				break;
 			case R_X86_64_GLOB_DAT:
-			case R_X86_64_JUMP_SLOT: if(!dst) _die("FUCK!!");
+			case R_X86_64_JUMP_SLOT: if(!dst) goto fail;
 				*(__u64*)dst = rS;
 				break;
-			case R_X86_64_64:		if (!dst) _die("FUCK!!");
+			case R_X86_64_64:		if (!dst) goto fail;
 				*(__u64*)dst = rS + rA;
 				break;
+			case R_X86_64_COPY:
+				r->r_offset = r_off;
 		}
 	}
+	return;
+	fail:
+		xprf(ERR, "%s - fuck!\n", __FUNCTION__);
 }
 
 /**

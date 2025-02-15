@@ -4,9 +4,6 @@
 #include "./utils.h"
 #include "./rel_instr.h"
 
-#define ELF_VIRT	1
-#define ELF_OFF		2
-
 #define ELF_T_EHDR		1
 #define ELF_T_PHDR		2
 #define ELF_T_SHDR		3
@@ -104,6 +101,7 @@ __u64 pack_mem_conv(pack_t *p, __u8 from, __u8 to, __u64 n);
 #define pack_base_vtov(p, elf, v)	pack_base_off(p, elf, ELF_VIRT, ELF_VIRT, v)
 
 void ptx_init(ptx_engine_t *ptx);
+void pack_init_elf(pack_t *p, elf_t *elf);
 __s8 pack_load_elf(pack_t *pack, __u8 *file);
 
 #define ptx_each_header(ptx, i)			\
@@ -124,7 +122,7 @@ __s8 pack_load_elf(pack_t *pack, __u8 *file);
 
 
 ptx_header_t *ptx_header_next(ptx_engine_t *ptx, ptx_header_t *min);
-void ptx_add_header(ptx_engine_t *ptx, __u8 t, elf_t *elf, void *ptr, __u64 count, __u64 hdr_sz);
+ptx_header_t *ptx_add_header(ptx_engine_t *ptx, __u8 t, elf_t *elf, void *ptr, __u64 count, __u64 hdr_sz);
 __s8 make_elf(pack_t *p, __u8 *output);
 ptx_header_t *ptx_type(ptx_engine_t *ptx, __u16 t);
 void pack_split_chunk(pack_t *pack, __u64 size);
@@ -132,11 +130,11 @@ void ptx_fill(pack_t *p, elf_t *elf, __u64 s_off, __u64 s_sz);
 __s8 ptx_stick_in(pack_t *pack, ptx_patch_tup *ret, __u64 off, __u64 size);
 void ptx_split(pack_t *p, void *ptr, __u64 off);
 __u64 pack_base_off(pack_t *pack, elf_t *elf, __u8 st, __u8 dt, __u64 v);
-__s64 pack_rel_off(pack_t *pack, rel_patch_t *rx, __u64 off);
 ptx_rel_t *ptx_get_rel(pack_t *pack, __u64 off, __u64 size);
 void pack_get_src(pack_t *p, ptx_src_t *ret, __u64 off);
-void pack_reloc(pack_t *pack);
-__s64 pack_rel_value(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 orig_imm);
+__s64 pack_rel_ftof(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 off);
+__s64 pack_rel_vtov(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 virt);
+__u64 pack_rel_addr(pack_t *pack, rel_t *rel, elf_t *elf, __u8 t, __u64 v);
 rel_t *pack_new_rel(pack_t *pack, __u64 off);
 
 #endif

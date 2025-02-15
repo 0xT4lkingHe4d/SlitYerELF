@@ -693,7 +693,7 @@ void do_disass(__u8 *ptr, uint b) {
 
 	while (l < b) {
 		instr_dat_t in = {0};
-		if (!!init_instr(X86_64, &in, ptr)) DIE("FUCK!");
+		if (!!init_instr(X86_64, &in, ptr)) return;
 		prf("0x%06x:   ", l);
 		pr_in_str(&in);
 

@@ -61,12 +61,15 @@ __s8 pack_load_elf(pack_t *pack, __u8 *file) {
 	return 0;
 }
 
-void pack_init_elf(pack_t *p, elf_t *elf) {
-	memset(p, 0, sizeof(p));
-	p->out_elf = elf;
+void pack_new(pack_t *p, elf_t *elf) {
+	*p = (pack_t){ .out_elf = elf };
 	llist_new(&p->ll_rel, sizeof(ptx_rel_t));
-
 	ptx_init(&p->ptx);
+}
+
+void pack_init_elf(pack_t *p, elf_t *elf) {
+	pack_new(p, elf);
+
 	ptx_add_header(&p->ptx, ELF_T_EHDR,	elf, elf->ehdr, 1, 0x40);
 	ptx_add_header(&p->ptx, ELF_T_PHDR,	elf, elf->phdr.ptr, elf->ehdr->e_phnum, ELF_PHDR_SZ(elf));
 	ptx_add_header(&p->ptx, ELF_T_SHDR,	elf, elf->sec.ptr,	elf->ehdr->e_shnum, ELF_SHDR_SZ(elf));
@@ -95,12 +98,11 @@ void pack_init_elf(pack_t *p, elf_t *elf) {
 }
 
 __u64 pack_patched_off(pack_t *pack, elf_t *elf, __u8 t, __u64 off) {
-	ptx_each_any(pack, p) {
+	ptx_each_any(pack, p)
 		if (_contain_(p->src.off, p->src.size, off)) {
 			__u64 v = p->off + (off - p->src.off);
 			return (t == ELF_VIRT) ? pack_ftov(pack, v) : v;
 		}
-	}
 
 	return -1;
 }
@@ -120,12 +122,20 @@ __u64 pack_base_off(pack_t *pack, elf_t *elf, __u8 from, __u8 to, __u64 v) {
 	return pack_patched_off(pack, elf, to, off);
 }
 
-__s64 pack_rel_off(pack_t *pack, rel_patch_t *rx, __u64 off) {
-	return pack_base_ftof(pack, rx->elf, off);
+/**
+ * Rel handlers
+**/
+
+__s64 pack_rel_ftof(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 off) {
+	return pack_base_ftof(pack, p->elf, off);
 }
 
-__s64 pack_rel_value(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 orig_imm) {
-	return pack_base_vtov(pack, p->elf, orig_imm);
+__s64 pack_rel_vtov(pack_t *pack, rel_t *rel, rel_patch_t *p, __u64 virt) {
+	return pack_base_vtov(pack, p->elf, virt);
+}
+
+__u64 pack_rel_addr(pack_t *pack, rel_t *rel, elf_t *elf, __u8 t, __u64 v) {
+	return pack_get_addr(pack, elf, t, v);
 }
 
 ptx_rel_t *ptx_get_rel(pack_t *pack, __u64 off, __u64 size) {

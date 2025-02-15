@@ -53,6 +53,7 @@ typedef enum {
 // } flags_enum;
 
 typedef enum {
+	GRP_F_NONE			= 0,
 	GRP_F_PREFIX		= 1,
 	GRP_F_BRANCH		= 2,
 	GRP_F_OBSOL			= 3,				/* obsolete */
@@ -80,9 +81,34 @@ typedef enum {
 	GRP_F_CONV			= 25,					/* conversion */
 	GRP_F_SM			= 26,					/* x87 FPU and SIMD state management */
 	GRP_F_DATAMOV_ARITH	= 27,				/* data movement */
+	GRP_F_CONVER		= 28,
+	GRP_F_CACHECT		= 29,
+	GRP_F_SYNC			= 30,
+	GRP_F_SIMDFP		= 31,
+	GRP_F_PCKSCLR		= 32,
+	GRP_F_SHUNPCK		= 33,
+	GRP_F_FETCH			= 34,
+	GRP_F_SIMDINT		= 35,
+	GRP_F_STRTXT		= 36,
+	GRP_F_PCKSP			= 37,
+	GRP_F_UNPACK		= 38,
+	GRP_F_SHIFT			= 39,
+	GRP_F_MXCSRSM		= 40,
+	GRP_F_ORDER			= 41,
+	GRP_F_DATAMOV_SEGREG= 42,
+	GRP_F_STACK_SEGREG	= 43,
+	GRP_F_INOUT_STRING		= 44,
+	GRP_F_STACK_FLGCTRL		= 45,
+	GRP_F_DATAMOV_FLGCTRL	= 46,
+	GRP_F_DATAMOV_STRING	= 47,
+	GRP_F_ARITH_STRING		= 48,
+	GRP_F_BRANCH_STACK		= 49,
+	GRP_F_BREAK_STACK		= 50,
 } grp_enum;
 
-#define GRP(a, b, c)	( ((GRP_F_##a&0x1f) << 10) | ( (GRP_F_##b&0x1f) << 5) | (GRP_F_##c&0x1f) )
+#define GRP(a, b, c)	( ((GRP_F_##a&0x3f) << 12) | ( (GRP_F_##b&0x3f) << 6) | (GRP_F_##c&0x3f) )
+#define INSTR_IS_GRP(in, g)		\
+		(( (in)->grp&0x3f) == GRP_F_##g || (((in)->grp >> 12)&0x3f == GRP_F_##g) || (((in)->grp >> 6)&0x3f) == GRP_F_##g)
 
 /** @MOOP - Mode of Operation **/
 #define MODOP_R 0x1     /* applies for real, protected and 64-bit mode. SMM is not taken into account. */
@@ -231,7 +257,7 @@ typedef struct {
 typedef struct {
 	__u8		*mnemonic;	/* instr */
 	oper_st		op[4];
-	__u16		grp;
+	__u32		grp;
 } x86_in_ops;
 
 typedef struct {
@@ -249,7 +275,7 @@ typedef struct {
 		struct {
 			__u8		*mnemonic;	/* instr */
 			oper_st		op[4];
-			__u16		grp;
+			__u32		grp;
 		};
 		x86_in_ops *ops;
 	};

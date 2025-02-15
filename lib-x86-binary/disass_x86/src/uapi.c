@@ -49,7 +49,7 @@ __u8 get_operand_ptr(instr_dat_t *in, operand *p, __u64 *v) {
 
 
 	imm = imm & N_BITS_MAX(sz);
-	*v = (is_min) ? -(imm) : imm;
+	*v = (is_min) ? -imm : imm;
 	return (is_min) ? '-' : '+';
 }
 
@@ -123,7 +123,7 @@ __u8 get_rip_val(instr_dat_t *in, __u64 *v) {
 __s8 get_rip_ptr_addr(instr_dat_t *in, void *off, __u64 *v) {
 	__u8 plmin = get_rip_val(in, v);
 	if (!plmin) return -1;
-	*v = (off + in->in_sz + ((plmin == u'-') ? (__s64)( -( ~*v + 1 ) ) : *v));
+	*v = (off + in->in_sz + ((plmin == u'-') ? (__s64)( -( ~*v+1 ) ) : *v));
 	// *v = off + *v + in->in_sz;//((plmin == '+') ? in->in_sz : 0);
 	return 0;
 }

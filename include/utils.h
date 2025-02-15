@@ -47,8 +47,8 @@
 #define PR_WARN		BYLW "  [WARN] : "CRST
 #define PR_DBG		BGRN "  [+++]  : "CRST
 
-#define xprf(t, str, ...)			\
-		prf(PR_##t str, __VA_ARGS__);//"@%s:%lu " str "\n", __FUNCTION__, __LINE__, __VA_ARGS__);
+#define xprf(t, str, ...)	prf(PR_##t str, __VA_ARGS__);
+#define xpr(t, str)			pr(PR_##t str);
 
 
 #define _contain_(a, sz, off)		(a <= off && (a + sz) > off)
@@ -72,6 +72,9 @@ void *xmalloc(__u64 sz);
 #define MEM_NONE		0
 #define MEM_HEAP		1
 #define MEM_MMAP		2
+#define MEM_ANY			3
+
+#define MMSZ_TYPE(t, sz)	((t==MEM_ANY) ? ((sz > 0x1000) ? MEM_MMAP : MEM_HEAP) : t)
 
 typedef struct {
 	__u8	*mem;
