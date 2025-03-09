@@ -1,0 +1,159 @@
+#include <assert.h>
+#ifndef UAPI_
+#define UAPI_
+#include "../disass/include/uapi.h"
+#endif
+#include "../include/elf.h"
+#include "../include/main.h"
+// #include "../include/stub_sym_arr.h"
+
+
+__s8 cpy_sym_ll(llist_t *ll, struct mmsz_tup *mmsz);
+__s8 make_sym_ll(llist_t *ll, elf_t *elf);
+__s8 sym_ll_mmap(llist_t *ll, struct mmsz_tup *mmsz);
+
+int light_init(struct arg_lst *args) {
+	elf_t elf = {0};
+	if (!!load_elf(args->input, &elf)) {
+		DIE("[!~!~!] DEAD - FAILED to load elf");
+	}
+	init_elf(&elf);
+	if (!elf.sym.tab) {
+		pr("[-] No symbol table found");
+		return -1;
+	}
+
+	llist_t ll = {0};
+	struct mmsz_tup mmsz = {0};
+	if (!!make_sym_ll(&ll, &elf)) return -1;
+	if (!!sym_ll_mmap(&ll, &mmsz )) return -1;
+	if (!!cpy_sym_ll(&ll, &mmsz )) return -1;
+
+
+	// __u64 off = 0;
+	// while (off < mmsz.sz) {
+	// 	symbol_cell *c = mmsz.mem + off;
+	// 	// _hexdump(c->data, c->size);
+	// 	off += c->size + sizeof(symbol_cell);
+	// }
+	// _assert((off == mmsz.sz), "SHALL NOT HAPPEN");
+
+
+	// RELF_stick_in(&relf, 0, elf.map, elf.size);
+	// foreach_shdr((&elf), sec) {
+		// if (!strncmp(&elf.sh_strtab[sec->sh_name], ".me_data", 9)) {
+	Elf_Phdr ph = {0};
+	memcpy(&ph, "0xdead beef MATE!", 18 % PHDR_SZ);
+	// RELF_phdr_remove(&relf, 1);
+	// RELF_phdr_add(&relf, &ph);
+			// break;
+		// }
+	// }
+
+	return 0;
+}
+
+
+// __s8 write_output(__u8 *out, elf_t *elf, struct mmsz_tup *mmsz) {
+// 	retelf_conf conf = (retelf_conf){
+// 		.flags	= _RELF_,
+// 		.output = out,
+// 	};
+// 	RELF_reconstruct();
+// 	int fd = open(args->output, O_CREAT|O_RDWR, 0755);
+// 	elf_t relf = {0};
+// 	assert(!new_elf(args->stub, &relf));
+
+// 	_wr(fd, 0, relf.map, relf.size);
+// 	// _wr(fd, 0, relf.ehdr, 0x40);
+// 	// foreach_phdr((&relf), p) {
+// 	// 	// if (p->p_type != PT_LOAD) continue;
+// 	// 	_wr(fd, p->p_offset, (void*)(relf.map + p->p_offset), p->p_filesz);
+// 	// }
+
+// 	foreach_shdr((&relf), sec) {
+// 		if (!strncmp(&relf.sh_strtab[sec->sh_name], ".me_data", 9)) {
+// 			Elf_Shdr sh = {0};
+// 			__u64 off = ((void*)sec - (void*)relf.map);
+// 			_rd(fd, off, &sh, sizeof(Elf_Shdr));
+// 			__u64 orig_sh_size = sh.sh_size;
+// 			sh.sh_size += mmsz->sz;
+// 			_wr(fd, off, &sh, sizeof(Elf_Shdr));
+// 			__u64 nxt = sh.sh_offset + orig_sh_size;
+// 			__u64 sz = relf.size - nxt;
+// 			__u8 *rest = map_anon(sz);
+// 			_rd(fd, nxt, rest, sz);
+
+// 			prf("%Lu!!!!\n",nxt);
+// 			__u64 i = 0;
+// 			_wr(fd, nxt, mmsz->mem, mmsz->sz);
+// 			_wr(fd, nxt + mmsz->sz, rest, sz);
+// 		}
+// 	}
+
+// 	close(fd);
+// }
+
+__s8 make_sym_ll(llist_t *ll, elf_t *elf) {
+	foreach_sym(elf, sym) {
+		if (!sym->st_value || !(sym->st_info & STT_FUNC)) continue;
+
+		Elf_Phdr *p = vaddr_to_phdr(elf, sym->st_value);
+		if (!(p->p_flags & PF_X)) continue;
+		if (!p) {
+			pr("Symbol doesnt have a phdr");
+			return -1;
+		}
+		_assert((!!sym_fits_phdr(sym, p)),
+			"Not supposed to happen - sym doesnt fit phdr (gotten from vaddr_to_phdr)");
+
+		__u64 sz = ((!sym->st_size) ? get_unknown_sz_sym_sz(elf, sym) : sym->st_size);
+		__u64 sym_off = elf_virt_to_off(elf, sym->st_value);
+		if (sym_off == -1) return -1;
+
+		lle *elem = list_add(&ll, sizeof(sym_obj));
+		_assert((!!elem), "FUCK!");
+		*(sym_obj *)elem->dat = (sym_obj){
+			.sym	= sym,
+			.size	= sz,
+			.ptr	= elf->map + sym_off,
+		};
+	}
+	return 0;
+}
+
+/**
+ * Foreach sym_obj - (Elf_Sym, sz, ptr) */
+__s8 sym_ll_mmap(llist_t *ll, struct mmsz_tup *mmsz) {
+	__u64 total_sz = 0;
+	foreach_list(ll, elem) {
+		sym_obj *se = elem->dat;
+		if (!se->sym) return -1;
+
+		total_sz += se->size + sizeof(symbol_cell);
+	}
+	
+	return (new_mmsz(mmsz, total_sz) == -1) ? -1 : 0;
+}
+
+__s8 cpy_sym_ll(llist_t *ll, struct mmsz_tup *mmsz) {
+	__u64 off = 0;
+	__u8 *ptr = mmsz->mem;
+	foreach_list(ll, elem) {
+		sym_obj *se = elem->dat;
+		if (!se->sym) return -1;
+
+		symbol_cell *cell = (void*)ptr;
+		memcpy(cell->key, "AAAABBBBCCCCDDDD", 16);
+		cell->addr = se->sym->st_value;
+		cell->size = se->size;
+		cell->data = (cell + sizeof(symbol_cell));
+		memcpy(cell->data, se->ptr, se->size);
+
+		ptr += sizeof(symbol_cell) + se->size;
+		_assertf((ptr <= (mmsz->mem + mmsz->sz)),
+			"god damn it !( %lx <= %lx )", ptr - mmsz->mem, mmsz->sz);
+	}
+	_hexdump(mmsz->mem, mmsz->sz);
+	return 0;
+}
