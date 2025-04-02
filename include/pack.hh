@@ -94,6 +94,7 @@ public:
         }
         fill();
     }
+    RelInstr *get_rel(std::shared_ptr<Elf> _elf, __u64 off);
     RelInstr *get_rel(Elf *_elf, __u64 off);
     void patch_elf();
     void fill();

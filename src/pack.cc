@@ -1,6 +1,6 @@
 #include "../include/pack.hh"
 
-// #define DO_DEBUG_H
+#define DO_DEBUG_H
 #ifdef DO_DEBUG_H
 #define dbgf(fmt, ...) {        \
     printf(fmt, __VA_ARGS__);   \
@@ -18,15 +18,15 @@ void pack::sort_px() {
 
 void pack::fill() {
     sort_px();
-    __u64 prev=0;
     std::list<std::tuple<__u64, __u64>> ll;
+    __u64 l = 0;
     for (auto& p : px) {
-        __s64 sz = p.dst.off - prev;
-        if (!!prev && sz > 0)
-            ll.emplace_back(prev, sz);
-        prev = p.dst.off + p.mm.sz;
+        __s64 sz = p.dst.off - l;
+        if (!!l && sz > 0)
+            ll.emplace_back(l, sz);
+        l = p.dst.off + p.mm.sz;
     }
-    ll.emplace_back(prev, s_elf->size - prev);
+    ll.emplace_back(l, s_elf->size - l);
 
     for (auto& [off, sz] : ll)
         px.elf_add(ElfHdrT::Filling, s_elf, off, sz);
@@ -40,7 +40,8 @@ void pack::fill() {
             if (p.src.off == (e)->s_elf->ehdr->e_phoff) \
                 _each_phdr(p.mm.mem, p.mm.sz, ph)
 
-struct hook_ctx pack::hook_fn(struct rel_patch_t *rx, __u64 imm) {
+
+hook_ctx pack::hook_fn(struct rel_patch_t *rx, __u64 imm) {
     return (hook_ctx){.ok=true, .v=imm};
 }
 
@@ -86,6 +87,9 @@ void pack::init() {
     }
 }
 
+RelInstr *pack::get_rel(std::shared_ptr<Elf> _elf, __u64 off) {
+    return get_rel(_elf.get(), off);
+}
 RelInstr *pack::get_rel(Elf *_elf, __u64 off) {
     for (auto& r : rel)
         if (r.s_tup.elf.get() == _elf && r.has(off)) return &r;
@@ -101,45 +105,61 @@ RelInstr *pack::get_rel(Elf *_elf, __u64 off) {
 #define each_rela(mem, sz, _e_)     __each_elf(mem, sz, Elf_Rela, _e_)
 #define each_rel(mem, sz, _e_)      __each_elf(mem, sz, Elf_Rel, _e_)
 
-void pack::patch_elf() {
-    for (auto& p : px) {
-        if (p.mm.is_alloc()) p.mm.alloc();
-        Elf *elf = p.src.elf.get();
-        void *mem   = p.mm.mem;
-        __u64 sz    = p.mm.sz;
+namespace PackPatch {
+    void dyn(pack& p, struct patch_st& px);
+    void rela(pack& p, struct patch_st& px);
+};
 
-        switch (p.src.hdr_type) {
-            case ElfHdrT::Relatab:
-            each_rela(mem, sz, rela) {
-                switch (ELF64_R_TYPE(rela->r_info)) {
-                    case R_X86_64_RELATIVE:
-                    {
-                        RelInstr *r = get_rel(elf, rela->r_addend);
-                        if (!!r) {
-                            dbgf("%lx -->> +%lx", rela->r_addend, r->offset(elf, rela->r_addend));
-                            rela->r_addend += r->offset(elf, rela->r_addend);
-                        }
-                    }
-                    break;
-                    case R_X86_64_GLOB_DAT:
-                    case R_X86_64_JUMP_SLOT: break;
-                }
+void PackPatch::dyn(pack& p, struct patch_st& px) {
+    each_dyn(px.mm.mem, px.mm.sz, dyn) {
+        if (!!px.src.elf->dyn_is_ptr(dyn)) {
+            RelInstr *r = p.get_rel(px.src.elf, dyn->d_un.d_ptr);
+            if (!r) break;
+
+            dbgf("%lx --> +%lx", dyn->d_un.d_ptr, r->offset(px.src.elf, dyn->d_un.d_ptr));
+            dyn->d_un.d_ptr = r->offset(px.src.elf, dyn->d_un.d_ptr);
+        }
+    }
+}
+
+void PackPatch::rela(pack& p, struct patch_st& px) {
+    each_rela(px.mm.mem, px.mm.sz, r) {
+        __u64 v = 0;
+        switch (ELF64_R_TYPE(r->r_info)) {
+            case R_X86_64_RELATIVE:
+            {
+                RelInstr *rel = p.get_rel(px.src.elf, r->r_addend);
+                if (!rel) break;
+                dbgf("%lx -->> +%lx", r->r_addend, rel->offset(px.src.elf, r->r_addend));
+                r->r_addend = rel->offset(px.src.elf, r->r_addend);          
             }
             break;
-
-        case ElfHdrT::Dyntab:
-            each_dyn(mem, sz, dyn) {
-                if (!elf->dyn_is_ptr(dyn)) continue;
-
-                RelInstr *r = get_rel(elf, dyn->d_un.d_ptr);
-                if (!!r)
-                    if (p.src.elf->dyn_is_ptr(dyn)) {
-                        dbgf("%lx --> +%lx", dyn->d_un.d_ptr, r->offset(elf, dyn->d_un.d_ptr));
-                        dyn->d_un.d_ptr += r->offset(elf, dyn->d_un.d_ptr);
-                    }
+            case R_X86_64_GLOB_DAT:
+            case R_X86_64_JUMP_SLOT:
+            {
+                RelInstr *rel = p.get_rel(px.src.elf, r->r_offset);
+                if (!rel) break;
+                dbgf("%lx -->> +%lx", r->r_offset, rel->offset(px.src.elf, r->r_offset));
+                r->r_offset = rel->offset(px.src.elf, r->r_offset);           
             }
             break;
         }
+    }
+}
+
+void pack::patch_elf() {
+    for (auto& p : px) {
+        if (p.mm.is_alloc()) p.mm.alloc();
+
+        switch (p.src.hdr_type) {
+            case ElfHdrT::Relatab:
+                PackPatch::rela(*this, p);
+                break;
+
+            case ElfHdrT::Dyntab:
+                PackPatch::dyn(*this, p);
+                break;
+            }
     }
 }
 
