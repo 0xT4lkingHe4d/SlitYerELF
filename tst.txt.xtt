@@ -1,0 +1,3680 @@
+    c8fa:	e8 81 a1 02 00       	call   36a80 <ssh_err>
+    c8ff:	41 b8 01 00 00 00    	mov    r8d,0x1
+    c905:	b9 01 00 00 00       	mov    ecx,0x1
+    c90a:	ba 9f 04 00 00       	mov    edx,0x49f
+    c90f:	49 89 c1             	mov    r9,rax
+    c912:	48 8d 05 c2 8b 08 00 	lea    rax,[rip+0x88bc2]        # 954db <_IO_stdin_used+0x4db>
+    c919:	57                   	push   rdi
+    c91a:	48 8d 35 d4 a5 08 00 	lea    rsi,[rip+0x8a5d4]        # 96ef5 <__func__.22>
+--
+    fa15:	e8 66 70 02 00       	call   36a80 <ssh_err>
+    fa1a:	41 b8 01 00 00 00    	mov    r8d,0x1
+    fa20:	b9 01 00 00 00       	mov    ecx,0x1
+    fa25:	4c 89 ee             	mov    rsi,r13
+    fa28:	49 89 c1             	mov    r9,rax
+    fa2b:	48 8d 05 a9 5a 08 00 	lea    rax,[rip+0x85aa9]        # 954db <_IO_stdin_used+0x4db>
+    fa32:	41 53                	push   r11
+    fa34:	ba af 05 00 00       	mov    edx,0x5af
+--
+   10760:	e8 1b 63 02 00       	call   36a80 <ssh_err>
+   10765:	48 83 ec 08          	sub    rsp,0x8
+   10769:	31 c9                	xor    ecx,ecx
+   1076b:	ba 27 02 00 00       	mov    edx,0x227
+   10770:	49 89 c1             	mov    r9,rax
+   10773:	48 8d 05 f7 48 08 00 	lea    rax,[rip+0x848f7]        # 95071 <_IO_stdin_used+0x71>
+   1077a:	41 55                	push   r13
+   1077c:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   107e3:	e8 98 62 02 00       	call   36a80 <ssh_err>
+   107e8:	48 83 ec 08          	sub    rsp,0x8
+   107ec:	31 c9                	xor    ecx,ecx
+   107ee:	ba 19 02 00 00       	mov    edx,0x219
+   107f3:	49 89 c1             	mov    r9,rax
+   107f6:	48 8d 05 74 48 08 00 	lea    rax,[rip+0x84874]        # 95071 <_IO_stdin_used+0x71>
+   107fd:	41 55                	push   r13
+   107ff:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   10837:	e8 44 62 02 00       	call   36a80 <ssh_err>
+   1083c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   10842:	31 c9                	xor    ecx,ecx
+   10844:	ba 20 02 00 00       	mov    edx,0x220
+   10849:	49 89 c1             	mov    r9,rax
+   1084c:	50                   	push   rax
+   1084d:	48 8d 05 1d 48 08 00 	lea    rax,[rip+0x8481d]        # 95071 <_IO_stdin_used+0x71>
+   10854:	48 8d 35 e5 65 08 00 	lea    rsi,[rip+0x865e5]        # 96e40 <__func__.15>
+--
+   10bd0:	e8 ab 5e 02 00       	call   36a80 <ssh_err>
+   10bd5:	48 83 ec 08          	sub    rsp,0x8
+   10bd9:	31 c9                	xor    ecx,ecx
+   10bdb:	ba 3e 08 00 00       	mov    edx,0x83e
+   10be0:	49 89 c1             	mov    r9,rax
+   10be3:	48 8d 05 b7 44 08 00 	lea    rax,[rip+0x844b7]        # 950a1 <_IO_stdin_used+0xa1>
+   10bea:	41 b8 05 00 00 00    	mov    r8d,0x5
+   10bf0:	50                   	push   rax
+--
+   10c75:	e8 06 5e 02 00       	call   36a80 <ssh_err>
+   10c7a:	b9 01 00 00 00       	mov    ecx,0x1
+   10c7f:	4c 89 f6             	mov    rsi,r14
+   10c82:	4c 89 e7             	mov    rdi,r12
+   10c85:	49 89 c1             	mov    r9,rax
+   10c88:	50                   	push   rax
+   10c89:	48 8d 05 4a 44 08 00 	lea    rax,[rip+0x8444a]        # 950da <_IO_stdin_used+0xda>
+   10c90:	ba 63 08 00 00       	mov    edx,0x863
+--
+   11570:	e8 0b 55 02 00       	call   36a80 <ssh_err>
+   11575:	b9 01 00 00 00       	mov    ecx,0x1
+   1157a:	4c 89 f6             	mov    rsi,r14
+   1157d:	4c 89 ef             	mov    rdi,r13
+   11580:	49 89 c1             	mov    r9,rax
+   11583:	48 8d 05 15 3c 08 00 	lea    rax,[rip+0x83c15]        # 9519f <_IO_stdin_used+0x19f>
+   1158a:	41 50                	push   r8
+   1158c:	ba 65 07 00 00       	mov    edx,0x765
+--
+   11f7f:	e8 fc 4a 02 00       	call   36a80 <ssh_err>
+   11f84:	53                   	push   rbx
+   11f85:	41 b8 01 00 00 00    	mov    r8d,0x1
+   11f8b:	4c 89 f6             	mov    rsi,r14
+   11f8e:	49 89 c1             	mov    r9,rax
+   11f91:	b9 01 00 00 00       	mov    ecx,0x1
+   11f96:	ba e6 08 00 00       	mov    edx,0x8e6
+   11f9b:	4c 89 e7             	mov    rdi,r12
+--
+   13fe2:	e8 99 2a 02 00       	call   36a80 <ssh_err>
+   13fe7:	41 b8 02 00 00 00    	mov    r8d,0x2
+   13fed:	b9 01 00 00 00       	mov    ecx,0x1
+   13ff2:	ba 3b 0b 00 00       	mov    edx,0xb3b
+   13ff7:	49 89 c1             	mov    r9,rax
+   13ffa:	48 8d 05 5d 30 08 00 	lea    rax,[rip+0x8305d]        # 9705e <__func__.22+0x169>
+   14001:	50                   	push   rax
+   14002:	48 8d 05 84 75 08 00 	lea    rax,[rip+0x87584]        # 9b58d <__func__.38+0x2fd>
+--
+   140aa:	e8 d1 29 02 00       	call   36a80 <ssh_err>
+   140af:	41 b8 02 00 00 00    	mov    r8d,0x2
+   140b5:	b9 01 00 00 00       	mov    ecx,0x1
+   140ba:	ba 3a 0b 00 00       	mov    edx,0xb3a
+   140bf:	49 89 c1             	mov    r9,rax
+   140c2:	48 8d 05 8d 2f 08 00 	lea    rax,[rip+0x82f8d]        # 97056 <__func__.22+0x161>
+   140c9:	50                   	push   rax
+   140ca:	48 8d 05 bc 74 08 00 	lea    rax,[rip+0x874bc]        # 9b58d <__func__.38+0x2fd>
+--
+   143ba:	e8 c1 26 02 00       	call   36a80 <ssh_err>
+   143bf:	41 b8 02 00 00 00    	mov    r8d,0x2
+   143c5:	b9 01 00 00 00       	mov    ecx,0x1
+   143ca:	ba 3d 0b 00 00       	mov    edx,0xb3d
+   143cf:	49 89 c1             	mov    r9,rax
+   143d2:	48 8d 05 99 2c 08 00 	lea    rax,[rip+0x82c99]        # 97072 <__func__.22+0x17d>
+   143d9:	50                   	push   rax
+   143da:	48 8d 05 ac 71 08 00 	lea    rax,[rip+0x871ac]        # 9b58d <__func__.38+0x2fd>
+--
+   144d2:	e8 a9 25 02 00       	call   36a80 <ssh_err>
+   144d7:	41 b8 02 00 00 00    	mov    r8d,0x2
+   144dd:	b9 01 00 00 00       	mov    ecx,0x1
+   144e2:	ba 3c 0b 00 00       	mov    edx,0xb3c
+   144e7:	49 89 c1             	mov    r9,rax
+   144ea:	48 8d 05 72 2b 08 00 	lea    rax,[rip+0x82b72]        # 97063 <__func__.22+0x16e>
+   144f1:	50                   	push   rax
+   144f2:	48 8d 05 94 70 08 00 	lea    rax,[rip+0x87094]        # 9b58d <__func__.38+0x2fd>
+--
+   14532:	e8 49 25 02 00       	call   36a80 <ssh_err>
+   14537:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1453d:	b9 01 00 00 00       	mov    ecx,0x1
+   14542:	ba 3e 0b 00 00       	mov    edx,0xb3e
+   14547:	49 89 c1             	mov    r9,rax
+   1454a:	48 8d 05 3a 2b 08 00 	lea    rax,[rip+0x82b3a]        # 9708b <__func__.22+0x196>
+   14551:	50                   	push   rax
+   14552:	48 8d 05 34 70 08 00 	lea    rax,[rip+0x87034]        # 9b58d <__func__.38+0x2fd>
+--
+   145ea:	e8 91 24 02 00       	call   36a80 <ssh_err>
+   145ef:	41 b8 02 00 00 00    	mov    r8d,0x2
+   145f5:	b9 01 00 00 00       	mov    ecx,0x1
+   145fa:	ba 3f 0b 00 00       	mov    edx,0xb3f
+   145ff:	49 89 c1             	mov    r9,rax
+   14602:	48 8d 05 98 2a 08 00 	lea    rax,[rip+0x82a98]        # 970a1 <__func__.22+0x1ac>
+   14609:	50                   	push   rax
+   1460a:	48 8d 05 7c 6f 08 00 	lea    rax,[rip+0x86f7c]        # 9b58d <__func__.38+0x2fd>
+--
+   1c08e:	e8 ed a9 01 00       	call   36a80 <ssh_err>
+   1c093:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1c099:	b9 01 00 00 00       	mov    ecx,0x1
+   1c09e:	ba b6 0d 00 00       	mov    edx,0xdb6
+   1c0a3:	49 89 c1             	mov    r9,rax
+   1c0a6:	48 8d 05 19 b2 07 00 	lea    rax,[rip+0x7b219]        # 972c6 <__func__.22+0x3d1>
+   1c0ad:	56                   	push   rsi
+   1c0ae:	48 8d 3d 63 ae 07 00 	lea    rdi,[rip+0x7ae63]        # 96f18 <__func__.22+0x23>
+--
+   1c372:	e8 09 a7 01 00       	call   36a80 <ssh_err>
+   1c377:	ba 59 03 00 00       	mov    edx,0x359
+   1c37c:	4c 89 fe             	mov    rsi,r15
+   1c37f:	4c 89 f7             	mov    rdi,r14
+   1c382:	49 89 c1             	mov    r9,rax
+   1c385:	48 8d 05 e1 ce 07 00 	lea    rax,[rip+0x7cee1]        # 9926d <__func__.13+0x130d>
+   1c38c:	51                   	push   rcx
+   1c38d:	41 b8 01 00 00 00    	mov    r8d,0x1
+--
+   1c4e3:	e8 98 a5 01 00       	call   36a80 <ssh_err>
+   1c4e8:	48 83 ec 08          	sub    rsp,0x8
+   1c4ec:	48 89 ee             	mov    rsi,rbp
+   1c4ef:	48 89 df             	mov    rdi,rbx
+   1c4f2:	49 89 c1             	mov    r9,rax
+   1c4f5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1c4fb:	b9 01 00 00 00       	mov    ecx,0x1
+   1c500:	ba 73 0a 00 00       	mov    edx,0xa73
+--
+   1d39e:	e8 dd 96 01 00       	call   36a80 <ssh_err>
+   1d3a3:	53                   	push   rbx
+   1d3a4:	b9 01 00 00 00       	mov    ecx,0x1
+   1d3a9:	ba c6 04 00 00       	mov    edx,0x4c6
+   1d3ae:	49 89 c1             	mov    r9,rax
+   1d3b1:	48 8d 05 c9 bf 07 00 	lea    rax,[rip+0x7bfc9]        # 99381 <__func__.13+0x1421>
+   1d3b8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1d3be:	50                   	push   rax
+--
+   1d435:	e8 46 96 01 00       	call   36a80 <ssh_err>
+   1d43a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1d440:	b9 01 00 00 00       	mov    ecx,0x1
+   1d445:	ba 38 05 00 00       	mov    edx,0x538
+   1d44a:	49 89 c1             	mov    r9,rax
+   1d44d:	48 8d 05 2d bf 07 00 	lea    rax,[rip+0x7bf2d]        # 99381 <__func__.13+0x1421>
+   1d454:	41 52                	push   r10
+   1d456:	48 8d 35 c3 dd 07 00 	lea    rsi,[rip+0x7ddc3]        # 9b220 <__func__.34>
+--
+   1d4d0:	e8 ab 95 01 00       	call   36a80 <ssh_err>
+   1d4d5:	b9 01 00 00 00       	mov    ecx,0x1
+   1d4da:	ba dc 04 00 00       	mov    edx,0x4dc
+   1d4df:	48 8d 35 3a dd 07 00 	lea    rsi,[rip+0x7dd3a]        # 9b220 <__func__.34>
+   1d4e6:	49 89 c1             	mov    r9,rax
+   1d4e9:	48 8d 05 ea 7b 07 00 	lea    rax,[rip+0x77bea]        # 950da <_IO_stdin_used+0xda>
+   1d4f0:	41 50                	push   r8
+   1d4f2:	48 8d 3d 37 bd 07 00 	lea    rdi,[rip+0x7bd37]        # 99230 <__func__.13+0x12d0>
+--
+   1d5f2:	e8 89 94 01 00       	call   36a80 <ssh_err>
+   1d5f7:	41 54                	push   r12
+   1d5f9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1d5ff:	b9 01 00 00 00       	mov    ecx,0x1
+   1d604:	49 89 c1             	mov    r9,rax
+   1d607:	48 8d 05 73 bd 07 00 	lea    rax,[rip+0x7bd73]        # 99381 <__func__.13+0x1421>
+   1d60e:	ba 8b 04 00 00       	mov    edx,0x48b
+   1d613:	50                   	push   rax
+--
+   1d842:	e8 39 92 01 00       	call   36a80 <ssh_err>
+   1d847:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1d84d:	b9 01 00 00 00       	mov    ecx,0x1
+   1d852:	ba fd 04 00 00       	mov    edx,0x4fd
+   1d857:	49 89 c1             	mov    r9,rax
+   1d85a:	48 8d 05 20 bb 07 00 	lea    rax,[rip+0x7bb20]        # 99381 <__func__.13+0x1421>
+   1d861:	56                   	push   rsi
+   1d862:	48 8d 3d c7 b9 07 00 	lea    rdi,[rip+0x7b9c7]        # 99230 <__func__.13+0x12d0>
+--
+   1db79:	e8 02 8f 01 00       	call   36a80 <ssh_err>
+   1db7e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1db84:	b9 01 00 00 00       	mov    ecx,0x1
+   1db89:	ba f0 04 00 00       	mov    edx,0x4f0
+   1db8e:	49 89 c1             	mov    r9,rax
+   1db91:	48 8d 05 e9 b7 07 00 	lea    rax,[rip+0x7b7e9]        # 99381 <__func__.13+0x1421>
+   1db98:	57                   	push   rdi
+   1db99:	48 8d 35 80 d6 07 00 	lea    rsi,[rip+0x7d680]        # 9b220 <__func__.34>
+--
+   1dfae:	e8 cd 8a 01 00       	call   36a80 <ssh_err>
+   1dfb3:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1dfb9:	b9 01 00 00 00       	mov    ecx,0x1
+   1dfbe:	ba 5d 05 00 00       	mov    edx,0x55d
+   1dfc3:	49 89 c1             	mov    r9,rax
+   1dfc6:	50                   	push   rax
+   1dfc7:	48 8d 05 24 b4 07 00 	lea    rax,[rip+0x7b424]        # 993f2 <__func__.13+0x1492>
+   1dfce:	48 8d 35 4b d2 07 00 	lea    rsi,[rip+0x7d24b]        # 9b220 <__func__.34>
+--
+   1e03d:	e8 3e 8a 01 00       	call   36a80 <ssh_err>
+   1e042:	41 55                	push   r13
+   1e044:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e04a:	b9 01 00 00 00       	mov    ecx,0x1
+   1e04f:	49 89 c1             	mov    r9,rax
+   1e052:	48 8d 05 28 b3 07 00 	lea    rax,[rip+0x7b328]        # 99381 <__func__.13+0x1421>
+   1e059:	ba 84 04 00 00       	mov    edx,0x484
+   1e05e:	50                   	push   rax
+--
+   1e095:	e8 e6 89 01 00       	call   36a80 <ssh_err>
+   1e09a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e0a0:	b9 01 00 00 00       	mov    ecx,0x1
+   1e0a5:	ba 20 05 00 00       	mov    edx,0x520
+   1e0aa:	49 89 c1             	mov    r9,rax
+   1e0ad:	50                   	push   rax
+   1e0ae:	48 8d 05 3d b3 07 00 	lea    rax,[rip+0x7b33d]        # 993f2 <__func__.13+0x1492>
+   1e0b5:	48 8d 35 64 d1 07 00 	lea    rsi,[rip+0x7d164]        # 9b220 <__func__.34>
+--
+   1e0cd:	e8 ae 89 01 00       	call   36a80 <ssh_err>
+   1e0d2:	41 55                	push   r13
+   1e0d4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e0da:	b9 01 00 00 00       	mov    ecx,0x1
+   1e0df:	49 89 c1             	mov    r9,rax
+   1e0e2:	48 8d 05 98 b2 07 00 	lea    rax,[rip+0x7b298]        # 99381 <__func__.13+0x1421>
+   1e0e9:	ba b1 04 00 00       	mov    edx,0x4b1
+   1e0ee:	50                   	push   rax
+--
+   1e106:	e8 75 89 01 00       	call   36a80 <ssh_err>
+   1e10b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e111:	ba 42 05 00 00       	mov    edx,0x542
+   1e116:	48 8d 35 03 d1 07 00 	lea    rsi,[rip+0x7d103]        # 9b220 <__func__.34>
+   1e11d:	49 89 c1             	mov    r9,rax
+   1e120:	48 8d 05 cb b2 07 00 	lea    rax,[rip+0x7b2cb]        # 993f2 <__func__.13+0x1492>
+   1e127:	51                   	push   rcx
+   1e128:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   1e13e:	e8 3d 89 01 00       	call   36a80 <ssh_err>
+   1e143:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e149:	b9 01 00 00 00       	mov    ecx,0x1
+   1e14e:	ba 77 04 00 00       	mov    edx,0x477
+   1e153:	49 89 c1             	mov    r9,rax
+   1e156:	50                   	push   rax
+   1e157:	48 8d 05 23 b2 07 00 	lea    rax,[rip+0x7b223]        # 99381 <__func__.13+0x1421>
+   1e15e:	48 8d 35 9b d0 07 00 	lea    rsi,[rip+0x7d09b]        # 9b200 <__func__.33>
+--
+   1e176:	e8 05 89 01 00       	call   36a80 <ssh_err>
+   1e17b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e181:	b9 01 00 00 00       	mov    ecx,0x1
+   1e186:	ba d8 04 00 00       	mov    edx,0x4d8
+   1e18b:	49 89 c1             	mov    r9,rax
+   1e18e:	48 8d 05 ec b1 07 00 	lea    rax,[rip+0x7b1ec]        # 99381 <__func__.13+0x1421>
+   1e195:	41 52                	push   r10
+   1e197:	48 8d 35 82 d0 07 00 	lea    rsi,[rip+0x7d082]        # 9b220 <__func__.34>
+--
+   1e1af:	e8 cc 88 01 00       	call   36a80 <ssh_err>
+   1e1b4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e1ba:	ba 11 05 00 00       	mov    edx,0x511
+   1e1bf:	48 8d 35 5a d0 07 00 	lea    rsi,[rip+0x7d05a]        # 9b220 <__func__.34>
+   1e1c6:	49 89 c1             	mov    r9,rax
+   1e1c9:	48 8d 05 b1 b1 07 00 	lea    rax,[rip+0x7b1b1]        # 99381 <__func__.13+0x1421>
+   1e1d0:	51                   	push   rcx
+   1e1d1:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   1e1e7:	e8 94 88 01 00       	call   36a80 <ssh_err>
+   1e1ec:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e1f2:	b9 01 00 00 00       	mov    ecx,0x1
+   1e1f7:	ba cd 04 00 00       	mov    edx,0x4cd
+   1e1fc:	49 89 c1             	mov    r9,rax
+   1e1ff:	48 8d 05 7b b1 07 00 	lea    rax,[rip+0x7b17b]        # 99381 <__func__.13+0x1421>
+   1e206:	41 53                	push   r11
+   1e208:	48 8d 35 11 d0 07 00 	lea    rsi,[rip+0x7d011]        # 9b220 <__func__.34>
+--
+   1e220:	e8 5b 88 01 00       	call   36a80 <ssh_err>
+   1e225:	53                   	push   rbx
+   1e226:	b9 01 00 00 00       	mov    ecx,0x1
+   1e22b:	ba 2e 05 00 00       	mov    edx,0x52e
+   1e230:	49 89 c1             	mov    r9,rax
+   1e233:	48 8d 05 33 b0 07 00 	lea    rax,[rip+0x7b033]        # 9926d <__func__.13+0x130d>
+   1e23a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e240:	50                   	push   rax
+--
+   1e258:	e8 23 88 01 00       	call   36a80 <ssh_err>
+   1e25d:	55                   	push   rbp
+   1e25e:	b9 01 00 00 00       	mov    ecx,0x1
+   1e263:	ba 2b 05 00 00       	mov    edx,0x52b
+   1e268:	49 89 c1             	mov    r9,rax
+   1e26b:	48 8d 05 0f b1 07 00 	lea    rax,[rip+0x7b10f]        # 99381 <__func__.13+0x1421>
+   1e272:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1e278:	50                   	push   rax
+--
+   1ed33:	e8 48 7d 01 00       	call   36a80 <ssh_err>
+   1ed38:	48 83 ec 08          	sub    rsp,0x8
+   1ed3c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1ed42:	4c 89 e7             	mov    rdi,r12
+   1ed45:	49 89 c1             	mov    r9,rax
+   1ed48:	48 8d 05 a8 a7 07 00 	lea    rax,[rip+0x7a7a8]        # 994f7 <__func__.13+0x1597>
+   1ed4f:	b9 01 00 00 00       	mov    ecx,0x1
+   1ed54:	ba c6 06 00 00       	mov    edx,0x6c6
+--
+   1ed77:	e8 04 7d 01 00       	call   36a80 <ssh_err>
+   1ed7c:	48 83 ec 08          	sub    rsp,0x8
+   1ed80:	41 b8 06 00 00 00    	mov    r8d,0x6
+   1ed86:	b9 01 00 00 00       	mov    ecx,0x1
+   1ed8b:	49 89 c1             	mov    r9,rax
+   1ed8e:	48 8d 05 cb a7 07 00 	lea    rax,[rip+0x7a7cb]        # 99560 <__func__.13+0x1600>
+   1ed95:	ba 28 07 00 00       	mov    edx,0x728
+   1ed9a:	50                   	push   rax
+--
+   1edab:	e8 d0 7c 01 00       	call   36a80 <ssh_err>
+   1edb0:	55                   	push   rbp
+   1edb1:	b9 01 00 00 00       	mov    ecx,0x1
+   1edb6:	ba 21 07 00 00       	mov    edx,0x721
+   1edbb:	49 89 c1             	mov    r9,rax
+   1edbe:	48 8d 05 dc 62 07 00 	lea    rax,[rip+0x762dc]        # 950a1 <_IO_stdin_used+0xa1>
+   1edc5:	41 b8 05 00 00 00    	mov    r8d,0x5
+   1edcb:	50                   	push   rax
+--
+   1eef1:	e8 8a 7b 01 00       	call   36a80 <ssh_err>
+   1eef6:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1eefc:	ba a6 06 00 00       	mov    edx,0x6a6
+   1ef01:	4c 89 e7             	mov    rdi,r12
+   1ef04:	49 89 c1             	mov    r9,rax
+   1ef07:	48 8d 05 91 62 07 00 	lea    rax,[rip+0x76291]        # 9519f <_IO_stdin_used+0x19f>
+   1ef0e:	51                   	push   rcx
+   1ef0f:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   1ef25:	e8 56 7b 01 00       	call   36a80 <ssh_err>
+   1ef2a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1ef30:	4c 89 e7             	mov    rdi,r12
+   1ef33:	b9 01 00 00 00       	mov    ecx,0x1
+   1ef38:	49 89 c1             	mov    r9,rax
+   1ef3b:	50                   	push   rax
+   1ef3c:	48 8d 05 5c 62 07 00 	lea    rax,[rip+0x7625c]        # 9519f <_IO_stdin_used+0x19f>
+   1ef43:	ba fe 06 00 00       	mov    edx,0x6fe
+--
+   1ef59:	e8 22 7b 01 00       	call   36a80 <ssh_err>
+   1ef5e:	b9 01 00 00 00       	mov    ecx,0x1
+   1ef63:	ba de 06 00 00       	mov    edx,0x6de
+   1ef68:	4c 89 e7             	mov    rdi,r12
+   1ef6b:	49 89 c1             	mov    r9,rax
+   1ef6e:	48 8d 05 2a 62 07 00 	lea    rax,[rip+0x7622a]        # 9519f <_IO_stdin_used+0x19f>
+   1ef75:	41 50                	push   r8
+   1ef77:	48 8d 35 c2 c0 07 00 	lea    rsi,[rip+0x7c0c2]        # 9b040 <__func__.17>
+--
+   1f4da:	e8 a1 75 01 00       	call   36a80 <ssh_err>
+   1f4df:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+   1f4e4:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1f4ea:	b9 01 00 00 00       	mov    ecx,0x1
+   1f4ef:	49 89 c1             	mov    r9,rax
+   1f4f2:	48 8d 05 07 b0 07 00 	lea    rax,[rip+0x7b007]        # 9a500 <__func__.13+0x25a0>
+   1f4f9:	52                   	push   rdx
+   1f4fa:	ba 12 09 00 00       	mov    edx,0x912
+--
+   1fb7c:	e8 ff 6e 01 00       	call   36a80 <ssh_err>
+   1fb81:	48 83 ec 08          	sub    rsp,0x8
+   1fb85:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1fb8b:	b9 01 00 00 00       	mov    ecx,0x1
+   1fb90:	49 89 c1             	mov    r9,rax
+   1fb93:	48 8d 05 c7 9a 07 00 	lea    rax,[rip+0x79ac7]        # 99661 <__func__.13+0x1701>
+   1fb9a:	ba 45 09 00 00       	mov    edx,0x945
+   1fb9f:	50                   	push   rax
+--
+   1fbb8:	e8 c3 6e 01 00       	call   36a80 <ssh_err>
+   1fbbd:	48 83 ec 08          	sub    rsp,0x8
+   1fbc1:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1fbc7:	b9 01 00 00 00       	mov    ecx,0x1
+   1fbcc:	49 89 c1             	mov    r9,rax
+   1fbcf:	48 8d 05 8a a9 07 00 	lea    rax,[rip+0x7a98a]        # 9a560 <__func__.13+0x2600>
+   1fbd6:	53                   	push   rbx
+   1fbd7:	ba 49 09 00 00       	mov    edx,0x949
+--
+   1fc13:	e8 68 6e 01 00       	call   36a80 <ssh_err>
+   1fc18:	48 83 ec 08          	sub    rsp,0x8
+   1fc1c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   1fc22:	b9 01 00 00 00       	mov    ecx,0x1
+   1fc27:	49 89 c1             	mov    r9,rax
+   1fc2a:	48 8d 05 df a9 07 00 	lea    rax,[rip+0x7a9df]        # 9a610 <__func__.13+0x26b0>
+   1fc31:	53                   	push   rbx
+   1fc32:	ba 63 09 00 00       	mov    edx,0x963
+--
+   1fc3e:	e8 3d 6e 01 00       	call   36a80 <ssh_err>
+   1fc43:	48 83 ec 08          	sub    rsp,0x8
+   1fc47:	41 b8 01 00 00 00    	mov    r8d,0x1
+   1fc4d:	b9 01 00 00 00       	mov    ecx,0x1
+   1fc52:	49 89 c1             	mov    r9,rax
+   1fc55:	48 8d 05 f4 99 07 00 	lea    rax,[rip+0x799f4]        # 99650 <__func__.13+0x16f0>
+   1fc5c:	ba 42 09 00 00       	mov    edx,0x942
+   1fc61:	50                   	push   rax
+--
+   209bf:	31 d2                	xor    edx,edx
+   209c1:	41 83 ff f2          	cmp    r15d,0xfffffff2
+   209c5:	b9 01 00 00 00       	mov    ecx,0x1
+   209ca:	0f 94 c2             	sete   dl
+   209cd:	49 89 c1             	mov    r9,rax
+   209d0:	48 83 ec 08          	sub    rsp,0x8
+   209d4:	48 8d 05 f0 8d 07 00 	lea    rax,[rip+0x78df0]        # 997cb <__func__.13+0x186b>
+   209db:	44 8d 44 52 02       	lea    r8d,[rdx+rdx*2+0x2]
+--
+   20bbe:	e8 bd 5e 01 00       	call   36a80 <ssh_err>
+   20bc3:	ff 74 24 08          	push   QWORD PTR [rsp+0x8]
+   20bc7:	41 b8 02 00 00 00    	mov    r8d,0x2
+   20bcd:	b9 01 00 00 00       	mov    ecx,0x1
+   20bd2:	49 89 c1             	mov    r9,rax
+   20bd5:	48 8d 05 d4 9c 07 00 	lea    rax,[rip+0x79cd4]        # 9a8b0 <__func__.13+0x2950>
+   20bdc:	ba e1 09 00 00       	mov    edx,0x9e1
+   20be1:	50                   	push   rax
+--
+   20be9:	e8 92 5e 01 00       	call   36a80 <ssh_err>
+   20bee:	48 83 ec 08          	sub    rsp,0x8
+   20bf2:	4c 89 e7             	mov    rdi,r12
+   20bf5:	4c 89 f6             	mov    rsi,r14
+   20bf8:	49 89 c1             	mov    r9,rax
+   20bfb:	41 b8 02 00 00 00    	mov    r8d,0x2
+   20c01:	b9 01 00 00 00       	mov    ecx,0x1
+   20c06:	ba 99 09 00 00       	mov    edx,0x999
+--
+   20f20:	e8 5b 5b 01 00       	call   36a80 <ssh_err>
+   20f25:	b9 01 00 00 00       	mov    ecx,0x1
+   20f2a:	4c 89 f6             	mov    rsi,r14
+   20f2d:	4c 89 e7             	mov    rdi,r12
+   20f30:	49 89 c1             	mov    r9,rax
+   20f33:	50                   	push   rax
+   20f34:	48 8d 05 28 89 07 00 	lea    rax,[rip+0x78928]        # 99863 <__func__.13+0x1903>
+   20f3b:	ba 37 0a 00 00       	mov    edx,0xa37
+--
+   20f50:	e8 2b 5b 01 00       	call   36a80 <ssh_err>
+   20f55:	41 b8 01 00 00 00    	mov    r8d,0x1
+   20f5b:	b9 01 00 00 00       	mov    ecx,0x1
+   20f60:	4c 89 f6             	mov    rsi,r14
+   20f63:	49 89 c1             	mov    r9,rax
+   20f66:	48 8d 05 bc 88 07 00 	lea    rax,[rip+0x788bc]        # 99829 <__func__.13+0x18c9>
+   20f6d:	57                   	push   rdi
+   20f6e:	ba 2b 0a 00 00       	mov    edx,0xa2b
+--
+   21138:	e8 43 59 01 00       	call   36a80 <ssh_err>
+   2113d:	ff 74 24 08          	push   QWORD PTR [rsp+0x8]
+   21141:	41 b8 02 00 00 00    	mov    r8d,0x2
+   21147:	4c 89 e7             	mov    rdi,r12
+   2114a:	49 89 c1             	mov    r9,rax
+   2114d:	48 8d 05 5c 97 07 00 	lea    rax,[rip+0x7975c]        # 9a8b0 <__func__.13+0x2950>
+   21154:	b9 01 00 00 00       	mov    ecx,0x1
+   21159:	ba a9 08 00 00       	mov    edx,0x8a9
+--
+   211a9:	e8 d2 58 01 00       	call   36a80 <ssh_err>
+   211ae:	b9 01 00 00 00       	mov    ecx,0x1
+   211b3:	4c 89 f6             	mov    rsi,r14
+   211b6:	4c 89 e7             	mov    rdi,r12
+   211b9:	49 89 c1             	mov    r9,rax
+   211bc:	48 8d 05 88 86 07 00 	lea    rax,[rip+0x78688]        # 9984b <__func__.13+0x18eb>
+   211c3:	52                   	push   rdx
+   211c4:	41 b8 01 00 00 00    	mov    r8d,0x1
+--
+   21947:	e8 34 51 01 00       	call   36a80 <ssh_err>
+   2194c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   21952:	b9 01 00 00 00       	mov    ecx,0x1
+   21957:	ba e0 0a 00 00       	mov    edx,0xae0
+   2195c:	49 89 c1             	mov    r9,rax
+   2195f:	50                   	push   rax
+   21960:	48 8d 05 ef 7f 07 00 	lea    rax,[rip+0x77fef]        # 99956 <__func__.13+0x19f6>
+   21967:	48 8d 35 62 95 07 00 	lea    rsi,[rip+0x79562]        # 9aed0 <__func__.1>
+--
+   21acd:	e8 ae 4f 01 00       	call   36a80 <ssh_err>
+   21ad2:	41 55                	push   r13
+   21ad4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   21ada:	b9 01 00 00 00       	mov    ecx,0x1
+   21adf:	49 89 c1             	mov    r9,rax
+   21ae2:	48 8d 05 01 7e 07 00 	lea    rax,[rip+0x77e01]        # 998ea <__func__.13+0x198a>
+   21ae9:	ba 9c 0a 00 00       	mov    edx,0xa9c
+   21aee:	50                   	push   rax
+--
+   21b37:	e8 44 4f 01 00       	call   36a80 <ssh_err>
+   21b3c:	41 56                	push   r14
+   21b3e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   21b44:	b9 01 00 00 00       	mov    ecx,0x1
+   21b49:	49 89 c1             	mov    r9,rax
+   21b4c:	48 8d 05 89 7d 07 00 	lea    rax,[rip+0x77d89]        # 998dc <__func__.13+0x197c>
+   21b53:	ba 97 0a 00 00       	mov    edx,0xa97
+   21b58:	50                   	push   rax
+--
+   21b70:	e8 0b 4f 01 00       	call   36a80 <ssh_err>
+   21b75:	41 b8 01 00 00 00    	mov    r8d,0x1
+   21b7b:	b9 01 00 00 00       	mov    ecx,0x1
+   21b80:	48 8d 35 49 93 07 00 	lea    rsi,[rip+0x79349]        # 9aed0 <__func__.1>
+   21b87:	49 89 c1             	mov    r9,rax
+   21b8a:	48 8d 05 b8 7d 07 00 	lea    rax,[rip+0x77db8]        # 99949 <__func__.13+0x19e9>
+   21b91:	52                   	push   rdx
+   21b92:	ba db 0a 00 00       	mov    edx,0xadb
+--
+   22e06:	31 c9                	xor    ecx,ecx
+   22e08:	4c 89 f7             	mov    rdi,r14
+   22e0b:	c7 00 00 00 00 00    	mov    DWORD PTR [rax],0x0
+   22e11:	8b 35 fd 11 0c 00    	mov    esi,DWORD PTR [rip+0xc11fd]        # e4014 <session_ident>
+   22e17:	49 89 c1             	mov    r9,rax
+   22e1a:	48 8d 15 4f a3 ff ff 	lea    rdx,[rip+0xffffffffffffa34f]        # 1d170 <client_simple_escape_filter>
+   22e21:	89 58 04             	mov    DWORD PTR [rax+0x4],ebx
+   22e24:	e8 a7 89 02 00       	call   4b7d0 <channel_register_filter>
+--
+   232bb:	e8 c0 37 01 00       	call   36a80 <ssh_err>
+   232c0:	48 83 ec 08          	sub    rsp,0x8
+   232c4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   232ca:	4c 89 ff             	mov    rdi,r15
+   232cd:	49 89 c1             	mov    r9,rax
+   232d0:	48 8d 05 49 68 07 00 	lea    rax,[rip+0x76849]        # 99b20 <__func__.13+0x1bc0>
+   232d7:	b9 01 00 00 00       	mov    ecx,0x1
+   232dc:	ba 42 06 00 00       	mov    edx,0x642
+--
+   232f2:	e8 89 37 01 00       	call   36a80 <ssh_err>
+   232f7:	48 83 ec 08          	sub    rsp,0x8
+   232fb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   23301:	4c 89 ff             	mov    rdi,r15
+   23304:	49 89 c1             	mov    r9,rax
+   23307:	48 8d 05 70 68 07 00 	lea    rax,[rip+0x76870]        # 99b7e <__func__.13+0x1c1e>
+   2330e:	b9 01 00 00 00       	mov    ecx,0x1
+   23313:	ba 70 06 00 00       	mov    edx,0x670
+--
+   23329:	e8 52 37 01 00       	call   36a80 <ssh_err>
+   2332e:	48 83 ec 08          	sub    rsp,0x8
+   23332:	41 b8 01 00 00 00    	mov    r8d,0x1
+   23338:	4c 89 ff             	mov    rdi,r15
+   2333b:	49 89 c1             	mov    r9,rax
+   2333e:	48 8d 05 02 67 07 00 	lea    rax,[rip+0x76702]        # 99a47 <__func__.13+0x1ae7>
+   23345:	b9 01 00 00 00       	mov    ecx,0x1
+   2334a:	ba 15 06 00 00       	mov    edx,0x615
+--
+   233ff:	e8 7c 36 01 00       	call   36a80 <ssh_err>
+   23404:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2340a:	b9 01 00 00 00       	mov    ecx,0x1
+   2340f:	4c 89 ff             	mov    rdi,r15
+   23412:	49 89 c1             	mov    r9,rax
+   23415:	48 8d 05 be 1c 07 00 	lea    rax,[rip+0x71cbe]        # 950da <_IO_stdin_used+0xda>
+   2341c:	56                   	push   rsi
+   2341d:	ba fb 01 00 00       	mov    edx,0x1fb
+--
+   23433:	e8 48 36 01 00       	call   36a80 <ssh_err>
+   23438:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2343e:	4c 89 ff             	mov    rdi,r15
+   23441:	b9 01 00 00 00       	mov    ecx,0x1
+   23446:	49 89 c1             	mov    r9,rax
+   23449:	50                   	push   rax
+   2344a:	48 8d 05 89 1c 07 00 	lea    rax,[rip+0x71c89]        # 950da <_IO_stdin_used+0xda>
+   23451:	ba 12 02 00 00       	mov    edx,0x212
+--
+   238ab:	e8 d0 31 01 00       	call   36a80 <ssh_err>
+   238b0:	55                   	push   rbp
+   238b1:	ba 10 03 00 00       	mov    edx,0x310
+   238b6:	4c 89 ee             	mov    rsi,r13
+   238b9:	49 89 c1             	mov    r9,rax
+   238bc:	48 8d 05 ed 6f 07 00 	lea    rax,[rip+0x76fed]        # 9a8b0 <__func__.13+0x2950>
+   238c3:	4c 89 e7             	mov    rdi,r12
+   238c6:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   24b4e:	0f 85 d3 00 00 00    	jne    24c27 <ssh_connect+0x3e7>
+   24b54:	89 b4 24 b0 00 00 00 	mov    DWORD PTR [rsp+0xb0],esi
+   24b5b:	48 89 ef             	mov    rdi,rbp
+   24b5e:	4c 89 e6             	mov    rsi,r12
+   24b61:	49 89 c1             	mov    r9,rax
+   24b64:	48 83 c4 78          	add    rsp,0x78
+   24b68:	5b                   	pop    rbx
+   24b69:	5d                   	pop    rbp
+--
+   25611:	e8 6a 14 01 00       	call   36a80 <ssh_err>
+   25616:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2561c:	ba 7a 03 00 00       	mov    edx,0x37a
+   25621:	48 8d 35 28 74 07 00 	lea    rsi,[rip+0x77428]        # 9ca50 <__func__.9>
+   25628:	49 89 c1             	mov    r9,rax
+   2562b:	48 8d 05 87 5e 07 00 	lea    rax,[rip+0x75e87]        # 9b4b9 <__func__.38+0x229>
+   25632:	51                   	push   rcx
+   25633:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   278af:	e8 cc f1 00 00       	call   36a80 <ssh_err>
+   278b4:	48 83 ec 08          	sub    rsp,0x8
+   278b8:	48 89 de             	mov    rsi,rbx
+   278bb:	4c 89 f7             	mov    rdi,r14
+   278be:	49 89 c1             	mov    r9,rax
+   278c1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   278c7:	b9 01 00 00 00       	mov    ecx,0x1
+   278cc:	ba ad 05 00 00       	mov    edx,0x5ad
+--
+   278e2:	e8 99 f1 00 00       	call   36a80 <ssh_err>
+   278e7:	48 83 ec 08          	sub    rsp,0x8
+   278eb:	31 c9                	xor    ecx,ecx
+   278ed:	ba af 05 00 00       	mov    edx,0x5af
+   278f2:	49 89 c1             	mov    r9,rax
+   278f5:	48 8d 05 43 3d 07 00 	lea    rax,[rip+0x73d43]        # 9b63f <__func__.38+0x3af>
+   278fc:	48 89 de             	mov    rsi,rbx
+   278ff:	4c 89 f7             	mov    rdi,r14
+--
+   27ae2:	e8 99 ef 00 00       	call   36a80 <ssh_err>
+   27ae7:	48 8b 54 24 08       	mov    rdx,QWORD PTR [rsp+0x8]
+   27aec:	41 b8 02 00 00 00    	mov    r8d,0x2
+   27af2:	31 c9                	xor    ecx,ecx
+   27af4:	49 89 c1             	mov    r9,rax
+   27af7:	48 8d 05 32 4d 07 00 	lea    rax,[rip+0x74d32]        # 9c830 <__func__.38+0x15a0>
+   27afe:	52                   	push   rdx
+   27aff:	ba fa 05 00 00       	mov    edx,0x5fa
+--
+   27dbb:	e8 c0 ec 00 00       	call   36a80 <ssh_err>
+   27dc0:	48 83 ec 08          	sub    rsp,0x8
+   27dc4:	41 b8 02 00 00 00    	mov    r8d,0x2
+   27dca:	b9 01 00 00 00       	mov    ecx,0x1
+   27dcf:	49 89 c1             	mov    r9,rax
+   27dd2:	48 8d 05 9e 38 07 00 	lea    rax,[rip+0x7389e]        # 9b677 <__func__.38+0x3e7>
+   27dd9:	ba c9 05 00 00       	mov    edx,0x5c9
+   27dde:	50                   	push   rax
+--
+   27e8b:	e8 f0 eb 00 00       	call   36a80 <ssh_err>
+   27e90:	48 83 ec 08          	sub    rsp,0x8
+   27e94:	41 b8 02 00 00 00    	mov    r8d,0x2
+   27e9a:	b9 01 00 00 00       	mov    ecx,0x1
+   27e9f:	49 89 c1             	mov    r9,rax
+   27ea2:	48 8d 05 e3 37 07 00 	lea    rax,[rip+0x737e3]        # 9b68c <__func__.38+0x3fc>
+   27ea9:	ba d1 05 00 00       	mov    edx,0x5d1
+   27eae:	50                   	push   rax
+--
+   284f9:	e8 82 e5 00 00       	call   36a80 <ssh_err>
+   284fe:	41 b8 01 00 00 00    	mov    r8d,0x1
+   28504:	31 c9                	xor    ecx,ecx
+   28506:	48 8d 35 d3 57 07 00 	lea    rsi,[rip+0x757d3]        # 9dce0 <__func__.28>
+   2850d:	49 89 c1             	mov    r9,rax
+   28510:	48 8d 05 27 46 07 00 	lea    rax,[rip+0x74627]        # 9cb3e <__func__.16+0x36>
+   28517:	52                   	push   rdx
+   28518:	ba 64 00 00 00       	mov    edx,0x64
+--
+   285d9:	e8 a2 e4 00 00       	call   36a80 <ssh_err>
+   285de:	48 83 ec 08          	sub    rsp,0x8
+   285e2:	41 b8 01 00 00 00    	mov    r8d,0x1
+   285e8:	b9 01 00 00 00       	mov    ecx,0x1
+   285ed:	49 89 c1             	mov    r9,rax
+   285f0:	48 8d 05 e3 ca 06 00 	lea    rax,[rip+0x6cae3]        # 950da <_IO_stdin_used+0xda>
+   285f7:	ba 02 04 00 00       	mov    edx,0x402
+   285fc:	50                   	push   rax
+--
+   28804:	e8 77 e2 00 00       	call   36a80 <ssh_err>
+   28809:	48 83 ec 08          	sub    rsp,0x8
+   2880d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   28813:	b9 01 00 00 00       	mov    ecx,0x1
+   28818:	49 89 c1             	mov    r9,rax
+   2881b:	48 8d 05 b8 c8 06 00 	lea    rax,[rip+0x6c8b8]        # 950da <_IO_stdin_used+0xda>
+   28822:	ba 1f 04 00 00       	mov    edx,0x41f
+   28827:	50                   	push   rax
+--
+   289e8:	e8 93 e0 00 00       	call   36a80 <ssh_err>
+   289ed:	48 83 ec 08          	sub    rsp,0x8
+   289f1:	4c 89 e6             	mov    rsi,r12
+   289f4:	48 89 ef             	mov    rdi,rbp
+   289f7:	49 89 c1             	mov    r9,rax
+   289fa:	41 b8 01 00 00 00    	mov    r8d,0x1
+   28a00:	b9 01 00 00 00       	mov    ecx,0x1
+   28a05:	ba 89 07 00 00       	mov    edx,0x789
+--
+   297a6:	e8 d5 d2 00 00       	call   36a80 <ssh_err>
+   297ab:	41 b8 02 00 00 00    	mov    r8d,0x2
+   297b1:	31 c9                	xor    ecx,ecx
+   297b3:	ba 1c 06 00 00       	mov    edx,0x61c
+   297b8:	49 89 c1             	mov    r9,rax
+   297bb:	48 8d 05 79 34 07 00 	lea    rax,[rip+0x73479]        # 9cc3b <__func__.16+0x133>
+   297c2:	41 57                	push   r15
+   297c4:	50                   	push   rax
+--
+   299a8:	e8 d3 d0 00 00       	call   36a80 <ssh_err>
+   299ad:	41 b8 06 00 00 00    	mov    r8d,0x6
+   299b3:	31 c9                	xor    ecx,ecx
+   299b5:	ba 16 06 00 00       	mov    edx,0x616
+   299ba:	49 89 c1             	mov    r9,rax
+   299bd:	48 8d 05 77 32 07 00 	lea    rax,[rip+0x73277]        # 9cc3b <__func__.16+0x133>
+   299c4:	41 55                	push   r13
+   299c6:	50                   	push   rax
+--
+   299d7:	e8 a4 d0 00 00       	call   36a80 <ssh_err>
+   299dc:	41 b8 05 00 00 00    	mov    r8d,0x5
+   299e2:	b9 01 00 00 00       	mov    ecx,0x1
+   299e7:	ba 2a 06 00 00       	mov    edx,0x62a
+   299ec:	49 89 c1             	mov    r9,rax
+   299ef:	48 8d 05 53 32 07 00 	lea    rax,[rip+0x73253]        # 9cc49 <__func__.16+0x141>
+   299f6:	41 55                	push   r13
+   299f8:	50                   	push   rax
+--
+   2a1c2:	e8 b9 c8 00 00       	call   36a80 <ssh_err>
+   2a1c7:	48 83 ec 08          	sub    rsp,0x8
+   2a1cb:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2a1d1:	b9 01 00 00 00       	mov    ecx,0x1
+   2a1d6:	49 89 c1             	mov    r9,rax
+   2a1d9:	48 8d 05 fb b2 06 00 	lea    rax,[rip+0x6b2fb]        # 954db <_IO_stdin_used+0x4db>
+   2a1e0:	ba ab 08 00 00       	mov    edx,0x8ab
+   2a1e5:	50                   	push   rax
+--
+   2a23d:	e8 3e c8 00 00       	call   36a80 <ssh_err>
+   2a242:	48 83 ec 08          	sub    rsp,0x8
+   2a246:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2a24c:	b9 01 00 00 00       	mov    ecx,0x1
+   2a251:	49 89 c1             	mov    r9,rax
+   2a254:	48 8d 05 4a 2a 07 00 	lea    rax,[rip+0x72a4a]        # 9cca5 <__func__.16+0x19d>
+   2a25b:	ba 9f 08 00 00       	mov    edx,0x89f
+   2a260:	50                   	push   rax
+--
+   2a8c2:	e8 b9 c1 00 00       	call   36a80 <ssh_err>
+   2a8c7:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2a8cd:	b9 01 00 00 00       	mov    ecx,0x1
+   2a8d2:	ba c2 08 00 00       	mov    edx,0x8c2
+   2a8d7:	49 89 c1             	mov    r9,rax
+   2a8da:	50                   	push   rax
+   2a8db:	48 8d 05 78 24 07 00 	lea    rax,[rip+0x72478]        # 9cd5a <__func__.16+0x252>
+   2a8e2:	50                   	push   rax
+--
+   2a9c1:	e8 ba c0 00 00       	call   36a80 <ssh_err>
+   2a9c6:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2a9cc:	b9 01 00 00 00       	mov    ecx,0x1
+   2a9d1:	ba 41 08 00 00       	mov    edx,0x841
+   2a9d6:	49 89 c1             	mov    r9,rax
+   2a9d9:	48 8d 05 fb aa 06 00 	lea    rax,[rip+0x6aafb]        # 954db <_IO_stdin_used+0x4db>
+   2a9e0:	57                   	push   rdi
+   2a9e1:	50                   	push   rax
+--
+   2aa16:	e8 65 c0 00 00       	call   36a80 <ssh_err>
+   2aa1b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2aa21:	b9 01 00 00 00       	mov    ecx,0x1
+   2aa26:	ba 39 08 00 00       	mov    edx,0x839
+   2aa2b:	49 89 c1             	mov    r9,rax
+   2aa2e:	48 8d 05 a6 aa 06 00 	lea    rax,[rip+0x6aaa6]        # 954db <_IO_stdin_used+0x4db>
+   2aa35:	41 52                	push   r10
+   2aa37:	50                   	push   rax
+--
+   2aaca:	e8 b1 bf 00 00       	call   36a80 <ssh_err>
+   2aacf:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2aad5:	48 89 ef             	mov    rdi,rbp
+   2aad8:	b9 01 00 00 00       	mov    ecx,0x1
+   2aadd:	49 89 c1             	mov    r9,rax
+   2aae0:	50                   	push   rax
+   2aae1:	48 8d 05 f3 a9 06 00 	lea    rax,[rip+0x6a9f3]        # 954db <_IO_stdin_used+0x4db>
+   2aae8:	ba 1d 08 00 00       	mov    edx,0x81d
+--
+   2b221:	e8 5a b8 00 00       	call   36a80 <ssh_err>
+   2b226:	48 83 ec 08          	sub    rsp,0x8
+   2b22a:	ba e5 04 00 00       	mov    edx,0x4e5
+   2b22f:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2b235:	49 89 c1             	mov    r9,rax
+   2b238:	48 8d 05 da 1b 07 00 	lea    rax,[rip+0x71bda]        # 9ce19 <__func__.16+0x311>
+   2b23f:	b9 01 00 00 00       	mov    ecx,0x1
+   2b244:	50                   	push   rax
+--
+   2b34f:	e8 2c b7 00 00       	call   36a80 <ssh_err>
+   2b354:	55                   	push   rbp
+   2b355:	b9 01 00 00 00       	mov    ecx,0x1
+   2b35a:	ba 7c 05 00 00       	mov    edx,0x57c
+   2b35f:	49 89 c1             	mov    r9,rax
+   2b362:	48 8d 05 74 1a 07 00 	lea    rax,[rip+0x71a74]        # 9cddd <__func__.16+0x2d5>
+   2b369:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b36f:	50                   	push   rax
+--
+   2b470:	e8 0b b6 00 00       	call   36a80 <ssh_err>
+   2b475:	41 54                	push   r12
+   2b477:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2b47d:	b9 01 00 00 00       	mov    ecx,0x1
+   2b482:	49 89 c1             	mov    r9,rax
+   2b485:	48 8d 05 e0 19 07 00 	lea    rax,[rip+0x719e0]        # 9ce6c <__func__.16+0x364>
+   2b48c:	41 55                	push   r13
+   2b48e:	ba a1 05 00 00       	mov    edx,0x5a1
+--
+   2b775:	e8 06 b3 00 00       	call   36a80 <ssh_err>
+   2b77a:	48 83 ec 08          	sub    rsp,0x8
+   2b77e:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2b784:	b9 01 00 00 00       	mov    ecx,0x1
+   2b789:	49 89 c1             	mov    r9,rax
+   2b78c:	48 8d 05 ac 16 07 00 	lea    rax,[rip+0x716ac]        # 9ce3f <__func__.16+0x337>
+   2b793:	ba f9 04 00 00       	mov    edx,0x4f9
+   2b798:	50                   	push   rax
+--
+   2b829:	e8 52 b2 00 00       	call   36a80 <ssh_err>
+   2b82e:	48 83 ec 08          	sub    rsp,0x8
+   2b832:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b838:	b9 01 00 00 00       	mov    ecx,0x1
+   2b83d:	49 89 c1             	mov    r9,rax
+   2b840:	48 8d 05 a9 15 07 00 	lea    rax,[rip+0x715a9]        # 9cdf0 <__func__.16+0x2e8>
+   2b847:	ba 86 05 00 00       	mov    edx,0x586
+   2b84c:	50                   	push   rax
+--
+   2b8c7:	e8 b4 b1 00 00       	call   36a80 <ssh_err>
+   2b8cc:	ff 74 24 50          	push   QWORD PTR [rsp+0x50]
+   2b8d0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b8d6:	b9 01 00 00 00       	mov    ecx,0x1
+   2b8db:	49 89 c1             	mov    r9,rax
+   2b8de:	48 8d 05 20 15 07 00 	lea    rax,[rip+0x71520]        # 9ce05 <__func__.16+0x2fd>
+   2b8e5:	ba 8e 05 00 00       	mov    edx,0x58e
+   2b8ea:	50                   	push   rax
+--
+   2b933:	e8 48 b1 00 00       	call   36a80 <ssh_err>
+   2b938:	41 54                	push   r12
+   2b93a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b940:	b9 01 00 00 00       	mov    ecx,0x1
+   2b945:	49 89 c1             	mov    r9,rax
+   2b948:	48 8d 05 82 14 07 00 	lea    rax,[rip+0x71482]        # 9cdd1 <__func__.16+0x2c9>
+   2b94f:	ba 78 05 00 00       	mov    edx,0x578
+   2b954:	50                   	push   rax
+--
+   2b9a3:	e8 d8 b0 00 00       	call   36a80 <ssh_err>
+   2b9a8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b9ae:	b9 01 00 00 00       	mov    ecx,0x1
+   2b9b3:	ba b8 05 00 00       	mov    edx,0x5b8
+   2b9b8:	49 89 c1             	mov    r9,rax
+   2b9bb:	50                   	push   rax
+   2b9bc:	48 8d 05 e4 14 07 00 	lea    rax,[rip+0x714e4]        # 9cea7 <__func__.16+0x39f>
+   2b9c3:	48 8d 35 b6 21 07 00 	lea    rsi,[rip+0x721b6]        # 9db80 <__func__.14>
+--
+   2b9db:	e8 a0 b0 00 00       	call   36a80 <ssh_err>
+   2b9e0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2b9e6:	b9 01 00 00 00       	mov    ecx,0x1
+   2b9eb:	48 8d 35 8e 21 07 00 	lea    rsi,[rip+0x7218e]        # 9db80 <__func__.14>
+   2b9f2:	49 89 c1             	mov    r9,rax
+   2b9f5:	48 8d 05 38 4f 07 00 	lea    rax,[rip+0x74f38]        # a0934 <__func__.3+0x144>
+   2b9fc:	52                   	push   rdx
+   2b9fd:	ba b2 05 00 00       	mov    edx,0x5b2
+--
+   2ba13:	e8 68 b0 00 00       	call   36a80 <ssh_err>
+   2ba18:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2ba1e:	ba ab 05 00 00       	mov    edx,0x5ab
+   2ba23:	48 8d 35 56 21 07 00 	lea    rsi,[rip+0x72156]        # 9db80 <__func__.14>
+   2ba2a:	49 89 c1             	mov    r9,rax
+   2ba2d:	48 8d 05 62 14 07 00 	lea    rax,[rip+0x71462]        # 9ce96 <__func__.16+0x38e>
+   2ba34:	51                   	push   rcx
+   2ba35:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   2c082:	e8 f9 a9 00 00       	call   36a80 <ssh_err>
+   2c087:	48 83 ec 08          	sub    rsp,0x8
+   2c08b:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2c091:	48 89 df             	mov    rdi,rbx
+   2c094:	49 89 c1             	mov    r9,rax
+   2c097:	48 8d 05 03 90 06 00 	lea    rax,[rip+0x69003]        # 950a1 <_IO_stdin_used+0xa1>
+   2c09e:	b9 01 00 00 00       	mov    ecx,0x1
+   2c0a3:	ba 63 06 00 00       	mov    edx,0x663
+--
+   2c5e7:	41 54                	push   r12
+   2c5e9:	ba c3 06 00 00       	mov    edx,0x6c3
+   2c5ee:	48 89 df             	mov    rdi,rbx
+   2c5f1:	41 56                	push   r14
+   2c5f3:	49 89 c1             	mov    r9,rax
+   2c5f6:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2c5fc:	31 c0                	xor    eax,eax
+   2c5fe:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   2c740:	e8 3b a3 00 00       	call   36a80 <ssh_err>
+   2c745:	48 83 ec 08          	sub    rsp,0x8
+   2c749:	41 b8 06 00 00 00    	mov    r8d,0x6
+   2c74f:	b9 01 00 00 00       	mov    ecx,0x1
+   2c754:	49 89 c1             	mov    r9,rax
+   2c757:	48 8d 05 02 ce 06 00 	lea    rax,[rip+0x6ce02]        # 99560 <__func__.13+0x1600>
+   2c75e:	ba 6a 06 00 00       	mov    edx,0x66a
+   2c763:	50                   	push   rax
+--
+   2c799:	e8 e2 a2 00 00       	call   36a80 <ssh_err>
+   2c79e:	48 83 ec 08          	sub    rsp,0x8
+   2c7a2:	48 89 ee             	mov    rsi,rbp
+   2c7a5:	48 89 df             	mov    rdi,rbx
+   2c7a8:	49 89 c1             	mov    r9,rax
+   2c7ab:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2c7b1:	b9 01 00 00 00       	mov    ecx,0x1
+   2c7b6:	ba 6d 06 00 00       	mov    edx,0x66d
+--
+   2c808:	e8 73 a2 00 00       	call   36a80 <ssh_err>
+   2c80d:	48 83 ec 08          	sub    rsp,0x8
+   2c811:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2c817:	b9 01 00 00 00       	mov    ecx,0x1
+   2c81c:	49 89 c1             	mov    r9,rax
+   2c81f:	48 8d 05 b4 88 06 00 	lea    rax,[rip+0x688b4]        # 950da <_IO_stdin_used+0xda>
+   2c826:	ba e4 05 00 00       	mov    edx,0x5e4
+   2c82b:	50                   	push   rax
+--
+   2c95a:	48 89 de             	mov    rsi,rbx
+   2c95d:	48 89 ef             	mov    rdi,rbp
+   2c960:	41 54                	push   r12
+   2c962:	48 8b 0d df 7a 0b 00 	mov    rcx,QWORD PTR [rip+0xb7adf]        # e4448 <options+0xa8>
+   2c969:	49 89 c1             	mov    r9,rax
+   2c96c:	48 8b 15 ed 7a 0b 00 	mov    rdx,QWORD PTR [rip+0xb7aed]        # e4460 <options+0xc0>
+   2c973:	4c 8b 05 d6 7a 0b 00 	mov    r8,QWORD PTR [rip+0xb7ad6]        # e4450 <options+0xb0>
+   2c97a:	e8 f1 da 04 00       	call   7a470 <kex_proposal_populate_entries>
+--
+   2cef5:	e8 86 9b 00 00       	call   36a80 <ssh_err>
+   2cefa:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2cf00:	31 c9                	xor    ecx,ecx
+   2cf02:	ba 06 01 00 00       	mov    edx,0x106
+   2cf07:	49 89 c1             	mov    r9,rax
+   2cf0a:	50                   	push   rax
+   2cf0b:	48 8d 05 a0 00 07 00 	lea    rax,[rip+0x700a0]        # 9cfb2 <__func__.16+0x4aa>
+   2cf12:	48 8d 35 e7 0d 07 00 	lea    rsi,[rip+0x70de7]        # 9dd00 <__func__.29>
+--
+   2cf2a:	e8 51 9b 00 00       	call   36a80 <ssh_err>
+   2cf2f:	53                   	push   rbx
+   2cf30:	b9 01 00 00 00       	mov    ecx,0x1
+   2cf35:	ba f7 00 00 00       	mov    edx,0xf7
+   2cf3a:	49 89 c1             	mov    r9,rax
+   2cf3d:	48 8d 05 2c 00 07 00 	lea    rax,[rip+0x7002c]        # 9cf70 <__func__.16+0x468>
+   2cf44:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2cf4a:	50                   	push   rax
+--
+   2d390:	e8 eb 96 00 00       	call   36a80 <ssh_err>
+   2d395:	48 83 ec 08          	sub    rsp,0x8
+   2d399:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2d39f:	b9 01 00 00 00       	mov    ecx,0x1
+   2d3a4:	49 89 c1             	mov    r9,rax
+   2d3a7:	48 8d 05 2c 7d 06 00 	lea    rax,[rip+0x67d2c]        # 950da <_IO_stdin_used+0xda>
+   2d3ae:	ba c9 01 00 00       	mov    edx,0x1c9
+   2d3b3:	50                   	push   rax
+--
+   2d3fc:	e8 7f 96 00 00       	call   36a80 <ssh_err>
+   2d401:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2d407:	b9 01 00 00 00       	mov    ecx,0x1
+   2d40c:	ba 34 09 00 00       	mov    edx,0x934
+   2d411:	49 89 c1             	mov    r9,rax
+   2d414:	48 8d 05 c0 80 06 00 	lea    rax,[rip+0x680c0]        # 954db <_IO_stdin_used+0x4db>
+   2d41b:	57                   	push   rdi
+   2d41c:	48 8d 35 5d 06 07 00 	lea    rsi,[rip+0x7065d]        # 9da80 <__func__.3>
+--
+   2dbcf:	e8 ac 8e 00 00       	call   36a80 <ssh_err>
+   2dbd4:	31 c9                	xor    ecx,ecx
+   2dbd6:	41 b8 05 00 00 00    	mov    r8d,0x5
+   2dbdc:	48 8d 35 dd ff 06 00 	lea    rsi,[rip+0x6ffdd]        # 9dbc0 <__func__.16>
+   2dbe3:	49 89 c1             	mov    r9,rax
+   2dbe6:	48 8d 05 93 f4 06 00 	lea    rax,[rip+0x6f493]        # 9d080 <__func__.16+0x578>
+   2dbed:	53                   	push   rbx
+   2dbee:	ba c0 02 00 00       	mov    edx,0x2c0
+--
+   2df06:	e8 75 8b 00 00       	call   36a80 <ssh_err>
+   2df0b:	b9 01 00 00 00       	mov    ecx,0x1
+   2df10:	4c 89 e6             	mov    rsi,r12
+   2df13:	48 89 ef             	mov    rdi,rbp
+   2df16:	49 89 c1             	mov    r9,rax
+   2df19:	50                   	push   rax
+   2df1a:	48 8d 05 90 29 07 00 	lea    rax,[rip+0x72990]        # a08b1 <__func__.3+0xc1>
+   2df21:	ba 77 04 00 00       	mov    edx,0x477
+--
+   2df80:	e8 fb 8a 00 00       	call   36a80 <ssh_err>
+   2df85:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2df8b:	b9 01 00 00 00       	mov    ecx,0x1
+   2df90:	ba 3d 01 00 00       	mov    edx,0x13d
+   2df95:	49 89 c1             	mov    r9,rax
+   2df98:	50                   	push   rax
+   2df99:	48 8d 05 11 29 07 00 	lea    rax,[rip+0x72911]        # a08b1 <__func__.3+0xc1>
+   2dfa0:	48 8d 35 f9 13 07 00 	lea    rsi,[rip+0x713f9]        # 9f3a0 <__func__.28>
+--
+   2e302:	e8 79 87 00 00       	call   36a80 <ssh_err>
+   2e307:	48 83 ec 08          	sub    rsp,0x8
+   2e30b:	4c 89 e6             	mov    rsi,r12
+   2e30e:	48 89 ef             	mov    rdi,rbp
+   2e311:	49 89 c1             	mov    r9,rax
+   2e314:	ba 2a 01 00 00       	mov    edx,0x12a
+   2e319:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2e31f:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   2e3b4:	e8 c7 86 00 00       	call   36a80 <ssh_err>
+   2e3b9:	48 83 ec 08          	sub    rsp,0x8
+   2e3bd:	41 b8 02 00 00 00    	mov    r8d,0x2
+   2e3c3:	b9 01 00 00 00       	mov    ecx,0x1
+   2e3c8:	49 89 c1             	mov    r9,rax
+   2e3cb:	48 8d 05 84 f9 06 00 	lea    rax,[rip+0x6f984]        # 9dd56 <__func__.29+0x56>
+   2e3d2:	ba 19 01 00 00       	mov    edx,0x119
+   2e3d7:	50                   	push   rax
+--
+   2e5bc:	e8 bf 84 00 00       	call   36a80 <ssh_err>
+   2e5c1:	48 83 ec 08          	sub    rsp,0x8
+   2e5c5:	48 89 ee             	mov    rsi,rbp
+   2e5c8:	48 89 df             	mov    rdi,rbx
+   2e5cb:	49 89 c1             	mov    r9,rax
+   2e5ce:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2e5d4:	b9 01 00 00 00       	mov    ecx,0x1
+   2e5d9:	ba f5 01 00 00       	mov    edx,0x1f5
+--
+   2e90b:	e8 70 81 00 00       	call   36a80 <ssh_err>
+   2e910:	48 83 ec 08          	sub    rsp,0x8
+   2e914:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2e91a:	b9 01 00 00 00       	mov    ecx,0x1
+   2e91f:	49 89 c1             	mov    r9,rax
+   2e922:	48 8d 05 88 1f 07 00 	lea    rax,[rip+0x71f88]        # a08b1 <__func__.3+0xc1>
+   2e929:	ba 49 01 00 00       	mov    edx,0x149
+   2e92e:	50                   	push   rax
+--
+   2eb8c:	e8 ef 7e 00 00       	call   36a80 <ssh_err>
+   2eb91:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2eb97:	b9 01 00 00 00       	mov    ecx,0x1
+   2eb9c:	4c 89 f6             	mov    rsi,r14
+   2eb9f:	49 89 c1             	mov    r9,rax
+   2eba2:	50                   	push   rax
+   2eba3:	48 8d 05 58 f2 06 00 	lea    rax,[rip+0x6f258]        # 9de02 <__func__.29+0x102>
+   2ebaa:	ba c2 04 00 00       	mov    edx,0x4c2
+--
+   2ed29:	e8 52 7d 00 00       	call   36a80 <ssh_err>
+   2ed2e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2ed34:	b9 01 00 00 00       	mov    ecx,0x1
+   2ed39:	ba 95 04 00 00       	mov    edx,0x495
+   2ed3e:	49 89 c1             	mov    r9,rax
+   2ed41:	48 8d 05 ba f0 06 00 	lea    rax,[rip+0x6f0ba]        # 9de02 <__func__.29+0x102>
+   2ed48:	41 53                	push   r11
+   2ed4a:	48 8d 35 bf 06 07 00 	lea    rsi,[rip+0x706bf]        # 9f410 <__func__.31>
+--
+   2ed62:	e8 19 7d 00 00       	call   36a80 <ssh_err>
+   2ed67:	53                   	push   rbx
+   2ed68:	b9 01 00 00 00       	mov    ecx,0x1
+   2ed6d:	ba 92 04 00 00       	mov    edx,0x492
+   2ed72:	49 89 c1             	mov    r9,rax
+   2ed75:	48 8d 05 35 1b 07 00 	lea    rax,[rip+0x71b35]        # a08b1 <__func__.3+0xc1>
+   2ed7c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2ed82:	50                   	push   rax
+--
+   2f4ec:	e8 8f 75 00 00       	call   36a80 <ssh_err>
+   2f4f1:	b9 01 00 00 00       	mov    ecx,0x1
+   2f4f6:	4c 89 fe             	mov    rsi,r15
+   2f4f9:	4c 89 f7             	mov    rdi,r14
+   2f4fc:	49 89 c1             	mov    r9,rax
+   2f4ff:	48 8d 05 ab 13 07 00 	lea    rax,[rip+0x713ab]        # a08b1 <__func__.3+0xc1>
+   2f506:	52                   	push   rdx
+   2f507:	41 b8 01 00 00 00    	mov    r8d,0x1
+--
+   2f5ba:	e8 c1 74 00 00       	call   36a80 <ssh_err>
+   2f5bf:	b9 01 00 00 00       	mov    ecx,0x1
+   2f5c4:	4c 89 fe             	mov    rsi,r15
+   2f5c7:	4c 89 f7             	mov    rdi,r14
+   2f5ca:	49 89 c1             	mov    r9,rax
+   2f5cd:	50                   	push   rax
+   2f5ce:	48 8d 05 2d e8 06 00 	lea    rax,[rip+0x6e82d]        # 9de02 <__func__.29+0x102>
+   2f5d5:	ba 44 04 00 00       	mov    edx,0x444
+--
+   2fab0:	e8 cb 6f 00 00       	call   36a80 <ssh_err>
+   2fab5:	ba a3 02 00 00       	mov    edx,0x2a3
+   2faba:	4c 89 fe             	mov    rsi,r15
+   2fabd:	4c 89 f7             	mov    rdi,r14
+   2fac0:	49 89 c1             	mov    r9,rax
+   2fac3:	48 8d 05 38 e3 06 00 	lea    rax,[rip+0x6e338]        # 9de02 <__func__.29+0x102>
+   2faca:	51                   	push   rcx
+   2facb:	41 b8 01 00 00 00    	mov    r8d,0x1
+--
+   2fb3b:	e8 40 6f 00 00       	call   36a80 <ssh_err>
+   2fb40:	b9 01 00 00 00       	mov    ecx,0x1
+   2fb45:	4c 89 fe             	mov    rsi,r15
+   2fb48:	4c 89 f7             	mov    rdi,r14
+   2fb4b:	49 89 c1             	mov    r9,rax
+   2fb4e:	48 8d 05 5c 0d 07 00 	lea    rax,[rip+0x70d5c]        # a08b1 <__func__.3+0xc1>
+   2fb55:	41 50                	push   r8
+   2fb57:	ba 81 02 00 00       	mov    edx,0x281
+--
+   2fb6c:	e8 0f 6f 00 00       	call   36a80 <ssh_err>
+   2fb71:	b9 01 00 00 00       	mov    ecx,0x1
+   2fb76:	4c 89 fe             	mov    rsi,r15
+   2fb79:	4c 89 f7             	mov    rdi,r14
+   2fb7c:	49 89 c1             	mov    r9,rax
+   2fb7f:	41 52                	push   r10
+   2fb81:	41 b8 01 00 00 00    	mov    r8d,0x1
+   2fb87:	ba 72 02 00 00       	mov    edx,0x272
+--
+   30215:	31 c9                	xor    ecx,ecx
+   30217:	4c 89 ff             	mov    rdi,r15
+   3021a:	4c 8d 05 ef be fe ff 	lea    r8,[rip+0xfffffffffffebeef]        # 1c110 <client_filter_cleanup>
+   30221:	48 8d 15 48 cf fe ff 	lea    rdx,[rip+0xfffffffffffecf48]        # 1d170 <client_simple_escape_filter>
+   30228:	49 89 c1             	mov    r9,rax
+   3022b:	e8 a0 b5 01 00       	call   4b7d0 <channel_register_filter>
+   30230:	e9 0c fe ff ff       	jmp    30041 <mux_master_process_new_session+0x371>
+   30235:	0f 1f 00             	nop    DWORD PTR [rax]
+--
+   304c4:	89 c7                	mov    edi,eax
+   304c6:	e8 b5 65 00 00       	call   36a80 <ssh_err>
+   304cb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   304d1:	ba 8b 01 00 00       	mov    edx,0x18b
+   304d6:	49 89 c1             	mov    r9,rax
+   304d9:	48 8d 05 8d 8d 06 00 	lea    rax,[rip+0x68d8d]        # 9926d <__func__.13+0x130d>
+   304e0:	51                   	push   rcx
+   304e1:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   307f6:	e8 85 62 00 00       	call   36a80 <ssh_err>
+   307fb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30801:	b9 01 00 00 00       	mov    ecx,0x1
+   30806:	4c 89 fe             	mov    rsi,r15
+   30809:	49 89 c1             	mov    r9,rax
+   3080c:	48 8d 05 b0 00 07 00 	lea    rax,[rip+0x700b0]        # a08c3 <__func__.3+0xd3>
+   30813:	57                   	push   rdi
+   30814:	ba 7c 05 00 00       	mov    edx,0x57c
+--
+   3094a:	e8 31 61 00 00       	call   36a80 <ssh_err>
+   3094f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30955:	b9 01 00 00 00       	mov    ecx,0x1
+   3095a:	4c 89 fe             	mov    rsi,r15
+   3095d:	49 89 c1             	mov    r9,rax
+   30960:	50                   	push   rax
+   30961:	48 8d 05 9a d4 06 00 	lea    rax,[rip+0x6d49a]        # 9de02 <__func__.29+0x102>
+   30968:	ba 8c 05 00 00       	mov    edx,0x58c
+--
+   30a1f:	e8 5c 60 00 00       	call   36a80 <ssh_err>
+   30a24:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30a2a:	b9 01 00 00 00       	mov    ecx,0x1
+   30a2f:	4c 89 fe             	mov    rsi,r15
+   30a32:	49 89 c1             	mov    r9,rax
+   30a35:	48 8d 05 75 fe 06 00 	lea    rax,[rip+0x6fe75]        # a08b1 <__func__.3+0xc1>
+   30a3c:	52                   	push   rdx
+   30a3d:	ba 87 05 00 00       	mov    edx,0x587
+--
+   30bd4:	e8 a7 5e 00 00       	call   36a80 <ssh_err>
+   30bd9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30bdf:	b9 01 00 00 00       	mov    ecx,0x1
+   30be4:	ba ed 05 00 00       	mov    edx,0x5ed
+   30be9:	49 89 c1             	mov    r9,rax
+   30bec:	50                   	push   rax
+   30bed:	48 8d 05 0e d2 06 00 	lea    rax,[rip+0x6d20e]        # 9de02 <__func__.29+0x102>
+   30bf4:	48 8d 35 a5 e5 06 00 	lea    rsi,[rip+0x6e5a5]        # 9f1a0 <__func__.10>
+--
+   30d77:	e8 04 5d 00 00       	call   36a80 <ssh_err>
+   30d7c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30d82:	b9 01 00 00 00       	mov    ecx,0x1
+   30d87:	ba be 05 00 00       	mov    edx,0x5be
+   30d8c:	49 89 c1             	mov    r9,rax
+   30d8f:	50                   	push   rax
+   30d90:	48 8d 05 a1 d2 06 00 	lea    rax,[rip+0x6d2a1]        # 9e038 <__func__.29+0x338>
+   30d97:	48 8d 35 d2 e3 06 00 	lea    rsi,[rip+0x6e3d2]        # 9f170 <__func__.8>
+--
+   30fa8:	e8 d3 5a 00 00       	call   36a80 <ssh_err>
+   30fad:	41 b8 01 00 00 00    	mov    r8d,0x1
+   30fb3:	b9 01 00 00 00       	mov    ecx,0x1
+   30fb8:	ba 31 06 00 00       	mov    edx,0x631
+   30fbd:	49 89 c1             	mov    r9,rax
+   30fc0:	50                   	push   rax
+   30fc1:	48 8d 05 a4 d0 06 00 	lea    rax,[rip+0x6d0a4]        # 9e06c <__func__.29+0x36c>
+   30fc8:	48 8d 35 b1 e1 06 00 	lea    rsi,[rip+0x6e1b1]        # 9f180 <__func__.9>
+--
+   3113a:	e8 41 59 00 00       	call   36a80 <ssh_err>
+   3113f:	48 83 ec 08          	sub    rsp,0x8
+   31143:	4c 89 ee             	mov    rsi,r13
+   31146:	4c 89 e7             	mov    rdi,r12
+   31149:	49 89 c1             	mov    r9,rax
+   3114c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31152:	b9 01 00 00 00       	mov    ecx,0x1
+   31157:	ba 97 06 00 00       	mov    edx,0x697
+--
+   31266:	e8 15 58 00 00       	call   36a80 <ssh_err>
+   3126b:	b9 01 00 00 00       	mov    ecx,0x1
+   31270:	4c 89 ee             	mov    rsi,r13
+   31273:	4c 89 e7             	mov    rdi,r12
+   31276:	49 89 c1             	mov    r9,rax
+   31279:	41 53                	push   r11
+   3127b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31281:	ba 86 06 00 00       	mov    edx,0x686
+--
+   312f5:	e8 86 57 00 00       	call   36a80 <ssh_err>
+   312fa:	b9 01 00 00 00       	mov    ecx,0x1
+   312ff:	4c 89 ee             	mov    rsi,r13
+   31302:	4c 89 e7             	mov    rdi,r12
+   31305:	49 89 c1             	mov    r9,rax
+   31308:	41 52                	push   r10
+   3130a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31310:	ba 94 06 00 00       	mov    edx,0x694
+--
+   31356:	e8 25 57 00 00       	call   36a80 <ssh_err>
+   3135b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31361:	b9 01 00 00 00       	mov    ecx,0x1
+   31366:	4c 89 e7             	mov    rdi,r12
+   31369:	49 89 c1             	mov    r9,rax
+   3136c:	48 8d 05 64 cd 06 00 	lea    rax,[rip+0x6cd64]        # 9e0d7 <__func__.29+0x3d7>
+   31373:	56                   	push   rsi
+   31374:	ba a1 06 00 00       	mov    edx,0x6a1
+--
+   31386:	e8 f5 56 00 00       	call   36a80 <ssh_err>
+   3138b:	b9 01 00 00 00       	mov    ecx,0x1
+   31390:	4c 89 ee             	mov    rsi,r13
+   31393:	4c 89 e7             	mov    rdi,r12
+   31396:	49 89 c1             	mov    r9,rax
+   31399:	48 8d 05 27 cd 06 00 	lea    rax,[rip+0x6cd27]        # 9e0c7 <__func__.29+0x3c7>
+   313a0:	41 50                	push   r8
+   313a2:	ba 9c 06 00 00       	mov    edx,0x69c
+--
+   3181e:	e8 5d 52 00 00       	call   36a80 <ssh_err>
+   31823:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31829:	b9 01 00 00 00       	mov    ecx,0x1
+   3182e:	ba 2f 07 00 00       	mov    edx,0x72f
+   31833:	49 89 c1             	mov    r9,rax
+   31836:	48 8d 05 5c c8 06 00 	lea    rax,[rip+0x6c85c]        # 9e099 <__func__.29+0x399>
+   3183d:	56                   	push   rsi
+   3183e:	48 8d 3d c4 c4 06 00 	lea    rdi,[rip+0x6c4c4]        # 9dd09 <__func__.29+0x9>
+--
+   31867:	e8 14 52 00 00       	call   36a80 <ssh_err>
+   3186c:	48 83 ec 08          	sub    rsp,0x8
+   31870:	41 b8 01 00 00 00    	mov    r8d,0x1
+   31876:	b9 01 00 00 00       	mov    ecx,0x1
+   3187b:	49 89 c1             	mov    r9,rax
+   3187e:	48 8d 05 80 f0 06 00 	lea    rax,[rip+0x6f080]        # a0905 <__func__.3+0x115>
+   31885:	ba 0a 07 00 00       	mov    edx,0x70a
+   3188a:	50                   	push   rax
+--
+   318a3:	e8 d8 51 00 00       	call   36a80 <ssh_err>
+   318a8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   318ae:	b9 01 00 00 00       	mov    ecx,0x1
+   318b3:	ba 19 07 00 00       	mov    edx,0x719
+   318b8:	49 89 c1             	mov    r9,rax
+   318bb:	48 8d 05 94 c4 06 00 	lea    rax,[rip+0x6c494]        # 9dd56 <__func__.29+0x56>
+   318c2:	41 52                	push   r10
+   318c4:	48 8d 35 a5 d7 06 00 	lea    rsi,[rip+0x6d7a5]        # 9f070 <__func__.1>
+--
+   319b5:	e8 c6 50 00 00       	call   36a80 <ssh_err>
+   319ba:	41 b8 01 00 00 00    	mov    r8d,0x1
+   319c0:	b9 01 00 00 00       	mov    ecx,0x1
+   319c5:	ba 35 07 00 00       	mov    edx,0x735
+   319ca:	49 89 c1             	mov    r9,rax
+   319cd:	50                   	push   rax
+   319ce:	48 8d 05 c4 c6 06 00 	lea    rax,[rip+0x6c6c4]        # 9e099 <__func__.29+0x399>
+   319d5:	48 8d 35 94 d6 06 00 	lea    rsi,[rip+0x6d694]        # 9f070 <__func__.1>
+--
+   319ed:	e8 8e 50 00 00       	call   36a80 <ssh_err>
+   319f2:	41 b8 01 00 00 00    	mov    r8d,0x1
+   319f8:	b9 01 00 00 00       	mov    ecx,0x1
+   319fd:	ba 25 07 00 00       	mov    edx,0x725
+   31a02:	49 89 c1             	mov    r9,rax
+   31a05:	48 8d 05 c1 c5 06 00 	lea    rax,[rip+0x6c5c1]        # 9dfcd <__func__.29+0x2cd>
+   31a0c:	57                   	push   rdi
+   31a0d:	48 8d 35 5c d6 06 00 	lea    rsi,[rip+0x6d65c]        # 9f070 <__func__.1>
+--
+   328c3:	e8 b8 41 00 00       	call   36a80 <ssh_err>
+   328c8:	b9 01 00 00 00       	mov    ecx,0x1
+   328cd:	ba 16 03 00 00       	mov    edx,0x316
+   328d2:	48 8d 35 17 ca 06 00 	lea    rsi,[rip+0x6ca17]        # 9f2f0 <__func__.22>
+   328d9:	49 89 c1             	mov    r9,rax
+   328dc:	48 8d 05 79 b9 06 00 	lea    rax,[rip+0x6b979]        # 9e25c <__func__.29+0x55c>
+   328e3:	41 50                	push   r8
+   328e5:	48 8d 3d 1d b4 06 00 	lea    rdi,[rip+0x6b41d]        # 9dd09 <__func__.29+0x9>
+--
+   329d9:	e8 a2 40 00 00       	call   36a80 <ssh_err>
+   329de:	48 83 ec 08          	sub    rsp,0x8
+   329e2:	4c 89 fe             	mov    rsi,r15
+   329e5:	4c 89 f7             	mov    rdi,r14
+   329e8:	49 89 c1             	mov    r9,rax
+   329eb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   329f1:	b9 01 00 00 00       	mov    ecx,0x1
+   329f6:	ba dc 04 00 00       	mov    edx,0x4dc
+--
+   32b24:	e8 57 3f 00 00       	call   36a80 <ssh_err>
+   32b29:	48 83 ec 08          	sub    rsp,0x8
+   32b2d:	4c 89 f6             	mov    rsi,r14
+   32b30:	4c 89 ef             	mov    rdi,r13
+   32b33:	49 89 c1             	mov    r9,rax
+   32b36:	41 b8 01 00 00 00    	mov    r8d,0x1
+   32b3c:	b9 01 00 00 00       	mov    ecx,0x1
+   32b41:	ba f2 04 00 00       	mov    edx,0x4f2
+--
+   33392:	e8 e9 36 00 00       	call   36a80 <ssh_err>
+   33397:	48 83 ec 08          	sub    rsp,0x8
+   3339b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   333a1:	4c 89 ee             	mov    rsi,r13
+   333a4:	49 89 c1             	mov    r9,rax
+   333a7:	48 8d 05 cb a9 06 00 	lea    rax,[rip+0x6a9cb]        # 9dd79 <__func__.29+0x79>
+   333ae:	b9 01 00 00 00       	mov    ecx,0x1
+   333b3:	ba 6b 06 00 00       	mov    edx,0x66b
+--
+   334f9:	e8 82 35 00 00       	call   36a80 <ssh_err>
+   334fe:	48 83 ec 08          	sub    rsp,0x8
+   33502:	41 b8 01 00 00 00    	mov    r8d,0x1
+   33508:	4c 89 e7             	mov    rdi,r12
+   3350b:	49 89 c1             	mov    r9,rax
+   3350e:	48 8d 05 84 ab 06 00 	lea    rax,[rip+0x6ab84]        # 9e099 <__func__.29+0x399>
+   33515:	b9 01 00 00 00       	mov    ecx,0x1
+   3351a:	ba 38 08 00 00       	mov    edx,0x838
+--
+   33e0a:	e8 71 2c 00 00       	call   36a80 <ssh_err>
+   33e0f:	48 83 ec 08          	sub    rsp,0x8
+   33e13:	4c 89 ee             	mov    rsi,r13
+   33e16:	4c 89 e7             	mov    rdi,r12
+   33e19:	49 89 c1             	mov    r9,rax
+   33e1c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   33e22:	b9 01 00 00 00       	mov    ecx,0x1
+   33e27:	ba ce 08 00 00       	mov    edx,0x8ce
+--
+   33fb5:	e8 c6 2a 00 00       	call   36a80 <ssh_err>
+   33fba:	48 83 ec 08          	sub    rsp,0x8
+   33fbe:	4c 89 ee             	mov    rsi,r13
+   33fc1:	4c 89 e7             	mov    rdi,r12
+   33fc4:	49 89 c1             	mov    r9,rax
+   33fc7:	41 b8 01 00 00 00    	mov    r8d,0x1
+   33fcd:	b9 01 00 00 00       	mov    ecx,0x1
+   33fd2:	ba d9 06 00 00       	mov    edx,0x6d9
+--
+   33fff:	e8 7c 2a 00 00       	call   36a80 <ssh_err>
+   34004:	48 83 ec 08          	sub    rsp,0x8
+   34008:	4c 89 ee             	mov    rsi,r13
+   3400b:	4c 89 e7             	mov    rdi,r12
+   3400e:	49 89 c1             	mov    r9,rax
+   34011:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34017:	b9 01 00 00 00       	mov    ecx,0x1
+   3401c:	ba ca 08 00 00       	mov    edx,0x8ca
+--
+   340e3:	e8 98 29 00 00       	call   36a80 <ssh_err>
+   340e8:	48 83 ec 08          	sub    rsp,0x8
+   340ec:	4c 89 ee             	mov    rsi,r13
+   340ef:	4c 89 e7             	mov    rdi,r12
+   340f2:	49 89 c1             	mov    r9,rax
+   340f5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   340fb:	b9 01 00 00 00       	mov    ecx,0x1
+   34100:	ba 84 08 00 00       	mov    edx,0x884
+--
+   34229:	e8 52 28 00 00       	call   36a80 <ssh_err>
+   3422e:	48 83 ec 08          	sub    rsp,0x8
+   34232:	4c 89 ee             	mov    rsi,r13
+   34235:	4c 89 e7             	mov    rdi,r12
+   34238:	49 89 c1             	mov    r9,rax
+   3423b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34241:	b9 01 00 00 00       	mov    ecx,0x1
+   34246:	ba 89 08 00 00       	mov    edx,0x889
+--
+   34485:	e8 f6 25 00 00       	call   36a80 <ssh_err>
+   3448a:	48 83 ec 08          	sub    rsp,0x8
+   3448e:	4c 89 ee             	mov    rsi,r13
+   34491:	4c 89 e7             	mov    rdi,r12
+   34494:	49 89 c1             	mov    r9,rax
+   34497:	41 b8 01 00 00 00    	mov    r8d,0x1
+   3449d:	b9 01 00 00 00       	mov    ecx,0x1
+   344a2:	ba d5 06 00 00       	mov    edx,0x6d5
+--
+   34701:	e8 7a 23 00 00       	call   36a80 <ssh_err>
+   34706:	48 83 ec 08          	sub    rsp,0x8
+   3470a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34710:	4c 89 e7             	mov    rdi,r12
+   34713:	49 89 c1             	mov    r9,rax
+   34716:	48 8d 05 7c 99 06 00 	lea    rax,[rip+0x6997c]        # 9e099 <__func__.29+0x399>
+   3471d:	b9 01 00 00 00       	mov    ecx,0x1
+   34722:	ba 01 08 00 00       	mov    edx,0x801
+--
+   34933:	e8 48 21 00 00       	call   36a80 <ssh_err>
+   34938:	41 57                	push   r15
+   3493a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34940:	4c 89 e7             	mov    rdi,r12
+   34943:	49 89 c1             	mov    r9,rax
+   34946:	48 8d 05 04 9a 06 00 	lea    rax,[rip+0x69a04]        # 9e351 <__func__.29+0x651>
+   3494d:	b9 01 00 00 00       	mov    ecx,0x1
+   34952:	ba 47 06 00 00       	mov    edx,0x647
+--
+   34a07:	e8 74 20 00 00       	call   36a80 <ssh_err>
+   34a0c:	41 56                	push   r14
+   34a0e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34a14:	4c 89 ee             	mov    rsi,r13
+   34a17:	49 89 c1             	mov    r9,rax
+   34a1a:	b9 01 00 00 00       	mov    ecx,0x1
+   34a1f:	ba b3 08 00 00       	mov    edx,0x8b3
+   34a24:	4c 89 e7             	mov    rdi,r12
+--
+   34a91:	e8 ea 1f 00 00       	call   36a80 <ssh_err>
+   34a96:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34a9c:	b9 01 00 00 00       	mov    ecx,0x1
+   34aa1:	4c 89 e7             	mov    rdi,r12
+   34aa4:	49 89 c1             	mov    r9,rax
+   34aa7:	48 8d 05 a8 92 06 00 	lea    rax,[rip+0x692a8]        # 9dd56 <__func__.29+0x56>
+   34aae:	56                   	push   rsi
+   34aaf:	ba 32 08 00 00       	mov    edx,0x832
+--
+   34af1:	e8 8a 1f 00 00       	call   36a80 <ssh_err>
+   34af6:	53                   	push   rbx
+   34af7:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34afd:	4c 89 ee             	mov    rsi,r13
+   34b00:	49 89 c1             	mov    r9,rax
+   34b03:	b9 01 00 00 00       	mov    ecx,0x1
+   34b08:	ba 78 08 00 00       	mov    edx,0x878
+   34b0d:	4c 89 e7             	mov    rdi,r12
+--
+   34b7f:	e8 fc 1e 00 00       	call   36a80 <ssh_err>
+   34b84:	b9 01 00 00 00       	mov    ecx,0x1
+   34b89:	4c 89 ee             	mov    rsi,r13
+   34b8c:	4c 89 e7             	mov    rdi,r12
+   34b8f:	49 89 c1             	mov    r9,rax
+   34b92:	50                   	push   rax
+   34b93:	48 8d 05 6b bd 06 00 	lea    rax,[rip+0x6bd6b]        # a0905 <__func__.3+0x115>
+   34b9a:	ba 5d 08 00 00       	mov    edx,0x85d
+--
+   34c5c:	e8 1f 1e 00 00       	call   36a80 <ssh_err>
+   34c61:	b9 01 00 00 00       	mov    ecx,0x1
+   34c66:	4c 89 ee             	mov    rsi,r13
+   34c69:	4c 89 e7             	mov    rdi,r12
+   34c6c:	49 89 c1             	mov    r9,rax
+   34c6f:	41 52                	push   r10
+   34c71:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34c77:	ba 7f 08 00 00       	mov    edx,0x87f
+--
+   34c8d:	e8 ee 1d 00 00       	call   36a80 <ssh_err>
+   34c92:	53                   	push   rbx
+   34c93:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34c99:	4c 89 e7             	mov    rdi,r12
+   34c9c:	49 89 c1             	mov    r9,rax
+   34c9f:	48 8d 05 e8 96 06 00 	lea    rax,[rip+0x696e8]        # 9e38e <__func__.29+0x68e>
+   34ca6:	b9 01 00 00 00       	mov    ecx,0x1
+   34cab:	ba 5e 06 00 00       	mov    edx,0x65e
+--
+   34cee:	e8 8d 1d 00 00       	call   36a80 <ssh_err>
+   34cf3:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34cf9:	b9 01 00 00 00       	mov    ecx,0x1
+   34cfe:	4c 89 e7             	mov    rdi,r12
+   34d01:	49 89 c1             	mov    r9,rax
+   34d04:	48 8d 05 fa bb 06 00 	lea    rax,[rip+0x6bbfa]        # a0905 <__func__.3+0x115>
+   34d0b:	52                   	push   rdx
+   34d0c:	ba 85 07 00 00       	mov    edx,0x785
+--
+   34d4f:	e8 2c 1d 00 00       	call   36a80 <ssh_err>
+   34d54:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34d5a:	4c 89 e7             	mov    rdi,r12
+   34d5d:	b9 01 00 00 00       	mov    ecx,0x1
+   34d62:	49 89 c1             	mov    r9,rax
+   34d65:	50                   	push   rax
+   34d66:	48 8d 05 fd 96 06 00 	lea    rax,[rip+0x696fd]        # 9e46a <__func__.29+0x76a>
+   34d6d:	ba 8d 07 00 00       	mov    edx,0x78d
+--
+   34d83:	e8 f8 1c 00 00       	call   36a80 <ssh_err>
+   34d88:	55                   	push   rbp
+   34d89:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34d8f:	4c 89 e7             	mov    rdi,r12
+   34d92:	49 89 c1             	mov    r9,rax
+   34d95:	48 8d 05 f2 92 06 00 	lea    rax,[rip+0x692f2]        # 9e08e <__func__.29+0x38e>
+   34d9c:	b9 01 00 00 00       	mov    ecx,0x1
+   34da1:	ba 58 06 00 00       	mov    edx,0x658
+--
+   34e16:	e8 65 1c 00 00       	call   36a80 <ssh_err>
+   34e1b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34e21:	b9 01 00 00 00       	mov    ecx,0x1
+   34e26:	ba 25 08 00 00       	mov    edx,0x825
+   34e2b:	49 89 c1             	mov    r9,rax
+   34e2e:	48 8d 05 d0 ba 06 00 	lea    rax,[rip+0x6bad0]        # a0905 <__func__.3+0x115>
+   34e35:	57                   	push   rdi
+   34e36:	4c 89 e7             	mov    rdi,r12
+--
+   34ea4:	e8 d7 1b 00 00       	call   36a80 <ssh_err>
+   34ea9:	41 57                	push   r15
+   34eab:	41 b8 01 00 00 00    	mov    r8d,0x1
+   34eb1:	4c 89 ee             	mov    rsi,r13
+   34eb4:	49 89 c1             	mov    r9,rax
+   34eb7:	b9 01 00 00 00       	mov    ecx,0x1
+   34ebc:	ba cc 06 00 00       	mov    edx,0x6cc
+   34ec1:	4c 89 e7             	mov    rdi,r12
+--
+   34f43:	e8 38 1b 00 00       	call   36a80 <ssh_err>
+   34f48:	b9 01 00 00 00       	mov    ecx,0x1
+   34f4d:	4c 89 ee             	mov    rsi,r13
+   34f50:	4c 89 e7             	mov    rdi,r12
+   34f53:	49 89 c1             	mov    r9,rax
+   34f56:	50                   	push   rax
+   34f57:	48 8d 05 a7 b9 06 00 	lea    rax,[rip+0x6b9a7]        # a0905 <__func__.3+0x115>
+   34f5e:	ba b9 06 00 00       	mov    edx,0x6b9
+--
+   34fc9:	e8 b2 1a 00 00       	call   36a80 <ssh_err>
+   34fce:	b9 01 00 00 00       	mov    ecx,0x1
+   34fd3:	ba b7 07 00 00       	mov    edx,0x7b7
+   34fd8:	4c 89 e7             	mov    rdi,r12
+   34fdb:	49 89 c1             	mov    r9,rax
+   34fde:	48 8d 05 b4 90 06 00 	lea    rax,[rip+0x690b4]        # 9e099 <__func__.29+0x399>
+   34fe5:	41 50                	push   r8
+   34fe7:	48 8d 35 22 a1 06 00 	lea    rsi,[rip+0x6a122]        # 9f110 <__func__.5>
+--
+   3502e:	e8 4d 1a 00 00       	call   36a80 <ssh_err>
+   35033:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35039:	4c 89 e7             	mov    rdi,r12
+   3503c:	b9 01 00 00 00       	mov    ecx,0x1
+   35041:	49 89 c1             	mov    r9,rax
+   35044:	50                   	push   rax
+   35045:	48 8d 05 62 94 06 00 	lea    rax,[rip+0x69462]        # 9e4ae <__func__.29+0x7ae>
+   3504c:	ba eb 07 00 00       	mov    edx,0x7eb
+--
+   3508d:	e8 ee 19 00 00       	call   36a80 <ssh_err>
+   35092:	55                   	push   rbp
+   35093:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35099:	4c 89 ee             	mov    rsi,r13
+   3509c:	49 89 c1             	mov    r9,rax
+   3509f:	b9 01 00 00 00       	mov    ecx,0x1
+   350a4:	ba c0 08 00 00       	mov    edx,0x8c0
+   350a9:	4c 89 e7             	mov    rdi,r12
+--
+   350f6:	e8 85 19 00 00       	call   36a80 <ssh_err>
+   350fb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35101:	4c 89 e7             	mov    rdi,r12
+   35104:	b9 01 00 00 00       	mov    ecx,0x1
+   35109:	49 89 c1             	mov    r9,rax
+   3510c:	48 8d 05 9b 93 06 00 	lea    rax,[rip+0x6939b]        # 9e4ae <__func__.29+0x7ae>
+   35113:	41 53                	push   r11
+   35115:	ba b2 07 00 00       	mov    edx,0x7b2
+--
+   3512b:	e8 50 19 00 00       	call   36a80 <ssh_err>
+   35130:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35136:	4c 89 e7             	mov    rdi,r12
+   35139:	b9 01 00 00 00       	mov    ecx,0x1
+   3513e:	49 89 c1             	mov    r9,rax
+   35141:	50                   	push   rax
+   35142:	48 8d 05 31 93 06 00 	lea    rax,[rip+0x69331]        # 9e47a <__func__.29+0x77a>
+   35149:	ba 92 07 00 00       	mov    edx,0x792
+--
+   3515d:	e8 1e 19 00 00       	call   36a80 <ssh_err>
+   35162:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35168:	b9 01 00 00 00       	mov    ecx,0x1
+   3516d:	ba bd 07 00 00       	mov    edx,0x7bd
+   35172:	49 89 c1             	mov    r9,rax
+   35175:	48 8d 05 1d 8f 06 00 	lea    rax,[rip+0x68f1d]        # 9e099 <__func__.29+0x399>
+   3517c:	57                   	push   rdi
+   3517d:	4c 89 e7             	mov    rdi,r12
+--
+   35191:	e8 ea 18 00 00       	call   36a80 <ssh_err>
+   35196:	41 b8 01 00 00 00    	mov    r8d,0x1
+   3519c:	4c 89 e7             	mov    rdi,r12
+   3519f:	b9 01 00 00 00       	mov    ecx,0x1
+   351a4:	49 89 c1             	mov    r9,rax
+   351a7:	50                   	push   rax
+   351a8:	48 8d 05 df 8e 06 00 	lea    rax,[rip+0x68edf]        # 9e08e <__func__.29+0x38e>
+   351af:	ba e7 07 00 00       	mov    edx,0x7e7
+--
+   35300:	e8 7b 17 00 00       	call   36a80 <ssh_err>
+   35305:	55                   	push   rbp
+   35306:	41 b8 01 00 00 00    	mov    r8d,0x1
+   3530c:	4c 89 e7             	mov    rdi,r12
+   3530f:	49 89 c1             	mov    r9,rax
+   35312:	48 8d 05 3d 8a 06 00 	lea    rax,[rip+0x68a3d]        # 9dd56 <__func__.29+0x56>
+   35319:	b9 01 00 00 00       	mov    ecx,0x1
+   3531e:	ba aa 07 00 00       	mov    edx,0x7aa
+--
+   35398:	e8 e3 16 00 00       	call   36a80 <ssh_err>
+   3539d:	53                   	push   rbx
+   3539e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   353a4:	4c 89 e7             	mov    rdi,r12
+   353a7:	49 89 c1             	mov    r9,rax
+   353aa:	48 8d 05 52 91 06 00 	lea    rax,[rip+0x69152]        # 9e503 <__func__.29+0x803>
+   353b1:	b9 01 00 00 00       	mov    ecx,0x1
+   353b6:	ba fc 07 00 00       	mov    edx,0x7fc
+--
+   35427:	e8 54 16 00 00       	call   36a80 <ssh_err>
+   3542c:	41 56                	push   r14
+   3542e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   35434:	4c 89 e7             	mov    rdi,r12
+   35437:	49 89 c1             	mov    r9,rax
+   3543a:	48 8d 05 6d 90 06 00 	lea    rax,[rip+0x6906d]        # 9e4ae <__func__.29+0x7ae>
+   35441:	b9 01 00 00 00       	mov    ecx,0x1
+   35446:	ba f5 07 00 00       	mov    edx,0x7f5
+--
+   356bb:	e8 c0 13 00 00       	call   36a80 <ssh_err>
+   356c0:	48 83 ec 08          	sub    rsp,0x8
+   356c4:	41 b8 02 00 00 00    	mov    r8d,0x2
+   356ca:	b9 01 00 00 00       	mov    ecx,0x1
+   356cf:	49 89 c1             	mov    r9,rax
+   356d2:	48 8d 05 f6 9e 06 00 	lea    rax,[rip+0x69ef6]        # 9f5cf <__func__.34+0x15f>
+   356d9:	ba a3 00 00 00       	mov    edx,0xa3
+   356de:	50                   	push   rax
+--
+   35a51:	e8 2a 10 00 00       	call   36a80 <ssh_err>
+   35a56:	48 83 ec 08          	sub    rsp,0x8
+   35a5a:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35a60:	b9 01 00 00 00       	mov    ecx,0x1
+   35a65:	49 89 c1             	mov    r9,rax
+   35a68:	48 8d 05 54 ae 06 00 	lea    rax,[rip+0x6ae54]        # a08c3 <__func__.3+0xd3>
+   35a6f:	ba a7 00 00 00       	mov    edx,0xa7
+   35a74:	50                   	push   rax
+--
+   35ae6:	e8 95 0f 00 00       	call   36a80 <ssh_err>
+   35aeb:	48 83 ec 08          	sub    rsp,0x8
+   35aef:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35af5:	b9 01 00 00 00       	mov    ecx,0x1
+   35afa:	49 89 c1             	mov    r9,rax
+   35afd:	48 8d 05 d3 9a 06 00 	lea    rax,[rip+0x69ad3]        # 9f5d7 <__func__.34+0x167>
+   35b04:	ba ab 00 00 00       	mov    edx,0xab
+   35b09:	50                   	push   rax
+--
+   35bb9:	e8 c2 0e 00 00       	call   36a80 <ssh_err>
+   35bbe:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35bc4:	b9 01 00 00 00       	mov    ecx,0x1
+   35bc9:	ba af 00 00 00       	mov    edx,0xaf
+   35bce:	49 89 c1             	mov    r9,rax
+   35bd1:	50                   	push   rax
+   35bd2:	48 8d 05 b5 87 06 00 	lea    rax,[rip+0x687b5]        # 9e38e <__func__.29+0x68e>
+   35bd9:	50                   	push   rax
+--
+   35c15:	e8 66 0e 00 00       	call   36a80 <ssh_err>
+   35c1a:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35c20:	b9 01 00 00 00       	mov    ecx,0x1
+   35c25:	ba be 00 00 00       	mov    edx,0xbe
+   35c2a:	49 89 c1             	mov    r9,rax
+   35c2d:	50                   	push   rax
+   35c2e:	48 8d 05 21 81 06 00 	lea    rax,[rip+0x68121]        # 9dd56 <__func__.29+0x56>
+   35c35:	50                   	push   rax
+--
+   35c42:	e8 39 0e 00 00       	call   36a80 <ssh_err>
+   35c47:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35c4d:	b9 01 00 00 00       	mov    ecx,0x1
+   35c52:	ba b9 00 00 00       	mov    edx,0xb9
+   35c57:	49 89 c1             	mov    r9,rax
+   35c5a:	50                   	push   rax
+   35c5b:	48 8d 05 7d 99 06 00 	lea    rax,[rip+0x6997d]        # 9f5df <__func__.34+0x16f>
+   35c62:	50                   	push   rax
+--
+   35d93:	e8 e8 0c 00 00       	call   36a80 <ssh_err>
+   35d98:	48 83 ec 08          	sub    rsp,0x8
+   35d9c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35da2:	b9 01 00 00 00       	mov    ecx,0x1
+   35da7:	49 89 c1             	mov    r9,rax
+   35daa:	48 8d 05 1e 98 06 00 	lea    rax,[rip+0x6981e]        # 9f5cf <__func__.34+0x15f>
+   35db1:	ba 04 01 00 00       	mov    edx,0x104
+   35db6:	50                   	push   rax
+--
+   35e62:	e8 19 0c 00 00       	call   36a80 <ssh_err>
+   35e67:	48 83 ec 08          	sub    rsp,0x8
+   35e6b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35e71:	b9 01 00 00 00       	mov    ecx,0x1
+   35e76:	49 89 c1             	mov    r9,rax
+   35e79:	48 8d 05 a5 97 06 00 	lea    rax,[rip+0x697a5]        # 9f625 <__func__.34+0x1b5>
+   35e80:	ba fb 00 00 00       	mov    edx,0xfb
+   35e85:	50                   	push   rax
+--
+   35fa4:	e8 d7 0a 00 00       	call   36a80 <ssh_err>
+   35fa9:	41 b8 02 00 00 00    	mov    r8d,0x2
+   35faf:	b9 01 00 00 00       	mov    ecx,0x1
+   35fb4:	ba 0c 01 00 00       	mov    edx,0x10c
+   35fb9:	49 89 c1             	mov    r9,rax
+   35fbc:	48 8d 05 6d 96 06 00 	lea    rax,[rip+0x6966d]        # 9f630 <__func__.34+0x1c0>
+   35fc3:	56                   	push   rsi
+   35fc4:	50                   	push   rax
+--
+   3610d:	e8 6e 09 00 00       	call   36a80 <ssh_err>
+   36112:	48 83 ec 08          	sub    rsp,0x8
+   36116:	41 b8 02 00 00 00    	mov    r8d,0x2
+   3611c:	48 8d 3d 4a 94 06 00 	lea    rdi,[rip+0x6944a]        # 9f56d <__func__.34+0xfd>
+   36123:	49 89 c1             	mov    r9,rax
+   36126:	48 8d 05 a2 94 06 00 	lea    rax,[rip+0x694a2]        # 9f5cf <__func__.34+0x15f>
+   3612d:	b9 01 00 00 00       	mov    ecx,0x1
+   36132:	ba 49 01 00 00       	mov    edx,0x149
+--
+   3635f:	e8 1c 07 00 00       	call   36a80 <ssh_err>
+   36364:	41 56                	push   r14
+   36366:	41 b8 02 00 00 00    	mov    r8d,0x2
+   3636c:	b9 01 00 00 00       	mov    ecx,0x1
+   36371:	49 89 c1             	mov    r9,rax
+   36374:	48 8d 05 db 79 06 00 	lea    rax,[rip+0x679db]        # 9dd56 <__func__.29+0x56>
+   3637b:	ba 52 01 00 00       	mov    edx,0x152
+   36380:	50                   	push   rax
+--
+   363d1:	e8 aa 06 00 00       	call   36a80 <ssh_err>
+   363d6:	b9 01 00 00 00       	mov    ecx,0x1
+   363db:	48 8d 35 d6 92 06 00 	lea    rsi,[rip+0x692d6]        # 9f6b8 <__func__.1>
+   363e2:	48 8d 3d 84 91 06 00 	lea    rdi,[rip+0x69184]        # 9f56d <__func__.34+0xfd>
+   363e9:	49 89 c1             	mov    r9,rax
+   363ec:	48 8d 05 4d 91 06 00 	lea    rax,[rip+0x6914d]        # 9f540 <__func__.34+0xd0>
+   363f3:	52                   	push   rdx
+   363f4:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   36415:	e8 66 06 00 00       	call   36a80 <ssh_err>
+   3641a:	41 b8 02 00 00 00    	mov    r8d,0x2
+   36420:	b9 01 00 00 00       	mov    ecx,0x1
+   36425:	ba 5c 01 00 00       	mov    edx,0x15c
+   3642a:	49 89 c1             	mov    r9,rax
+   3642d:	48 8d 05 26 92 06 00 	lea    rax,[rip+0x69226]        # 9f65a <__func__.34+0x1ea>
+   36434:	57                   	push   rdi
+   36435:	48 8d 35 7c 92 06 00 	lea    rsi,[rip+0x6927c]        # 9f6b8 <__func__.1>
+--
+   365a3:	e8 d8 04 00 00       	call   36a80 <ssh_err>
+   365a8:	48 83 ec 08          	sub    rsp,0x8
+   365ac:	41 b8 02 00 00 00    	mov    r8d,0x2
+   365b2:	b9 01 00 00 00       	mov    ecx,0x1
+   365b7:	49 89 c1             	mov    r9,rax
+   365ba:	48 8d 05 0e 90 06 00 	lea    rax,[rip+0x6900e]        # 9f5cf <__func__.34+0x15f>
+   365c1:	ba a4 01 00 00       	mov    edx,0x1a4
+   365c6:	50                   	push   rax
+--
+   36932:	e8 49 01 00 00       	call   36a80 <ssh_err>
+   36937:	48 83 ec 08          	sub    rsp,0x8
+   3693b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   36941:	b9 01 00 00 00       	mov    ecx,0x1
+   36946:	49 89 c1             	mov    r9,rax
+   36949:	48 8d 05 06 74 06 00 	lea    rax,[rip+0x67406]        # 9dd56 <__func__.29+0x56>
+   36950:	ba b0 01 00 00       	mov    edx,0x1b0
+   36955:	50                   	push   rax
+--
+   369e3:	e8 98 00 00 00       	call   36a80 <ssh_err>
+   369e8:	48 83 ec 08          	sub    rsp,0x8
+   369ec:	41 b8 02 00 00 00    	mov    r8d,0x2
+   369f2:	b9 01 00 00 00       	mov    ecx,0x1
+   369f7:	49 89 c1             	mov    r9,rax
+   369fa:	48 8d 05 33 4c 06 00 	lea    rax,[rip+0x64c33]        # 9b634 <__func__.38+0x3a4>
+   36a01:	ba b5 01 00 00       	mov    edx,0x1b5
+   36a06:	50                   	push   rax
+--
+   44b52:	e8 29 1f ff ff       	call   36a80 <ssh_err>
+   44b57:	41 b8 01 00 00 00    	mov    r8d,0x1
+   44b5d:	b9 01 00 00 00       	mov    ecx,0x1
+   44b62:	ba 6c 09 00 00       	mov    edx,0x96c
+   44b67:	49 89 c1             	mov    r9,rax
+   44b6a:	48 8d 05 a1 bc 05 00 	lea    rax,[rip+0x5bca1]        # a0812 <__func__.3+0x22>
+   44b71:	53                   	push   rbx
+   44b72:	48 8d 35 27 ec 05 00 	lea    rsi,[rip+0x5ec27]        # a37a0 <__func__.93>
+--
+   44c45:	e8 36 1e ff ff       	call   36a80 <ssh_err>
+   44c4a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   44c50:	b9 01 00 00 00       	mov    ecx,0x1
+   44c55:	ba a8 09 00 00       	mov    edx,0x9a8
+   44c5a:	49 89 c1             	mov    r9,rax
+   44c5d:	48 8d 05 dc bb 05 00 	lea    rax,[rip+0x5bbdc]        # a0840 <__func__.3+0x50>
+   44c64:	53                   	push   rbx
+   44c65:	48 8d 35 14 eb 05 00 	lea    rsi,[rip+0x5eb14]        # a3780 <__func__.92>
+--
+   44e86:	e8 f5 1b ff ff       	call   36a80 <ssh_err>
+   44e8b:	48 83 ec 08          	sub    rsp,0x8
+   44e8f:	31 c9                	xor    ecx,ecx
+   44e91:	ba 53 04 00 00       	mov    edx,0x453
+   44e96:	49 89 c1             	mov    r9,rax
+   44e99:	48 8d 05 b4 b9 05 00 	lea    rax,[rip+0x5b9b4]        # a0854 <__func__.3+0x64>
+   44ea0:	53                   	push   rbx
+   44ea1:	41 b8 01 00 00 00    	mov    r8d,0x1
+--
+   4545b:	e8 20 16 ff ff       	call   36a80 <ssh_err>
+   45460:	41 b8 01 00 00 00    	mov    r8d,0x1
+   45466:	b9 01 00 00 00       	mov    ecx,0x1
+   4546b:	ba 88 07 00 00       	mov    edx,0x788
+   45470:	49 89 c1             	mov    r9,rax
+   45473:	48 8d 05 2b b4 05 00 	lea    rax,[rip+0x5b42b]        # a08a5 <__func__.3+0xb5>
+   4547a:	53                   	push   rbx
+   4547b:	48 8d 35 1e e2 05 00 	lea    rsi,[rip+0x5e21e]        # a36a0 <__func__.84>
+--
+   454c6:	e8 b5 15 ff ff       	call   36a80 <ssh_err>
+   454cb:	41 b8 01 00 00 00    	mov    r8d,0x1
+   454d1:	b9 01 00 00 00       	mov    ecx,0x1
+   454d6:	ba 71 07 00 00       	mov    edx,0x771
+   454db:	49 89 c1             	mov    r9,rax
+   454de:	48 8d 05 c0 b3 05 00 	lea    rax,[rip+0x5b3c0]        # a08a5 <__func__.3+0xb5>
+   454e5:	53                   	push   rbx
+   454e6:	48 8d 35 b3 e1 05 00 	lea    rsi,[rip+0x5e1b3]        # a36a0 <__func__.84>
+--
+   45522:	e8 59 15 ff ff       	call   36a80 <ssh_err>
+   45527:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4552d:	b9 01 00 00 00       	mov    ecx,0x1
+   45532:	ba 7e 07 00 00       	mov    edx,0x77e
+   45537:	49 89 c1             	mov    r9,rax
+   4553a:	48 8d 05 64 b3 05 00 	lea    rax,[rip+0x5b364]        # a08a5 <__func__.3+0xb5>
+   45541:	53                   	push   rbx
+   45542:	48 8d 35 57 e1 05 00 	lea    rsi,[rip+0x5e157]        # a36a0 <__func__.84>
+--
+   45587:	e8 f4 14 ff ff       	call   36a80 <ssh_err>
+   4558c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   45592:	b9 01 00 00 00       	mov    ecx,0x1
+   45597:	ba 8b 07 00 00       	mov    edx,0x78b
+   4559c:	49 89 c1             	mov    r9,rax
+   4559f:	48 8d 05 11 b3 05 00 	lea    rax,[rip+0x5b311]        # a08b7 <__func__.3+0xc7>
+   455a6:	53                   	push   rbx
+   455a7:	48 8d 35 f2 e0 05 00 	lea    rsi,[rip+0x5e0f2]        # a36a0 <__func__.84>
+--
+   455c2:	e8 b9 14 ff ff       	call   36a80 <ssh_err>
+   455c7:	41 b8 01 00 00 00    	mov    r8d,0x1
+   455cd:	b9 01 00 00 00       	mov    ecx,0x1
+   455d2:	ba 83 07 00 00       	mov    edx,0x783
+   455d7:	49 89 c1             	mov    r9,rax
+   455da:	48 8d 05 c4 b2 05 00 	lea    rax,[rip+0x5b2c4]        # a08a5 <__func__.3+0xb5>
+   455e1:	53                   	push   rbx
+   455e2:	48 8d 35 b7 e0 05 00 	lea    rsi,[rip+0x5e0b7]        # a36a0 <__func__.84>
+--
+   455fd:	e8 7e 14 ff ff       	call   36a80 <ssh_err>
+   45602:	41 b8 01 00 00 00    	mov    r8d,0x1
+   45608:	b9 01 00 00 00       	mov    ecx,0x1
+   4560d:	ba 79 07 00 00       	mov    edx,0x779
+   45612:	49 89 c1             	mov    r9,rax
+   45615:	48 8d 05 89 b2 05 00 	lea    rax,[rip+0x5b289]        # a08a5 <__func__.3+0xb5>
+   4561c:	53                   	push   rbx
+   4561d:	48 8d 35 7c e0 05 00 	lea    rsi,[rip+0x5e07c]        # a36a0 <__func__.84>
+--
+   45638:	e8 43 14 ff ff       	call   36a80 <ssh_err>
+   4563d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   45643:	b9 01 00 00 00       	mov    ecx,0x1
+   45648:	ba 75 07 00 00       	mov    edx,0x775
+   4564d:	49 89 c1             	mov    r9,rax
+   45650:	48 8d 05 4e b2 05 00 	lea    rax,[rip+0x5b24e]        # a08a5 <__func__.3+0xb5>
+   45657:	53                   	push   rbx
+   45658:	48 8d 35 41 e0 05 00 	lea    rsi,[rip+0x5e041]        # a36a0 <__func__.84>
+--
+   45acf:	e8 ac 0f ff ff       	call   36a80 <ssh_err>
+   45ad4:	41 b8 05 00 00 00    	mov    r8d,0x5
+   45ada:	31 c9                	xor    ecx,ecx
+   45adc:	ba d5 05 00 00       	mov    edx,0x5d5
+   45ae1:	49 89 c1             	mov    r9,rax
+   45ae4:	48 8d 05 22 ae 05 00 	lea    rax,[rip+0x5ae22]        # a090d <__func__.3+0x11d>
+   45aeb:	53                   	push   rbx
+   45aec:	50                   	push   rax
+--
+   45ee5:	e8 96 0b ff ff       	call   36a80 <ssh_err>
+   45eea:	b9 01 00 00 00       	mov    ecx,0x1
+   45eef:	4c 89 fe             	mov    rsi,r15
+   45ef2:	4c 89 f7             	mov    rdi,r14
+   45ef5:	49 89 c1             	mov    r9,rax
+   45ef8:	48 8d 05 29 aa 05 00 	lea    rax,[rip+0x5aa29]        # a0928 <__func__.3+0x138>
+   45eff:	53                   	push   rbx
+   45f00:	ba fc 05 00 00       	mov    edx,0x5fc
+--
+   45f18:	e8 63 0b ff ff       	call   36a80 <ssh_err>
+   45f1d:	b9 01 00 00 00       	mov    ecx,0x1
+   45f22:	4c 89 fe             	mov    rsi,r15
+   45f25:	4c 89 f7             	mov    rdi,r14
+   45f28:	49 89 c1             	mov    r9,rax
+   45f2b:	48 8d 05 f6 a9 05 00 	lea    rax,[rip+0x5a9f6]        # a0928 <__func__.3+0x138>
+   45f32:	53                   	push   rbx
+   45f33:	ba e3 05 00 00       	mov    edx,0x5e3
+--
+   45f4b:	e8 30 0b ff ff       	call   36a80 <ssh_err>
+   45f50:	b9 01 00 00 00       	mov    ecx,0x1
+   45f55:	4c 89 fe             	mov    rsi,r15
+   45f58:	4c 89 f7             	mov    rdi,r14
+   45f5b:	49 89 c1             	mov    r9,rax
+   45f5e:	48 8d 05 d7 a9 05 00 	lea    rax,[rip+0x5a9d7]        # a093c <__func__.3+0x14c>
+   45f65:	53                   	push   rbx
+   45f66:	ba 0d 06 00 00       	mov    edx,0x60d
+--
+   46420:	e8 5b 06 ff ff       	call   36a80 <ssh_err>
+   46425:	41 b8 05 00 00 00    	mov    r8d,0x5
+   4642b:	31 c9                	xor    ecx,ecx
+   4642d:	ba 75 06 00 00       	mov    edx,0x675
+   46432:	49 89 c1             	mov    r9,rax
+   46435:	48 8d 05 6d a5 05 00 	lea    rax,[rip+0x5a56d]        # a09a9 <__func__.3+0x1b9>
+   4643c:	53                   	push   rbx
+   4643d:	50                   	push   rax
+--
+   4646d:	e8 0e 06 ff ff       	call   36a80 <ssh_err>
+   46472:	b9 01 00 00 00       	mov    ecx,0x1
+   46477:	4c 89 ee             	mov    rsi,r13
+   4647a:	4c 89 f7             	mov    rdi,r14
+   4647d:	49 89 c1             	mov    r9,rax
+   46480:	48 8d 05 a1 a4 05 00 	lea    rax,[rip+0x5a4a1]        # a0928 <__func__.3+0x138>
+   46487:	53                   	push   rbx
+   46488:	ba 71 06 00 00       	mov    edx,0x671
+--
+   464b2:	e8 c9 05 ff ff       	call   36a80 <ssh_err>
+   464b7:	b9 01 00 00 00       	mov    ecx,0x1
+   464bc:	4c 89 ee             	mov    rsi,r13
+   464bf:	4c 89 f7             	mov    rdi,r14
+   464c2:	49 89 c1             	mov    r9,rax
+   464c5:	48 8d 05 70 a4 05 00 	lea    rax,[rip+0x5a470]        # a093c <__func__.3+0x14c>
+   464cc:	53                   	push   rbx
+   464cd:	ba 47 06 00 00       	mov    edx,0x647
+--
+   464e5:	e8 96 05 ff ff       	call   36a80 <ssh_err>
+   464ea:	b9 01 00 00 00       	mov    ecx,0x1
+   464ef:	4c 89 ee             	mov    rsi,r13
+   464f2:	4c 89 f7             	mov    rdi,r14
+   464f5:	49 89 c1             	mov    r9,rax
+   464f8:	48 8d 05 29 a4 05 00 	lea    rax,[rip+0x5a429]        # a0928 <__func__.3+0x138>
+   464ff:	53                   	push   rbx
+   46500:	ba 43 06 00 00       	mov    edx,0x643
+--
+   46518:	e8 63 05 ff ff       	call   36a80 <ssh_err>
+   4651d:	b9 01 00 00 00       	mov    ecx,0x1
+   46522:	4c 89 ee             	mov    rsi,r13
+   46525:	4c 89 f7             	mov    rdi,r14
+   46528:	49 89 c1             	mov    r9,rax
+   4652b:	48 8d 05 f6 a3 05 00 	lea    rax,[rip+0x5a3f6]        # a0928 <__func__.3+0x138>
+   46532:	53                   	push   rbx
+   46533:	ba 6d 06 00 00       	mov    edx,0x66d
+--
+   4654b:	e8 30 05 ff ff       	call   36a80 <ssh_err>
+   46550:	b9 01 00 00 00       	mov    ecx,0x1
+   46555:	4c 89 ee             	mov    rsi,r13
+   46558:	4c 89 f7             	mov    rdi,r14
+   4655b:	49 89 c1             	mov    r9,rax
+   4655e:	48 8d 05 d7 a3 05 00 	lea    rax,[rip+0x5a3d7]        # a093c <__func__.3+0x14c>
+   46565:	53                   	push   rbx
+   46566:	ba 95 06 00 00       	mov    edx,0x695
+--
+   46a61:	e8 1a 00 ff ff       	call   36a80 <ssh_err>
+   46a66:	41 54                	push   r12
+   46a68:	ba 30 0d 00 00       	mov    edx,0xd30
+   46a6d:	31 c9                	xor    ecx,ecx
+   46a6f:	49 89 c1             	mov    r9,rax
+   46a72:	48 8d 05 66 9f 05 00 	lea    rax,[rip+0x59f66]        # a09df <__func__.3+0x1ef>
+   46a79:	48 8d 35 80 c5 05 00 	lea    rsi,[rip+0x5c580]        # a3000 <__func__.29>
+   46a80:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   46ab0:	e8 cb ff fe ff       	call   36a80 <ssh_err>
+   46ab5:	ba 34 0d 00 00       	mov    edx,0xd34
+   46aba:	31 c9                	xor    ecx,ecx
+   46abc:	48 8d 35 3d c5 05 00 	lea    rsi,[rip+0x5c53d]        # a3000 <__func__.29>
+   46ac3:	49 89 c1             	mov    r9,rax
+   46ac6:	50                   	push   rax
+   46ac7:	48 8d 05 31 9f 05 00 	lea    rax,[rip+0x59f31]        # a09ff <__func__.3+0x20f>
+   46ace:	48 8d 3d 32 9d 05 00 	lea    rdi,[rip+0x59d32]        # a0807 <__func__.3+0x17>
+--
+   475ed:	e8 8e f4 fe ff       	call   36a80 <ssh_err>
+   475f2:	41 b8 01 00 00 00    	mov    r8d,0x1
+   475f8:	b9 01 00 00 00       	mov    ecx,0x1
+   475fd:	ba 86 08 00 00       	mov    edx,0x886
+   47602:	49 89 c1             	mov    r9,rax
+   47605:	48 8d 05 a7 94 05 00 	lea    rax,[rip+0x594a7]        # a0ab3 <__func__.3+0x2c3>
+   4760c:	53                   	push   rbx
+   4760d:	48 8d 35 6c c0 05 00 	lea    rsi,[rip+0x5c06c]        # a3680 <__func__.83>
+--
+   47682:	e8 f9 f3 fe ff       	call   36a80 <ssh_err>
+   47687:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4768d:	b9 01 00 00 00       	mov    ecx,0x1
+   47692:	ba 88 08 00 00       	mov    edx,0x888
+   47697:	49 89 c1             	mov    r9,rax
+   4769a:	48 8d 05 2b 94 05 00 	lea    rax,[rip+0x5942b]        # a0acc <__func__.3+0x2dc>
+   476a1:	53                   	push   rbx
+   476a2:	48 8d 35 d7 bf 05 00 	lea    rsi,[rip+0x5bfd7]        # a3680 <__func__.83>
+--
+   4819f:	e8 dc e8 fe ff       	call   36a80 <ssh_err>
+   481a4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   481aa:	b9 01 00 00 00       	mov    ecx,0x1
+   481af:	ba 0b 02 00 00       	mov    edx,0x20b
+   481b4:	49 89 c1             	mov    r9,rax
+   481b7:	48 8d 05 75 89 05 00 	lea    rax,[rip+0x58975]        # a0b33 <__func__.3+0x343>
+   481be:	56                   	push   rsi
+   481bf:	50                   	push   rax
+--
+   485d0:	e8 ab e4 fe ff       	call   36a80 <ssh_err>
+   485d5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   485db:	b9 01 00 00 00       	mov    ecx,0x1
+   485e0:	4c 89 e6             	mov    rsi,r12
+   485e3:	49 89 c1             	mov    r9,rax
+   485e6:	48 8d 05 aa 85 05 00 	lea    rax,[rip+0x585aa]        # a0b97 <__func__.3+0x3a7>
+   485ed:	53                   	push   rbx
+   485ee:	ba ed 07 00 00       	mov    edx,0x7ed
+--
+   499f8:	e8 83 d0 fe ff       	call   36a80 <ssh_err>
+   499fd:	41 b8 01 00 00 00    	mov    r8d,0x1
+   49a03:	b9 01 00 00 00       	mov    ecx,0x1
+   49a08:	4c 89 fe             	mov    rsi,r15
+   49a0b:	49 89 c1             	mov    r9,rax
+   49a0e:	48 8d 05 90 6e 05 00 	lea    rax,[rip+0x56e90]        # a08a5 <__func__.3+0xb5>
+   49a15:	53                   	push   rbx
+   49a16:	ba 4e 07 00 00       	mov    edx,0x74e
+--
+   49a2f:	e8 4c d0 fe ff       	call   36a80 <ssh_err>
+   49a34:	41 b8 01 00 00 00    	mov    r8d,0x1
+   49a3a:	b9 01 00 00 00       	mov    ecx,0x1
+   49a3f:	4c 89 fe             	mov    rsi,r15
+   49a42:	49 89 c1             	mov    r9,rax
+   49a45:	48 8d 05 6b 6e 05 00 	lea    rax,[rip+0x56e6b]        # a08b7 <__func__.3+0xc7>
+   49a4c:	53                   	push   rbx
+   49a4d:	ba 51 07 00 00       	mov    edx,0x751
+--
+   49d2f:	e8 4c cd fe ff       	call   36a80 <ssh_err>
+   49d34:	41 b8 01 00 00 00    	mov    r8d,0x1
+   49d3a:	b9 01 00 00 00       	mov    ecx,0x1
+   49d3f:	4c 89 f6             	mov    rsi,r14
+   49d42:	49 89 c1             	mov    r9,rax
+   49d45:	48 8d 05 c6 6a 05 00 	lea    rax,[rip+0x56ac6]        # a0812 <__func__.3+0x22>
+   49d4c:	53                   	push   rbx
+   49d4d:	ba 1f 09 00 00       	mov    edx,0x91f
+--
+   4a0c4:	e8 b7 c9 fe ff       	call   36a80 <ssh_err>
+   4a0c9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4a0cf:	b9 01 00 00 00       	mov    ecx,0x1
+   4a0d4:	ba e1 08 00 00       	mov    edx,0x8e1
+   4a0d9:	49 89 c1             	mov    r9,rax
+   4a0dc:	48 8d 05 5d 67 05 00 	lea    rax,[rip+0x5675d]        # a0840 <__func__.3+0x50>
+   4a0e3:	53                   	push   rbx
+   4a0e4:	48 8d 35 75 95 05 00 	lea    rsi,[rip+0x59575]        # a3660 <__func__.82>
+--
+   4a38c:	e8 ef c6 fe ff       	call   36a80 <ssh_err>
+   4a391:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4a397:	b9 01 00 00 00       	mov    ecx,0x1
+   4a39c:	ba dc 08 00 00       	mov    edx,0x8dc
+   4a3a1:	49 89 c1             	mov    r9,rax
+   4a3a4:	48 8d 05 b5 69 05 00 	lea    rax,[rip+0x569b5]        # a0d60 <__func__.3+0x570>
+   4a3ab:	53                   	push   rbx
+   4a3ac:	48 8d 35 ad 92 05 00 	lea    rsi,[rip+0x592ad]        # a3660 <__func__.82>
+--
+   4a3cc:	e8 af c6 fe ff       	call   36a80 <ssh_err>
+   4a3d1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4a3d7:	b9 01 00 00 00       	mov    ecx,0x1
+   4a3dc:	ba 46 09 00 00       	mov    edx,0x946
+   4a3e1:	49 89 c1             	mov    r9,rax
+   4a3e4:	48 8d 05 ac 67 05 00 	lea    rax,[rip+0x567ac]        # a0b97 <__func__.3+0x3a7>
+   4a3eb:	53                   	push   rbx
+   4a3ec:	48 8d 35 0d 92 05 00 	lea    rsi,[rip+0x5920d]        # a3600 <__func__.79>
+--
+   4a43b:	e8 40 c6 fe ff       	call   36a80 <ssh_err>
+   4a440:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4a446:	b9 01 00 00 00       	mov    ecx,0x1
+   4a44b:	ba a7 08 00 00       	mov    edx,0x8a7
+   4a450:	49 89 c1             	mov    r9,rax
+   4a453:	48 8d 05 ed 68 05 00 	lea    rax,[rip+0x568ed]        # a0d47 <__func__.3+0x557>
+   4a45a:	53                   	push   rbx
+   4a45b:	48 8d 35 fe 91 05 00 	lea    rsi,[rip+0x591fe]        # a3660 <__func__.82>
+--
+   4a476:	e8 05 c6 fe ff       	call   36a80 <ssh_err>
+   4a47b:	b9 01 00 00 00       	mov    ecx,0x1
+   4a480:	4c 89 f6             	mov    rsi,r14
+   4a483:	4c 89 ef             	mov    rdi,r13
+   4a486:	49 89 c1             	mov    r9,rax
+   4a489:	48 8d 05 b0 63 05 00 	lea    rax,[rip+0x563b0]        # a0840 <__func__.3+0x50>
+   4a490:	53                   	push   rbx
+   4a491:	ba fe 08 00 00       	mov    edx,0x8fe
+--
+   4ab4a:	e8 31 bf fe ff       	call   36a80 <ssh_err>
+   4ab4f:	48 83 ec 08          	sub    rsp,0x8
+   4ab53:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4ab59:	b9 01 00 00 00       	mov    ecx,0x1
+   4ab5e:	49 89 c1             	mov    r9,rax
+   4ab61:	48 8d 05 19 e8 04 00 	lea    rax,[rip+0x4e819]        # 99381 <__func__.13+0x1421>
+   4ab68:	ba 3a 04 00 00       	mov    edx,0x43a
+   4ab6d:	50                   	push   rax
+--
+   4abed:	e8 8e be fe ff       	call   36a80 <ssh_err>
+   4abf2:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4abf8:	b9 01 00 00 00       	mov    ecx,0x1
+   4abfd:	ba 1b 04 00 00       	mov    edx,0x41b
+   4ac02:	49 89 c1             	mov    r9,rax
+   4ac05:	48 8d 05 75 e7 04 00 	lea    rax,[rip+0x4e775]        # 99381 <__func__.13+0x1421>
+   4ac0c:	57                   	push   rdi
+   4ac0d:	48 8d 35 ac 87 05 00 	lea    rsi,[rip+0x587ac]        # a33c0 <__func__.59>
+--
+   4b05f:	e8 1c ba fe ff       	call   36a80 <ssh_err>
+   4b064:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4b06a:	4c 89 ef             	mov    rdi,r13
+   4b06d:	b9 01 00 00 00       	mov    ecx,0x1
+   4b072:	49 89 c1             	mov    r9,rax
+   4b075:	48 8d 05 1b 5b 05 00 	lea    rax,[rip+0x55b1b]        # a0b97 <__func__.3+0x3a7>
+   4b07c:	53                   	push   rbx
+   4b07d:	ba d6 02 00 00       	mov    edx,0x2d6
+--
+   4b2f1:	e8 8a b7 fe ff       	call   36a80 <ssh_err>
+   4b2f6:	b9 01 00 00 00       	mov    ecx,0x1
+   4b2fb:	4c 89 e6             	mov    rsi,r12
+   4b2fe:	4c 89 ef             	mov    rdi,r13
+   4b301:	49 89 c1             	mov    r9,rax
+   4b304:	48 8d 05 8c 58 05 00 	lea    rax,[rip+0x5588c]        # a0b97 <__func__.3+0x3a7>
+   4b30b:	53                   	push   rbx
+   4b30c:	ba 64 04 00 00       	mov    edx,0x464
+--
+   4b435:	e8 46 b6 fe ff       	call   36a80 <ssh_err>
+   4b43a:	b9 01 00 00 00       	mov    ecx,0x1
+   4b43f:	4c 89 fe             	mov    rsi,r15
+   4b442:	4c 89 f7             	mov    rdi,r14
+   4b445:	49 89 c1             	mov    r9,rax
+   4b448:	48 8d 05 48 57 05 00 	lea    rax,[rip+0x55748]        # a0b97 <__func__.3+0x3a7>
+   4b44f:	53                   	push   rbx
+   4b450:	ba 79 04 00 00       	mov    edx,0x479
+--
+   4b96d:	e8 0e b1 fe ff       	call   36a80 <ssh_err>
+   4b972:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4b978:	b9 01 00 00 00       	mov    ecx,0x1
+   4b97d:	ba dc 04 00 00       	mov    edx,0x4dc
+   4b982:	49 89 c1             	mov    r9,rax
+   4b985:	48 8d 05 0b 52 05 00 	lea    rax,[rip+0x5520b]        # a0b97 <__func__.3+0x3a7>
+   4b98c:	53                   	push   rbx
+   4b98d:	48 8d 35 3c 79 05 00 	lea    rsi,[rip+0x5793c]        # a32d0 <__func__.51>
+--
+   4bd95:	e8 e6 ac fe ff       	call   36a80 <ssh_err>
+   4bd9a:	b9 01 00 00 00       	mov    ecx,0x1
+   4bd9f:	4c 89 f6             	mov    rsi,r14
+   4bda2:	4c 89 ef             	mov    rdi,r13
+   4bda5:	49 89 c1             	mov    r9,rax
+   4bda8:	48 8d 05 d8 50 05 00 	lea    rax,[rip+0x550d8]        # a0e87 <__func__.3+0x697>
+   4bdaf:	53                   	push   rbx
+   4bdb0:	ba 13 08 00 00       	mov    edx,0x813
+--
+   4bf48:	e8 33 ab fe ff       	call   36a80 <ssh_err>
+   4bf4d:	b9 01 00 00 00       	mov    ecx,0x1
+   4bf52:	4c 89 f6             	mov    rsi,r14
+   4bf55:	4c 89 ef             	mov    rdi,r13
+   4bf58:	49 89 c1             	mov    r9,rax
+   4bf5b:	48 8d 05 3d 4f 05 00 	lea    rax,[rip+0x54f3d]        # a0e9f <__func__.3+0x6af>
+   4bf62:	53                   	push   rbx
+   4bf63:	ba 2e 08 00 00       	mov    edx,0x82e
+--
+   4cfb2:	e8 c9 9a fe ff       	call   36a80 <ssh_err>
+   4cfb7:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4cfbd:	b9 01 00 00 00       	mov    ecx,0x1
+   4cfc2:	ba f7 06 00 00       	mov    edx,0x6f7
+   4cfc7:	49 89 c1             	mov    r9,rax
+   4cfca:	48 8d 05 57 39 05 00 	lea    rax,[rip+0x53957]        # a0928 <__func__.3+0x138>
+   4cfd1:	53                   	push   rbx
+   4cfd2:	48 8d 35 67 62 05 00 	lea    rsi,[rip+0x56267]        # a3240 <__func__.47>
+--
+   4cfed:	e8 8e 9a fe ff       	call   36a80 <ssh_err>
+   4cff2:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4cff8:	b9 01 00 00 00       	mov    ecx,0x1
+   4cffd:	ba 1a 07 00 00       	mov    edx,0x71a
+   4d002:	49 89 c1             	mov    r9,rax
+   4d005:	48 8d 05 1c 39 05 00 	lea    rax,[rip+0x5391c]        # a0928 <__func__.3+0x138>
+   4d00c:	53                   	push   rbx
+   4d00d:	48 8d 35 2c 62 05 00 	lea    rsi,[rip+0x5622c]        # a3240 <__func__.47>
+--
+   4d02a:	e8 51 9a fe ff       	call   36a80 <ssh_err>
+   4d02f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4d035:	b9 01 00 00 00       	mov    ecx,0x1
+   4d03a:	ba 17 07 00 00       	mov    edx,0x717
+   4d03f:	49 89 c1             	mov    r9,rax
+   4d042:	48 8d 05 ca 3e 05 00 	lea    rax,[rip+0x53eca]        # a0f13 <__func__.3+0x723>
+   4d049:	53                   	push   rbx
+   4d04a:	48 8d 35 ef 61 05 00 	lea    rsi,[rip+0x561ef]        # a3240 <__func__.47>
+--
+   4d913:	e8 68 91 fe ff       	call   36a80 <ssh_err>
+   4d918:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4d91e:	b9 01 00 00 00       	mov    ecx,0x1
+   4d923:	ba a3 0b 00 00       	mov    edx,0xba3
+   4d928:	49 89 c1             	mov    r9,rax
+   4d92b:	48 8d 05 15 34 05 00 	lea    rax,[rip+0x53415]        # a0d47 <__func__.3+0x557>
+   4d932:	53                   	push   rbx
+   4d933:	48 8d 35 f6 57 05 00 	lea    rsi,[rip+0x557f6]        # a3130 <__func__.38>
+--
+   4d94e:	e8 2d 91 fe ff       	call   36a80 <ssh_err>
+   4d953:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4d959:	b9 01 00 00 00       	mov    ecx,0x1
+   4d95e:	ba e7 0b 00 00       	mov    edx,0xbe7
+   4d963:	49 89 c1             	mov    r9,rax
+   4d966:	48 8d 05 d3 2e 05 00 	lea    rax,[rip+0x52ed3]        # a0840 <__func__.3+0x50>
+   4d96d:	53                   	push   rbx
+   4d96e:	48 8d 35 8b 57 05 00 	lea    rsi,[rip+0x5578b]        # a3100 <__func__.37>
+--
+   4d989:	e8 f2 90 fe ff       	call   36a80 <ssh_err>
+   4d98e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4d994:	b9 01 00 00 00       	mov    ecx,0x1
+   4d999:	ba e5 0b 00 00       	mov    edx,0xbe5
+   4d99e:	49 89 c1             	mov    r9,rax
+   4d9a1:	48 8d 05 21 36 05 00 	lea    rax,[rip+0x53621]        # a0fc9 <__func__.3+0x7d9>
+   4d9a8:	53                   	push   rbx
+   4d9a9:	48 8d 35 50 57 05 00 	lea    rsi,[rip+0x55750]        # a3100 <__func__.37>
+--
+   4d9f8:	e8 83 90 fe ff       	call   36a80 <ssh_err>
+   4d9fd:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4da03:	b9 01 00 00 00       	mov    ecx,0x1
+   4da08:	ba b2 0b 00 00       	mov    edx,0xbb2
+   4da0d:	49 89 c1             	mov    r9,rax
+   4da10:	48 8d 05 82 35 05 00 	lea    rax,[rip+0x53582]        # a0f99 <__func__.3+0x7a9>
+   4da17:	53                   	push   rbx
+   4da18:	48 8d 35 11 57 05 00 	lea    rsi,[rip+0x55711]        # a3130 <__func__.38>
+--
+   4da67:	e8 14 90 fe ff       	call   36a80 <ssh_err>
+   4da6c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4da72:	b9 01 00 00 00       	mov    ecx,0x1
+   4da77:	ba c4 0b 00 00       	mov    edx,0xbc4
+   4da7c:	49 89 c1             	mov    r9,rax
+   4da7f:	48 8d 05 ba 2d 05 00 	lea    rax,[rip+0x52dba]        # a0840 <__func__.3+0x50>
+   4da86:	53                   	push   rbx
+   4da87:	48 8d 35 a2 56 05 00 	lea    rsi,[rip+0x556a2]        # a3130 <__func__.38>
+--
+   4daa2:	e8 d9 8f fe ff       	call   36a80 <ssh_err>
+   4daa7:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4daad:	b9 01 00 00 00       	mov    ecx,0x1
+   4dab2:	ba c2 0b 00 00       	mov    edx,0xbc2
+   4dab7:	49 89 c1             	mov    r9,rax
+   4daba:	48 8d 05 f2 34 05 00 	lea    rax,[rip+0x534f2]        # a0fb3 <__func__.3+0x7c3>
+   4dac1:	53                   	push   rbx
+   4dac2:	48 8d 35 67 56 05 00 	lea    rsi,[rip+0x55667]        # a3130 <__func__.38>
+--
+   4dc13:	e8 68 8e fe ff       	call   36a80 <ssh_err>
+   4dc18:	48 83 ec 08          	sub    rsp,0x8
+   4dc1c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4dc22:	b9 01 00 00 00       	mov    ecx,0x1
+   4dc27:	49 89 c1             	mov    r9,rax
+   4dc2a:	48 8d 05 25 01 05 00 	lea    rax,[rip+0x50125]        # 9dd56 <__func__.29+0x56>
+   4dc31:	ba 66 0c 00 00       	mov    edx,0xc66
+   4dc36:	50                   	push   rax
+--
+   4dd12:	e8 69 8d fe ff       	call   36a80 <ssh_err>
+   4dd17:	48 83 ec 08          	sub    rsp,0x8
+   4dd1b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4dd21:	b9 01 00 00 00       	mov    ecx,0x1
+   4dd26:	49 89 c1             	mov    r9,rax
+   4dd29:	48 8d 05 93 2b 05 00 	lea    rax,[rip+0x52b93]        # a08c3 <__func__.3+0xd3>
+   4dd30:	ba c5 0c 00 00       	mov    edx,0xcc5
+   4dd35:	50                   	push   rax
+--
+   4dddc:	e8 9f 8c fe ff       	call   36a80 <ssh_err>
+   4dde1:	48 83 ec 08          	sub    rsp,0x8
+   4dde5:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4ddeb:	b9 01 00 00 00       	mov    ecx,0x1
+   4ddf0:	49 89 c1             	mov    r9,rax
+   4ddf3:	48 8d 05 5c ff 04 00 	lea    rax,[rip+0x4ff5c]        # 9dd56 <__func__.29+0x56>
+   4ddfa:	ba 81 0c 00 00       	mov    edx,0xc81
+   4ddff:	50                   	push   rax
+--
+   4df1d:	e8 5e 8b fe ff       	call   36a80 <ssh_err>
+   4df22:	48 83 ec 08          	sub    rsp,0x8
+   4df26:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4df2c:	b9 01 00 00 00       	mov    ecx,0x1
+   4df31:	49 89 c1             	mov    r9,rax
+   4df34:	48 8d 05 1b fe 04 00 	lea    rax,[rip+0x4fe1b]        # 9dd56 <__func__.29+0x56>
+   4df3b:	ba a2 0c 00 00       	mov    edx,0xca2
+   4df40:	50                   	push   rax
+--
+   4e03f:	e8 3c 8a fe ff       	call   36a80 <ssh_err>
+   4e044:	48 83 ec 08          	sub    rsp,0x8
+   4e048:	b9 01 00 00 00       	mov    ecx,0x1
+   4e04d:	48 8d 35 7c 50 05 00 	lea    rsi,[rip+0x5507c]        # a30d0 <__func__.36>
+   4e054:	49 89 c1             	mov    r9,rax
+   4e057:	48 8d 05 65 28 05 00 	lea    rax,[rip+0x52865]        # a08c3 <__func__.3+0xd3>
+   4e05e:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e064:	ba be 0c 00 00       	mov    edx,0xcbe
+--
+   4e112:	e8 69 89 fe ff       	call   36a80 <ssh_err>
+   4e117:	48 83 ec 08          	sub    rsp,0x8
+   4e11b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e121:	b9 01 00 00 00       	mov    ecx,0x1
+   4e126:	49 89 c1             	mov    r9,rax
+   4e129:	48 8d 05 9f 14 05 00 	lea    rax,[rip+0x5149f]        # 9f5cf <__func__.34+0x15f>
+   4e130:	ba 8d 0c 00 00       	mov    edx,0xc8d
+   4e135:	50                   	push   rax
+--
+   4e252:	e8 29 88 fe ff       	call   36a80 <ssh_err>
+   4e257:	48 83 ec 08          	sub    rsp,0x8
+   4e25b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e261:	b9 01 00 00 00       	mov    ecx,0x1
+   4e266:	49 89 c1             	mov    r9,rax
+   4e269:	48 8d 05 e6 fa 04 00 	lea    rax,[rip+0x4fae6]        # 9dd56 <__func__.29+0x56>
+   4e270:	ba 98 0c 00 00       	mov    edx,0xc98
+   4e275:	50                   	push   rax
+--
+   4e282:	e8 f9 87 fe ff       	call   36a80 <ssh_err>
+   4e287:	48 83 ec 08          	sub    rsp,0x8
+   4e28b:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e291:	b9 01 00 00 00       	mov    ecx,0x1
+   4e296:	49 89 c1             	mov    r9,rax
+   4e299:	48 8d 05 2f 13 05 00 	lea    rax,[rip+0x5132f]        # 9f5cf <__func__.34+0x15f>
+   4e2a0:	ba 70 0c 00 00       	mov    edx,0xc70
+   4e2a5:	50                   	push   rax
+--
+   4e341:	e8 3a 87 fe ff       	call   36a80 <ssh_err>
+   4e346:	48 83 ec 08          	sub    rsp,0x8
+   4e34a:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e350:	b9 01 00 00 00       	mov    ecx,0x1
+   4e355:	49 89 c1             	mov    r9,rax
+   4e358:	48 8d 05 f7 f9 04 00 	lea    rax,[rip+0x4f9f7]        # 9dd56 <__func__.29+0x56>
+   4e35f:	ba 4e 0c 00 00       	mov    edx,0xc4e
+   4e364:	50                   	push   rax
+--
+   4e447:	e8 34 86 fe ff       	call   36a80 <ssh_err>
+   4e44c:	48 83 ec 08          	sub    rsp,0x8
+   4e450:	ba 0b 0d 00 00       	mov    edx,0xd0b
+   4e455:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4e45b:	49 89 c1             	mov    r9,rax
+   4e45e:	48 8d 05 07 2c 05 00 	lea    rax,[rip+0x52c07]        # a106c <__func__.3+0x87c>
+   4e465:	b9 01 00 00 00       	mov    ecx,0x1
+   4e46a:	50                   	push   rax
+--
+   4e88c:	e8 ef 81 fe ff       	call   36a80 <ssh_err>
+   4e891:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4e897:	b9 01 00 00 00       	mov    ecx,0x1
+   4e89c:	4c 89 f6             	mov    rsi,r14
+   4e89f:	49 89 c1             	mov    r9,rax
+   4e8a2:	48 8d 05 24 28 05 00 	lea    rax,[rip+0x52824]        # a10cd <__func__.3+0x8dd>
+   4e8a9:	53                   	push   rbx
+   4e8aa:	ba 87 0d 00 00       	mov    edx,0xd87
+--
+   4e901:	e8 7a 81 fe ff       	call   36a80 <ssh_err>
+   4e906:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4e90c:	b9 01 00 00 00       	mov    ecx,0x1
+   4e911:	4c 89 f6             	mov    rsi,r14
+   4e914:	49 89 c1             	mov    r9,rax
+   4e917:	48 8d 05 93 27 05 00 	lea    rax,[rip+0x52793]        # a10b1 <__func__.3+0x8c1>
+   4e91e:	53                   	push   rbx
+   4e91f:	ba 85 0d 00 00       	mov    edx,0xd85
+--
+   4e955:	e8 26 81 fe ff       	call   36a80 <ssh_err>
+   4e95a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   4e960:	b9 01 00 00 00       	mov    ecx,0x1
+   4e965:	4c 89 f6             	mov    rsi,r14
+   4e968:	49 89 c1             	mov    r9,rax
+   4e96b:	48 8d 05 2a 27 05 00 	lea    rax,[rip+0x5272a]        # a109c <__func__.3+0x8ac>
+   4e972:	53                   	push   rbx
+   4e973:	ba 5d 0d 00 00       	mov    edx,0xd5d
+--
+   4ec5a:	e8 21 7e fe ff       	call   36a80 <ssh_err>
+   4ec5f:	48 83 ec 08          	sub    rsp,0x8
+   4ec63:	4c 89 f6             	mov    rsi,r14
+   4ec66:	48 89 ef             	mov    rdi,rbp
+   4ec69:	49 89 c1             	mov    r9,rax
+   4ec6c:	ba bc 0d 00 00       	mov    edx,0xdbc
+   4ec71:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4ec77:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   4ecad:	89 c7                	mov    edi,eax
+   4ecaf:	e8 cc 7d fe ff       	call   36a80 <ssh_err>
+   4ecb4:	b9 01 00 00 00       	mov    ecx,0x1
+   4ecb9:	ba a5 0d 00 00       	mov    edx,0xda5
+   4ecbe:	49 89 c1             	mov    r9,rax
+   4ecc1:	48 8d 05 2b 24 05 00 	lea    rax,[rip+0x5242b]        # a10f3 <__func__.3+0x903>
+   4ecc8:	41 50                	push   r8
+   4ecca:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   4ecef:	89 c7                	mov    edi,eax
+   4ecf1:	e8 8a 7d fe ff       	call   36a80 <ssh_err>
+   4ecf6:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4ecfc:	ba b0 0d 00 00       	mov    edx,0xdb0
+   4ed01:	49 89 c1             	mov    r9,rax
+   4ed04:	48 8d 05 2b 24 05 00 	lea    rax,[rip+0x5242b]        # a1136 <__func__.3+0x946>
+   4ed0b:	51                   	push   rcx
+   4ed0c:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   4ee3e:	e8 3d 7c fe ff       	call   36a80 <ssh_err>
+   4ee43:	4c 89 f6             	mov    rsi,r14
+   4ee46:	b9 01 00 00 00       	mov    ecx,0x1
+   4ee4b:	48 8d 3d b5 19 05 00 	lea    rdi,[rip+0x519b5]        # a0807 <__func__.3+0x17>
+   4ee52:	49 89 c1             	mov    r9,rax
+   4ee55:	48 8d 05 da 22 05 00 	lea    rax,[rip+0x522da]        # a1136 <__func__.3+0x946>
+   4ee5c:	41 50                	push   r8
+   4ee5e:	ba c8 0d 00 00       	mov    edx,0xdc8
+--
+   4ef51:	e8 2a 7b fe ff       	call   36a80 <ssh_err>
+   4ef56:	4c 89 f6             	mov    rsi,r14
+   4ef59:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4ef5f:	48 8d 3d a1 18 05 00 	lea    rdi,[rip+0x518a1]        # a0807 <__func__.3+0x17>
+   4ef66:	49 89 c1             	mov    r9,rax
+   4ef69:	50                   	push   rax
+   4ef6a:	48 8d 05 c5 21 05 00 	lea    rax,[rip+0x521c5]        # a1136 <__func__.3+0x946>
+   4ef71:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   4f1d5:	e8 a6 78 fe ff       	call   36a80 <ssh_err>
+   4f1da:	48 83 ec 08          	sub    rsp,0x8
+   4f1de:	4c 89 f6             	mov    rsi,r14
+   4f1e1:	48 8d 3d 1f 16 05 00 	lea    rdi,[rip+0x5161f]        # a0807 <__func__.3+0x17>
+   4f1e8:	49 89 c1             	mov    r9,rax
+   4f1eb:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4f1f1:	b9 01 00 00 00       	mov    ecx,0x1
+   4f1f6:	ba fe 0d 00 00       	mov    edx,0xdfe
+--
+   4f4b1:	e8 ca 75 fe ff       	call   36a80 <ssh_err>
+   4f4b6:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4f4bc:	b9 01 00 00 00       	mov    ecx,0x1
+   4f4c1:	ba 36 0e 00 00       	mov    edx,0xe36
+   4f4c6:	49 89 c1             	mov    r9,rax
+   4f4c9:	50                   	push   rax
+   4f4ca:	48 8d 05 c8 1d 05 00 	lea    rax,[rip+0x51dc8]        # a1299 <__func__.3+0xaa9>
+   4f4d1:	50                   	push   rax
+--
+   4f510:	89 c7                	mov    edi,eax
+   4f512:	e8 69 75 fe ff       	call   36a80 <ssh_err>
+   4f517:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4f51d:	b9 01 00 00 00       	mov    ecx,0x1
+   4f522:	49 89 c1             	mov    r9,rax
+   4f525:	48 8d 05 43 1d 05 00 	lea    rax,[rip+0x51d43]        # a126f <__func__.3+0xa7f>
+   4f52c:	52                   	push   rdx
+   4f52d:	ba 2f 0e 00 00       	mov    edx,0xe2f
+--
+   4f6c1:	e8 ba 73 fe ff       	call   36a80 <ssh_err>
+   4f6c6:	4c 89 fe             	mov    rsi,r15
+   4f6c9:	41 b8 02 00 00 00    	mov    r8d,0x2
+   4f6cf:	48 8d 3d 31 11 05 00 	lea    rdi,[rip+0x51131]        # a0807 <__func__.3+0x17>
+   4f6d6:	49 89 c1             	mov    r9,rax
+   4f6d9:	50                   	push   rax
+   4f6da:	48 8d 05 d5 1b 05 00 	lea    rax,[rip+0x51bd5]        # a12b6 <__func__.3+0xac6>
+   4f6e1:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   500f4:	e8 87 69 fe ff       	call   36a80 <ssh_err>
+   500f9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   500ff:	b9 01 00 00 00       	mov    ecx,0x1
+   50104:	ba d9 10 00 00       	mov    edx,0x10d9
+   50109:	49 89 c1             	mov    r9,rax
+   5010c:	50                   	push   rax
+   5010d:	48 8d 05 4e 12 05 00 	lea    rax,[rip+0x5124e]        # a1362 <__func__.3+0xb72>
+   50114:	48 8d 35 05 2c 05 00 	lea    rsi,[rip+0x52c05]        # a2d20 <__func__.14>
+--
+   5016e:	e8 0d 69 fe ff       	call   36a80 <ssh_err>
+   50173:	48 83 ec 08          	sub    rsp,0x8
+   50177:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5017d:	b9 01 00 00 00       	mov    ecx,0x1
+   50182:	49 89 c1             	mov    r9,rax
+   50185:	48 8d 05 c2 11 05 00 	lea    rax,[rip+0x511c2]        # a134e <__func__.3+0xb5e>
+   5018c:	ba cf 10 00 00       	mov    edx,0x10cf
+   50191:	50                   	push   rax
+--
+   50409:	e8 72 66 fe ff       	call   36a80 <ssh_err>
+   5040e:	48 83 ec 08          	sub    rsp,0x8
+   50412:	41 b8 01 00 00 00    	mov    r8d,0x1
+   50418:	b9 01 00 00 00       	mov    ecx,0x1
+   5041d:	49 89 c1             	mov    r9,rax
+   50420:	48 8d 05 6d 0f 05 00 	lea    rax,[rip+0x50f6d]        # a1394 <__func__.3+0xba4>
+   50427:	ba 4d 11 00 00       	mov    edx,0x114d
+   5042c:	50                   	push   rax
+--
+   504e6:	e8 95 65 fe ff       	call   36a80 <ssh_err>
+   504eb:	48 83 ec 08          	sub    rsp,0x8
+   504ef:	41 b8 01 00 00 00    	mov    r8d,0x1
+   504f5:	b9 01 00 00 00       	mov    ecx,0x1
+   504fa:	49 89 c1             	mov    r9,rax
+   504fd:	48 8d 05 90 0e 05 00 	lea    rax,[rip+0x50e90]        # a1394 <__func__.3+0xba4>
+   50504:	ba 71 11 00 00       	mov    edx,0x1171
+   50509:	50                   	push   rax
+--
+   50b69:	e8 12 5f fe ff       	call   36a80 <ssh_err>
+   50b6e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   50b74:	b9 01 00 00 00       	mov    ecx,0x1
+   50b79:	ba 50 13 00 00       	mov    edx,0x1350
+   50b7e:	49 89 c1             	mov    r9,rax
+   50b81:	48 8d 05 2a 08 05 00 	lea    rax,[rip+0x5082a]        # a13b2 <__func__.3+0xbc2>
+   50b88:	53                   	push   rbx
+   50b89:	48 8d 35 60 20 05 00 	lea    rsi,[rip+0x52060]        # a2bf0 <__func__.8>
+--
+   5120b:	e8 70 58 fe ff       	call   36a80 <ssh_err>
+   51210:	53                   	push   rbx
+   51211:	b9 01 00 00 00       	mov    ecx,0x1
+   51216:	ba 37 13 00 00       	mov    edx,0x1337
+   5121b:	49 89 c1             	mov    r9,rax
+   5121e:	48 8d 05 1b 17 05 00 	lea    rax,[rip+0x5171b]        # a2940 <__func__.3+0x2150>
+   51225:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5122b:	50                   	push   rax
+--
+   520da:	e8 a1 49 fe ff       	call   36a80 <ssh_err>
+   520df:	48 83 ec 08          	sub    rsp,0x8
+   520e3:	41 b8 01 00 00 00    	mov    r8d,0x1
+   520e9:	b9 01 00 00 00       	mov    ecx,0x1
+   520ee:	49 89 c1             	mov    r9,rax
+   520f1:	48 8d 05 93 f3 04 00 	lea    rax,[rip+0x4f393]        # a148b <__func__.3+0xc9b>
+   520f8:	ba d8 14 00 00       	mov    edx,0x14d8
+   520fd:	50                   	push   rax
+--
+   53598:	e8 e3 34 fe ff       	call   36a80 <ssh_err>
+   5359d:	48 83 ec 08          	sub    rsp,0x8
+   535a1:	ba cf 01 00 00       	mov    edx,0x1cf
+   535a6:	41 b8 02 00 00 00    	mov    r8d,0x2
+   535ac:	49 89 c1             	mov    r9,rax
+   535af:	48 8d 05 bc 03 05 00 	lea    rax,[rip+0x503bc]        # a3972 <__func__.96+0x182>
+   535b6:	b9 01 00 00 00       	mov    ecx,0x1
+   535bb:	50                   	push   rax
+--
+   5461c:	e8 5f 24 fe ff       	call   36a80 <ssh_err>
+   54621:	41 54                	push   r12
+   54623:	ba 17 01 00 00       	mov    edx,0x117
+   54628:	41 b8 05 00 00 00    	mov    r8d,0x5
+   5462e:	49 89 c1             	mov    r9,rax
+   54631:	48 8d 05 78 62 04 00 	lea    rax,[rip+0x46278]        # 9a8b0 <__func__.13+0x2950>
+   54638:	b9 01 00 00 00       	mov    ecx,0x1
+   5463d:	50                   	push   rax
+--
+   54eeb:	e8 90 1b fe ff       	call   36a80 <ssh_err>
+   54ef0:	48 83 ec 08          	sub    rsp,0x8
+   54ef4:	b9 01 00 00 00       	mov    ecx,0x1
+   54ef9:	ba 87 02 00 00       	mov    edx,0x287
+   54efe:	49 89 c1             	mov    r9,rax
+   54f01:	48 8d 05 ca eb 04 00 	lea    rax,[rip+0x4ebca]        # a3ad2 <__func__.96+0x2e2>
+   54f08:	48 8d 3d f8 e9 04 00 	lea    rdi,[rip+0x4e9f8]        # a3907 <__func__.96+0x117>
+   54f0f:	41 b8 02 00 00 00    	mov    r8d,0x2
+--
+   5688f:	e8 ec 01 fe ff       	call   36a80 <ssh_err>
+   56894:	b9 01 00 00 00       	mov    ecx,0x1
+   56899:	4c 89 e6             	mov    rsi,r12
+   5689c:	48 89 ef             	mov    rdi,rbp
+   5689f:	49 89 c1             	mov    r9,rax
+   568a2:	50                   	push   rax
+   568a3:	48 8d 05 39 d8 04 00 	lea    rax,[rip+0x4d839]        # a40e3 <__func__.12+0x1fb>
+   568aa:	ba c4 00 00 00       	mov    edx,0xc4
+--
+   574a6:	e8 d5 f5 fd ff       	call   36a80 <ssh_err>
+   574ab:	b9 01 00 00 00       	mov    ecx,0x1
+   574b0:	48 89 ee             	mov    rsi,rbp
+   574b3:	4c 89 ef             	mov    rdi,r13
+   574b6:	49 89 c1             	mov    r9,rax
+   574b9:	50                   	push   rax
+   574ba:	48 8d 05 22 cc 04 00 	lea    rax,[rip+0x4cc22]        # a40e3 <__func__.12+0x1fb>
+   574c1:	ba fb 00 00 00       	mov    edx,0xfb
+--
+   57848:	e8 33 f2 fd ff       	call   36a80 <ssh_err>
+   5784d:	b9 01 00 00 00       	mov    ecx,0x1
+   57852:	4c 89 ee             	mov    rsi,r13
+   57855:	4c 89 e7             	mov    rdi,r12
+   57858:	49 89 c1             	mov    r9,rax
+   5785b:	50                   	push   rax
+   5785c:	48 8d 05 80 c8 04 00 	lea    rax,[rip+0x4c880]        # a40e3 <__func__.12+0x1fb>
+   57863:	ba e2 00 00 00       	mov    edx,0xe2
+--
+   58d92:	e8 e9 dc fd ff       	call   36a80 <ssh_err>
+   58d97:	48 83 ec 08          	sub    rsp,0x8
+   58d9b:	ba 3c 01 00 00       	mov    edx,0x13c
+   58da0:	41 b8 02 00 00 00    	mov    r8d,0x2
+   58da6:	49 89 c1             	mov    r9,rax
+   58da9:	48 8d 05 e4 b9 04 00 	lea    rax,[rip+0x4b9e4]        # a4794 <__func__.15+0x54>
+   58db0:	b9 01 00 00 00       	mov    ecx,0x1
+   58db5:	50                   	push   rax
+--
+   59c4e:	e8 2d ce fd ff       	call   36a80 <ssh_err>
+   59c53:	41 b8 02 00 00 00    	mov    r8d,0x2
+   59c59:	31 c9                	xor    ecx,ecx
+   59c5b:	ba ef 07 00 00       	mov    edx,0x7ef
+   59c60:	49 89 c1             	mov    r9,rax
+   59c63:	50                   	push   rax
+   59c64:	48 8d 05 f2 ab 04 00 	lea    rax,[rip+0x4abf2]        # a485d <__func__.15+0x11d>
+   59c6b:	48 8d 35 36 b3 04 00 	lea    rsi,[rip+0x4b336]        # a4fa8 <__func__.8>
+--
+   5c114:	e8 67 a9 fd ff       	call   36a80 <ssh_err>
+   5c119:	48 83 ec 08          	sub    rsp,0x8
+   5c11d:	48 89 ee             	mov    rsi,rbp
+   5c120:	48 89 df             	mov    rdi,rbx
+   5c123:	49 89 c1             	mov    r9,rax
+   5c126:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5c12c:	b9 01 00 00 00       	mov    ecx,0x1
+   5c131:	ba b3 07 00 00       	mov    edx,0x7b3
+--
+   5d243:	e8 38 98 fd ff       	call   36a80 <ssh_err>
+   5d248:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5d24e:	b9 01 00 00 00       	mov    ecx,0x1
+   5d253:	ba ec 05 00 00       	mov    edx,0x5ec
+   5d258:	49 89 c1             	mov    r9,rax
+   5d25b:	50                   	push   rax
+   5d25c:	48 8d 05 3d 3b 04 00 	lea    rax,[rip+0x43b3d]        # a0da0 <__func__.3+0x5b0>
+   5d263:	48 8d 35 d6 7d 04 00 	lea    rsi,[rip+0x47dd6]        # a5040 <__func__.14>
+--
+   5f055:	e8 26 7a fd ff       	call   36a80 <ssh_err>
+   5f05a:	48 83 ec 08          	sub    rsp,0x8
+   5f05e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f064:	b9 01 00 00 00       	mov    ecx,0x1
+   5f069:	49 89 c1             	mov    r9,rax
+   5f06c:	48 8d 05 5c 05 04 00 	lea    rax,[rip+0x4055c]        # 9f5cf <__func__.34+0x15f>
+   5f073:	ba 33 01 00 00       	mov    edx,0x133
+   5f078:	50                   	push   rax
+--
+   5f090:	e8 eb 79 fd ff       	call   36a80 <ssh_err>
+   5f095:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f09b:	b9 01 00 00 00       	mov    ecx,0x1
+   5f0a0:	ba 4e 01 00 00       	mov    edx,0x14e
+   5f0a5:	49 89 c1             	mov    r9,rax
+   5f0a8:	50                   	push   rax
+   5f0a9:	48 8d 05 26 66 04 00 	lea    rax,[rip+0x46626]        # a56d6 <__func__.1+0x1a6>
+   5f0b0:	48 8d 35 79 64 04 00 	lea    rsi,[rip+0x46479]        # a5530 <__func__.1>
+--
+   5f0c8:	e8 b3 79 fd ff       	call   36a80 <ssh_err>
+   5f0cd:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f0d3:	b9 01 00 00 00       	mov    ecx,0x1
+   5f0d8:	ba 41 00 00 00       	mov    edx,0x41
+   5f0dd:	49 89 c1             	mov    r9,rax
+   5f0e0:	48 8d 05 af 64 04 00 	lea    rax,[rip+0x464af]        # a5596 <__func__.1+0x66>
+   5f0e7:	48 8d 35 42 64 04 00 	lea    rsi,[rip+0x46442]        # a5530 <__func__.1>
+   5f0ee:	50                   	push   rax
+--
+   5f107:	e8 74 79 fd ff       	call   36a80 <ssh_err>
+   5f10c:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f112:	b9 01 00 00 00       	mov    ecx,0x1
+   5f117:	ba 3f 00 00 00       	mov    edx,0x3f
+   5f11c:	49 89 c1             	mov    r9,rax
+   5f11f:	48 8d 05 69 64 04 00 	lea    rax,[rip+0x46469]        # a558f <__func__.1+0x5f>
+   5f126:	48 8d 35 03 64 04 00 	lea    rsi,[rip+0x46403]        # a5530 <__func__.1>
+   5f12d:	50                   	push   rax
+--
+   5f146:	e8 35 79 fd ff       	call   36a80 <ssh_err>
+   5f14b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f151:	b9 01 00 00 00       	mov    ecx,0x1
+   5f156:	ba 3e 00 00 00       	mov    edx,0x3e
+   5f15b:	49 89 c1             	mov    r9,rax
+   5f15e:	48 8d 05 24 64 04 00 	lea    rax,[rip+0x46424]        # a5589 <__func__.1+0x59>
+   5f165:	48 8d 35 c4 63 04 00 	lea    rsi,[rip+0x463c4]        # a5530 <__func__.1>
+   5f16c:	50                   	push   rax
+--
+   5f185:	e8 f6 78 fd ff       	call   36a80 <ssh_err>
+   5f18a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f190:	b9 01 00 00 00       	mov    ecx,0x1
+   5f195:	ba 59 00 00 00       	mov    edx,0x59
+   5f19a:	49 89 c1             	mov    r9,rax
+   5f19d:	48 8d 05 2c 64 04 00 	lea    rax,[rip+0x4642c]        # a55d0 <__func__.1+0xa0>
+   5f1a4:	48 8d 35 85 63 04 00 	lea    rsi,[rip+0x46385]        # a5530 <__func__.1>
+   5f1ab:	50                   	push   rax
+--
+   5f1c4:	e8 b7 78 fd ff       	call   36a80 <ssh_err>
+   5f1c9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f1cf:	b9 01 00 00 00       	mov    ecx,0x1
+   5f1d4:	ba 56 00 00 00       	mov    edx,0x56
+   5f1d9:	49 89 c1             	mov    r9,rax
+   5f1dc:	48 8d 05 e5 63 04 00 	lea    rax,[rip+0x463e5]        # a55c8 <__func__.1+0x98>
+   5f1e3:	48 8d 35 46 63 04 00 	lea    rsi,[rip+0x46346]        # a5530 <__func__.1>
+   5f1ea:	50                   	push   rax
+--
+   5f203:	e8 78 78 fd ff       	call   36a80 <ssh_err>
+   5f208:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f20e:	b9 01 00 00 00       	mov    ecx,0x1
+   5f213:	ba 53 00 00 00       	mov    edx,0x53
+   5f218:	49 89 c1             	mov    r9,rax
+   5f21b:	48 8d 05 9d 63 04 00 	lea    rax,[rip+0x4639d]        # a55bf <__func__.1+0x8f>
+   5f222:	48 8d 35 07 63 04 00 	lea    rsi,[rip+0x46307]        # a5530 <__func__.1>
+   5f229:	50                   	push   rax
+--
+   5f242:	e8 39 78 fd ff       	call   36a80 <ssh_err>
+   5f247:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f24d:	b9 01 00 00 00       	mov    ecx,0x1
+   5f252:	ba 4d 00 00 00       	mov    edx,0x4d
+   5f257:	49 89 c1             	mov    r9,rax
+   5f25a:	48 8d 05 58 63 04 00 	lea    rax,[rip+0x46358]        # a55b9 <__func__.1+0x89>
+   5f261:	48 8d 35 c8 62 04 00 	lea    rsi,[rip+0x462c8]        # a5530 <__func__.1>
+   5f268:	50                   	push   rax
+--
+   5f281:	e8 fa 77 fd ff       	call   36a80 <ssh_err>
+   5f286:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f28c:	b9 01 00 00 00       	mov    ecx,0x1
+   5f291:	ba 4b 00 00 00       	mov    edx,0x4b
+   5f296:	49 89 c1             	mov    r9,rax
+   5f299:	48 8d 05 13 63 04 00 	lea    rax,[rip+0x46313]        # a55b3 <__func__.1+0x83>
+   5f2a0:	48 8d 35 89 62 04 00 	lea    rsi,[rip+0x46289]        # a5530 <__func__.1>
+   5f2a7:	50                   	push   rax
+--
+   5f2c0:	e8 bb 77 fd ff       	call   36a80 <ssh_err>
+   5f2c5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f2cb:	b9 01 00 00 00       	mov    ecx,0x1
+   5f2d0:	ba 4a 00 00 00       	mov    edx,0x4a
+   5f2d5:	49 89 c1             	mov    r9,rax
+   5f2d8:	48 8d 05 cd 62 04 00 	lea    rax,[rip+0x462cd]        # a55ac <__func__.1+0x7c>
+   5f2df:	48 8d 35 4a 62 04 00 	lea    rsi,[rip+0x4624a]        # a5530 <__func__.1>
+   5f2e6:	50                   	push   rax
+--
+   5f2ff:	e8 7c 77 fd ff       	call   36a80 <ssh_err>
+   5f304:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f30a:	b9 01 00 00 00       	mov    ecx,0x1
+   5f30f:	ba 48 00 00 00       	mov    edx,0x48
+   5f314:	49 89 c1             	mov    r9,rax
+   5f317:	48 8d 05 88 62 04 00 	lea    rax,[rip+0x46288]        # a55a6 <__func__.1+0x76>
+   5f31e:	48 8d 35 0b 62 04 00 	lea    rsi,[rip+0x4620b]        # a5530 <__func__.1>
+   5f325:	50                   	push   rax
+--
+   5f33e:	e8 3d 77 fd ff       	call   36a80 <ssh_err>
+   5f343:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f349:	b9 01 00 00 00       	mov    ecx,0x1
+   5f34e:	ba 45 00 00 00       	mov    edx,0x45
+   5f353:	49 89 c1             	mov    r9,rax
+   5f356:	48 8d 05 44 62 04 00 	lea    rax,[rip+0x46244]        # a55a1 <__func__.1+0x71>
+   5f35d:	48 8d 35 cc 61 04 00 	lea    rsi,[rip+0x461cc]        # a5530 <__func__.1>
+   5f364:	50                   	push   rax
+--
+   5f37d:	e8 fe 76 fd ff       	call   36a80 <ssh_err>
+   5f382:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f388:	b9 01 00 00 00       	mov    ecx,0x1
+   5f38d:	ba 7d 00 00 00       	mov    edx,0x7d
+   5f392:	49 89 c1             	mov    r9,rax
+   5f395:	48 8d 05 aa 62 04 00 	lea    rax,[rip+0x462aa]        # a5646 <__func__.1+0x116>
+   5f39c:	48 8d 35 8d 61 04 00 	lea    rsi,[rip+0x4618d]        # a5530 <__func__.1>
+   5f3a3:	50                   	push   rax
+--
+   5f3bc:	e8 bf 76 fd ff       	call   36a80 <ssh_err>
+   5f3c1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f3c7:	b9 01 00 00 00       	mov    ecx,0x1
+   5f3cc:	ba 7e 00 00 00       	mov    edx,0x7e
+   5f3d1:	49 89 c1             	mov    r9,rax
+   5f3d4:	48 8d 05 70 62 04 00 	lea    rax,[rip+0x46270]        # a564b <__func__.1+0x11b>
+   5f3db:	48 8d 35 4e 61 04 00 	lea    rsi,[rip+0x4614e]        # a5530 <__func__.1>
+   5f3e2:	50                   	push   rax
+--
+   5f3fb:	e8 80 76 fd ff       	call   36a80 <ssh_err>
+   5f400:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f406:	b9 01 00 00 00       	mov    ecx,0x1
+   5f40b:	ba 80 00 00 00       	mov    edx,0x80
+   5f410:	49 89 c1             	mov    r9,rax
+   5f413:	48 8d 05 38 62 04 00 	lea    rax,[rip+0x46238]        # a5652 <__func__.1+0x122>
+   5f41a:	48 8d 35 0f 61 04 00 	lea    rsi,[rip+0x4610f]        # a5530 <__func__.1>
+   5f421:	50                   	push   rax
+--
+   5f43a:	e8 41 76 fd ff       	call   36a80 <ssh_err>
+   5f43f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f445:	b9 01 00 00 00       	mov    ecx,0x1
+   5f44a:	ba 6a 00 00 00       	mov    edx,0x6a
+   5f44f:	49 89 c1             	mov    r9,rax
+   5f452:	48 8d 05 8e 61 04 00 	lea    rax,[rip+0x4618e]        # a55e7 <__func__.1+0xb7>
+   5f459:	48 8d 35 d0 60 04 00 	lea    rsi,[rip+0x460d0]        # a5530 <__func__.1>
+   5f460:	50                   	push   rax
+--
+   5f479:	e8 02 76 fd ff       	call   36a80 <ssh_err>
+   5f47e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f484:	b9 01 00 00 00       	mov    ecx,0x1
+   5f489:	ba 69 00 00 00       	mov    edx,0x69
+   5f48e:	49 89 c1             	mov    r9,rax
+   5f491:	48 8d 05 48 61 04 00 	lea    rax,[rip+0x46148]        # a55e0 <__func__.1+0xb0>
+   5f498:	48 8d 35 91 60 04 00 	lea    rsi,[rip+0x46091]        # a5530 <__func__.1>
+   5f49f:	50                   	push   rax
+--
+   5f4b8:	e8 c3 75 fd ff       	call   36a80 <ssh_err>
+   5f4bd:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f4c3:	b9 01 00 00 00       	mov    ecx,0x1
+   5f4c8:	ba 65 00 00 00       	mov    edx,0x65
+   5f4cd:	49 89 c1             	mov    r9,rax
+   5f4d0:	48 8d 05 00 61 04 00 	lea    rax,[rip+0x46100]        # a55d7 <__func__.1+0xa7>
+   5f4d7:	48 8d 35 52 60 04 00 	lea    rsi,[rip+0x46052]        # a5530 <__func__.1>
+   5f4de:	50                   	push   rax
+--
+   5f4f7:	e8 84 75 fd ff       	call   36a80 <ssh_err>
+   5f4fc:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f502:	b9 01 00 00 00       	mov    ecx,0x1
+   5f507:	ba 75 00 00 00       	mov    edx,0x75
+   5f50c:	49 89 c1             	mov    r9,rax
+   5f50f:	48 8d 05 08 61 04 00 	lea    rax,[rip+0x46108]        # a561e <__func__.1+0xee>
+   5f516:	48 8d 35 13 60 04 00 	lea    rsi,[rip+0x46013]        # a5530 <__func__.1>
+   5f51d:	50                   	push   rax
+--
+   5f536:	e8 45 75 fd ff       	call   36a80 <ssh_err>
+   5f53b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f541:	b9 01 00 00 00       	mov    ecx,0x1
+   5f546:	ba 74 00 00 00       	mov    edx,0x74
+   5f54b:	49 89 c1             	mov    r9,rax
+   5f54e:	48 8d 05 c3 60 04 00 	lea    rax,[rip+0x460c3]        # a5618 <__func__.1+0xe8>
+   5f555:	48 8d 35 d4 5f 04 00 	lea    rsi,[rip+0x45fd4]        # a5530 <__func__.1>
+   5f55c:	50                   	push   rax
+--
+   5f575:	e8 06 75 fd ff       	call   36a80 <ssh_err>
+   5f57a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f580:	b9 01 00 00 00       	mov    ecx,0x1
+   5f585:	ba a8 00 00 00       	mov    edx,0xa8
+   5f58a:	49 89 c1             	mov    r9,rax
+   5f58d:	48 8d 05 34 61 04 00 	lea    rax,[rip+0x46134]        # a56c8 <__func__.1+0x198>
+   5f594:	48 8d 35 95 5f 04 00 	lea    rsi,[rip+0x45f95]        # a5530 <__func__.1>
+   5f59b:	50                   	push   rax
+--
+   5f5b4:	e8 c7 74 fd ff       	call   36a80 <ssh_err>
+   5f5b9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f5bf:	b9 01 00 00 00       	mov    ecx,0x1
+   5f5c4:	ba a9 00 00 00       	mov    edx,0xa9
+   5f5c9:	49 89 c1             	mov    r9,rax
+   5f5cc:	48 8d 05 fc 60 04 00 	lea    rax,[rip+0x460fc]        # a56cf <__func__.1+0x19f>
+   5f5d3:	48 8d 35 56 5f 04 00 	lea    rsi,[rip+0x45f56]        # a5530 <__func__.1>
+   5f5da:	50                   	push   rax
+--
+   5f5f3:	e8 88 74 fd ff       	call   36a80 <ssh_err>
+   5f5f8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f5fe:	b9 01 00 00 00       	mov    ecx,0x1
+   5f603:	ba a0 00 00 00       	mov    edx,0xa0
+   5f608:	49 89 c1             	mov    r9,rax
+   5f60b:	48 8d 05 a1 60 04 00 	lea    rax,[rip+0x460a1]        # a56b3 <__func__.1+0x183>
+   5f612:	48 8d 35 17 5f 04 00 	lea    rsi,[rip+0x45f17]        # a5530 <__func__.1>
+   5f619:	50                   	push   rax
+--
+   5f632:	e8 49 74 fd ff       	call   36a80 <ssh_err>
+   5f637:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f63d:	b9 01 00 00 00       	mov    ecx,0x1
+   5f642:	ba a3 00 00 00       	mov    edx,0xa3
+   5f647:	49 89 c1             	mov    r9,rax
+   5f64a:	48 8d 05 68 60 04 00 	lea    rax,[rip+0x46068]        # a56b9 <__func__.1+0x189>
+   5f651:	48 8d 35 d8 5e 04 00 	lea    rsi,[rip+0x45ed8]        # a5530 <__func__.1>
+   5f658:	50                   	push   rax
+--
+   5f671:	e8 0a 74 fd ff       	call   36a80 <ssh_err>
+   5f676:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f67c:	b9 01 00 00 00       	mov    ecx,0x1
+   5f681:	ba a6 00 00 00       	mov    edx,0xa6
+   5f686:	49 89 c1             	mov    r9,rax
+   5f689:	48 8d 05 30 60 04 00 	lea    rax,[rip+0x46030]        # a56c0 <__func__.1+0x190>
+   5f690:	48 8d 35 99 5e 04 00 	lea    rsi,[rip+0x45e99]        # a5530 <__func__.1>
+   5f697:	50                   	push   rax
+--
+   5f6b0:	e8 cb 73 fd ff       	call   36a80 <ssh_err>
+   5f6b5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f6bb:	b9 01 00 00 00       	mov    ecx,0x1
+   5f6c0:	ba a7 00 00 00       	mov    edx,0xa7
+   5f6c5:	49 89 c1             	mov    r9,rax
+   5f6c8:	48 8d 05 f5 5f 04 00 	lea    rax,[rip+0x45ff5]        # a56c4 <__func__.1+0x194>
+   5f6cf:	48 8d 35 5a 5e 04 00 	lea    rsi,[rip+0x45e5a]        # a5530 <__func__.1>
+   5f6d6:	50                   	push   rax
+--
+   5f6ef:	e8 8c 73 fd ff       	call   36a80 <ssh_err>
+   5f6f4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f6fa:	b9 01 00 00 00       	mov    ecx,0x1
+   5f6ff:	ba 89 00 00 00       	mov    edx,0x89
+   5f704:	49 89 c1             	mov    r9,rax
+   5f707:	48 8d 05 70 5f 04 00 	lea    rax,[rip+0x45f70]        # a567e <__func__.1+0x14e>
+   5f70e:	48 8d 35 1b 5e 04 00 	lea    rsi,[rip+0x45e1b]        # a5530 <__func__.1>
+   5f715:	50                   	push   rax
+--
+   5f72e:	e8 4d 73 fd ff       	call   36a80 <ssh_err>
+   5f733:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f739:	b9 01 00 00 00       	mov    ecx,0x1
+   5f73e:	ba 8c 00 00 00       	mov    edx,0x8c
+   5f743:	49 89 c1             	mov    r9,rax
+   5f746:	48 8d 05 38 5f 04 00 	lea    rax,[rip+0x45f38]        # a5685 <__func__.1+0x155>
+   5f74d:	48 8d 35 dc 5d 04 00 	lea    rsi,[rip+0x45ddc]        # a5530 <__func__.1>
+   5f754:	50                   	push   rax
+--
+   5f76d:	e8 0e 73 fd ff       	call   36a80 <ssh_err>
+   5f772:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f778:	b9 01 00 00 00       	mov    ecx,0x1
+   5f77d:	ba 8f 00 00 00       	mov    edx,0x8f
+   5f782:	49 89 c1             	mov    r9,rax
+   5f785:	48 8d 05 01 5f 04 00 	lea    rax,[rip+0x45f01]        # a568d <__func__.1+0x15d>
+   5f78c:	48 8d 35 9d 5d 04 00 	lea    rsi,[rip+0x45d9d]        # a5530 <__func__.1>
+   5f793:	50                   	push   rax
+--
+   5f7ac:	e8 cf 72 fd ff       	call   36a80 <ssh_err>
+   5f7b1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f7b7:	b9 01 00 00 00       	mov    ecx,0x1
+   5f7bc:	ba 92 00 00 00       	mov    edx,0x92
+   5f7c1:	49 89 c1             	mov    r9,rax
+   5f7c4:	48 8d 05 c9 5e 04 00 	lea    rax,[rip+0x45ec9]        # a5694 <__func__.1+0x164>
+   5f7cb:	48 8d 35 5e 5d 04 00 	lea    rsi,[rip+0x45d5e]        # a5530 <__func__.1>
+   5f7d2:	50                   	push   rax
+--
+   5f7eb:	e8 90 72 fd ff       	call   36a80 <ssh_err>
+   5f7f0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f7f6:	b9 01 00 00 00       	mov    ecx,0x1
+   5f7fb:	ba 95 00 00 00       	mov    edx,0x95
+   5f800:	49 89 c1             	mov    r9,rax
+   5f803:	48 8d 05 91 5e 04 00 	lea    rax,[rip+0x45e91]        # a569b <__func__.1+0x16b>
+   5f80a:	48 8d 35 1f 5d 04 00 	lea    rsi,[rip+0x45d1f]        # a5530 <__func__.1>
+   5f811:	50                   	push   rax
+--
+   5f82a:	e8 51 72 fd ff       	call   36a80 <ssh_err>
+   5f82f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f835:	b9 01 00 00 00       	mov    ecx,0x1
+   5f83a:	ba 97 00 00 00       	mov    edx,0x97
+   5f83f:	49 89 c1             	mov    r9,rax
+   5f842:	48 8d 05 58 5e 04 00 	lea    rax,[rip+0x45e58]        # a56a1 <__func__.1+0x171>
+   5f849:	48 8d 35 e0 5c 04 00 	lea    rsi,[rip+0x45ce0]        # a5530 <__func__.1>
+   5f850:	50                   	push   rax
+--
+   5f869:	e8 12 72 fd ff       	call   36a80 <ssh_err>
+   5f86e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f874:	b9 01 00 00 00       	mov    ecx,0x1
+   5f879:	ba 9a 00 00 00       	mov    edx,0x9a
+   5f87e:	49 89 c1             	mov    r9,rax
+   5f881:	48 8d 05 1f 5e 04 00 	lea    rax,[rip+0x45e1f]        # a56a7 <__func__.1+0x177>
+   5f888:	48 8d 35 a1 5c 04 00 	lea    rsi,[rip+0x45ca1]        # a5530 <__func__.1>
+   5f88f:	50                   	push   rax
+--
+   5f8a8:	e8 d3 71 fd ff       	call   36a80 <ssh_err>
+   5f8ad:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f8b3:	b9 01 00 00 00       	mov    ecx,0x1
+   5f8b8:	ba 9d 00 00 00       	mov    edx,0x9d
+   5f8bd:	49 89 c1             	mov    r9,rax
+   5f8c0:	48 8d 05 e6 5d 04 00 	lea    rax,[rip+0x45de6]        # a56ad <__func__.1+0x17d>
+   5f8c7:	48 8d 35 62 5c 04 00 	lea    rsi,[rip+0x45c62]        # a5530 <__func__.1>
+   5f8ce:	50                   	push   rax
+--
+   5f8e7:	e8 94 71 fd ff       	call   36a80 <ssh_err>
+   5f8ec:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f8f2:	b9 01 00 00 00       	mov    ecx,0x1
+   5f8f7:	ba 73 00 00 00       	mov    edx,0x73
+   5f8fc:	49 89 c1             	mov    r9,rax
+   5f8ff:	48 8d 05 0d 5d 04 00 	lea    rax,[rip+0x45d0d]        # a5613 <__func__.1+0xe3>
+   5f906:	48 8d 35 23 5c 04 00 	lea    rsi,[rip+0x45c23]        # a5530 <__func__.1>
+   5f90d:	50                   	push   rax
+--
+   5f926:	e8 55 71 fd ff       	call   36a80 <ssh_err>
+   5f92b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f931:	b9 01 00 00 00       	mov    ecx,0x1
+   5f936:	ba 71 00 00 00       	mov    edx,0x71
+   5f93b:	49 89 c1             	mov    r9,rax
+   5f93e:	48 8d 05 c8 5c 04 00 	lea    rax,[rip+0x45cc8]        # a560d <__func__.1+0xdd>
+   5f945:	48 8d 35 e4 5b 04 00 	lea    rsi,[rip+0x45be4]        # a5530 <__func__.1>
+   5f94c:	50                   	push   rax
+--
+   5f965:	e8 16 71 fd ff       	call   36a80 <ssh_err>
+   5f96a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f970:	b9 01 00 00 00       	mov    ecx,0x1
+   5f975:	ba 43 00 00 00       	mov    edx,0x43
+   5f97a:	49 89 c1             	mov    r9,rax
+   5f97d:	48 8d 05 18 5c 04 00 	lea    rax,[rip+0x45c18]        # a559c <__func__.1+0x6c>
+   5f984:	48 8d 35 a5 5b 04 00 	lea    rsi,[rip+0x45ba5]        # a5530 <__func__.1>
+   5f98b:	50                   	push   rax
+--
+   5f9a4:	e8 d7 70 fd ff       	call   36a80 <ssh_err>
+   5f9a9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f9af:	b9 01 00 00 00       	mov    ecx,0x1
+   5f9b4:	ba 6e 00 00 00       	mov    edx,0x6e
+   5f9b9:	49 89 c1             	mov    r9,rax
+   5f9bc:	48 8d 05 3e 5c 04 00 	lea    rax,[rip+0x45c3e]        # a5601 <__func__.1+0xd1>
+   5f9c3:	48 8d 35 66 5b 04 00 	lea    rsi,[rip+0x45b66]        # a5530 <__func__.1>
+   5f9ca:	50                   	push   rax
+--
+   5f9e3:	e8 98 70 fd ff       	call   36a80 <ssh_err>
+   5f9e8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5f9ee:	b9 01 00 00 00       	mov    ecx,0x1
+   5f9f3:	ba 6d 00 00 00       	mov    edx,0x6d
+   5f9f8:	49 89 c1             	mov    r9,rax
+   5f9fb:	48 8d 05 f9 5b 04 00 	lea    rax,[rip+0x45bf9]        # a55fb <__func__.1+0xcb>
+   5fa02:	48 8d 35 27 5b 04 00 	lea    rsi,[rip+0x45b27]        # a5530 <__func__.1>
+   5fa09:	50                   	push   rax
+--
+   5fa22:	e8 59 70 fd ff       	call   36a80 <ssh_err>
+   5fa27:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fa2d:	b9 01 00 00 00       	mov    ecx,0x1
+   5fa32:	ba 6c 00 00 00       	mov    edx,0x6c
+   5fa37:	49 89 c1             	mov    r9,rax
+   5fa3a:	48 8d 05 b3 5b 04 00 	lea    rax,[rip+0x45bb3]        # a55f4 <__func__.1+0xc4>
+   5fa41:	48 8d 35 e8 5a 04 00 	lea    rsi,[rip+0x45ae8]        # a5530 <__func__.1>
+   5fa48:	50                   	push   rax
+--
+   5fa61:	e8 1a 70 fd ff       	call   36a80 <ssh_err>
+   5fa66:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fa6c:	b9 01 00 00 00       	mov    ecx,0x1
+   5fa71:	ba 6b 00 00 00       	mov    edx,0x6b
+   5fa76:	49 89 c1             	mov    r9,rax
+   5fa79:	48 8d 05 6e 5b 04 00 	lea    rax,[rip+0x45b6e]        # a55ee <__func__.1+0xbe>
+   5fa80:	48 8d 35 a9 5a 04 00 	lea    rsi,[rip+0x45aa9]        # a5530 <__func__.1>
+   5fa87:	50                   	push   rax
+--
+   5faa0:	e8 db 6f fd ff       	call   36a80 <ssh_err>
+   5faa5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5faab:	b9 01 00 00 00       	mov    ecx,0x1
+   5fab0:	ba 77 00 00 00       	mov    edx,0x77
+   5fab5:	49 89 c1             	mov    r9,rax
+   5fab8:	48 8d 05 65 5b 04 00 	lea    rax,[rip+0x45b65]        # a5624 <__func__.1+0xf4>
+   5fabf:	48 8d 35 6a 5a 04 00 	lea    rsi,[rip+0x45a6a]        # a5530 <__func__.1>
+   5fac6:	50                   	push   rax
+--
+   5fadf:	e8 9c 6f fd ff       	call   36a80 <ssh_err>
+   5fae4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5faea:	b9 01 00 00 00       	mov    ecx,0x1
+   5faef:	ba 6f 00 00 00       	mov    edx,0x6f
+   5faf4:	49 89 c1             	mov    r9,rax
+   5faf7:	48 8d 05 09 5b 04 00 	lea    rax,[rip+0x45b09]        # a5607 <__func__.1+0xd7>
+   5fafe:	48 8d 35 2b 5a 04 00 	lea    rsi,[rip+0x45a2b]        # a5530 <__func__.1>
+   5fb05:	50                   	push   rax
+--
+   5fb1e:	e8 5d 6f fd ff       	call   36a80 <ssh_err>
+   5fb23:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fb29:	b9 01 00 00 00       	mov    ecx,0x1
+   5fb2e:	ba 3d 00 00 00       	mov    edx,0x3d
+   5fb33:	49 89 c1             	mov    r9,rax
+   5fb36:	48 8d 05 3b 5a 04 00 	lea    rax,[rip+0x45a3b]        # a5578 <__func__.1+0x48>
+   5fb3d:	48 8d 35 ec 59 04 00 	lea    rsi,[rip+0x459ec]        # a5530 <__func__.1>
+   5fb44:	50                   	push   rax
+--
+   5fb5d:	e8 1e 6f fd ff       	call   36a80 <ssh_err>
+   5fb62:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fb68:	b9 01 00 00 00       	mov    ecx,0x1
+   5fb6d:	ba 82 00 00 00       	mov    edx,0x82
+   5fb72:	49 89 c1             	mov    r9,rax
+   5fb75:	48 8d 05 dc 5a 04 00 	lea    rax,[rip+0x45adc]        # a5658 <__func__.1+0x128>
+   5fb7c:	48 8d 35 ad 59 04 00 	lea    rsi,[rip+0x459ad]        # a5530 <__func__.1>
+   5fb83:	50                   	push   rax
+--
+   5fb9c:	e8 df 6e fd ff       	call   36a80 <ssh_err>
+   5fba1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fba7:	b9 01 00 00 00       	mov    ecx,0x1
+   5fbac:	ba 83 00 00 00       	mov    edx,0x83
+   5fbb1:	49 89 c1             	mov    r9,rax
+   5fbb4:	48 8d 05 a2 5a 04 00 	lea    rax,[rip+0x45aa2]        # a565d <__func__.1+0x12d>
+   5fbbb:	48 8d 35 6e 59 04 00 	lea    rsi,[rip+0x4596e]        # a5530 <__func__.1>
+   5fbc2:	50                   	push   rax
+--
+   5fbdb:	e8 a0 6e fd ff       	call   36a80 <ssh_err>
+   5fbe0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fbe6:	b9 01 00 00 00       	mov    ecx,0x1
+   5fbeb:	ba 84 00 00 00       	mov    edx,0x84
+   5fbf0:	49 89 c1             	mov    r9,rax
+   5fbf3:	48 8d 05 69 5a 04 00 	lea    rax,[rip+0x45a69]        # a5663 <__func__.1+0x133>
+   5fbfa:	48 8d 35 2f 59 04 00 	lea    rsi,[rip+0x4592f]        # a5530 <__func__.1>
+   5fc01:	50                   	push   rax
+--
+   5fc1a:	e8 61 6e fd ff       	call   36a80 <ssh_err>
+   5fc1f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fc25:	b9 01 00 00 00       	mov    ecx,0x1
+   5fc2a:	ba 85 00 00 00       	mov    edx,0x85
+   5fc2f:	49 89 c1             	mov    r9,rax
+   5fc32:	48 8d 05 30 5a 04 00 	lea    rax,[rip+0x45a30]        # a5669 <__func__.1+0x139>
+   5fc39:	48 8d 35 f0 58 04 00 	lea    rsi,[rip+0x458f0]        # a5530 <__func__.1>
+   5fc40:	50                   	push   rax
+--
+   5fc59:	e8 22 6e fd ff       	call   36a80 <ssh_err>
+   5fc5e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fc64:	b9 01 00 00 00       	mov    ecx,0x1
+   5fc69:	ba 86 00 00 00       	mov    edx,0x86
+   5fc6e:	49 89 c1             	mov    r9,rax
+   5fc71:	48 8d 05 f8 59 04 00 	lea    rax,[rip+0x459f8]        # a5670 <__func__.1+0x140>
+   5fc78:	48 8d 35 b1 58 04 00 	lea    rsi,[rip+0x458b1]        # a5530 <__func__.1>
+   5fc7f:	50                   	push   rax
+--
+   5fc98:	e8 e3 6d fd ff       	call   36a80 <ssh_err>
+   5fc9d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fca3:	b9 01 00 00 00       	mov    ecx,0x1
+   5fca8:	ba 87 00 00 00       	mov    edx,0x87
+   5fcad:	49 89 c1             	mov    r9,rax
+   5fcb0:	48 8d 05 c0 59 04 00 	lea    rax,[rip+0x459c0]        # a5677 <__func__.1+0x147>
+   5fcb7:	48 8d 35 72 58 04 00 	lea    rsi,[rip+0x45872]        # a5530 <__func__.1>
+   5fcbe:	50                   	push   rax
+--
+   5fd09:	e8 72 6d fd ff       	call   36a80 <ssh_err>
+   5fd0e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5fd14:	b9 01 00 00 00       	mov    ecx,0x1
+   5fd19:	ba 7a 00 00 00       	mov    edx,0x7a
+   5fd1e:	49 89 c1             	mov    r9,rax
+   5fd21:	48 8d 05 18 59 04 00 	lea    rax,[rip+0x45918]        # a5640 <__func__.1+0x110>
+   5fd28:	48 8d 35 01 58 04 00 	lea    rsi,[rip+0x45801]        # a5530 <__func__.1>
+   5fd2f:	50                   	push   rax
+--
+   5ff8f:	e8 ec 6a fd ff       	call   36a80 <ssh_err>
+   5ff94:	41 b8 01 00 00 00    	mov    r8d,0x1
+   5ff9a:	b9 01 00 00 00       	mov    ecx,0x1
+   5ff9f:	4c 89 fe             	mov    rsi,r15
+   5ffa2:	49 89 c1             	mov    r9,rax
+   5ffa5:	48 8d 05 ad 57 04 00 	lea    rax,[rip+0x457ad]        # a5759 <__func__.1+0x229>
+   5ffac:	57                   	push   rdi
+   5ffad:	ba ac 01 00 00       	mov    edx,0x1ac
+--
+   60b90:	e8 eb 5e fd ff       	call   36a80 <ssh_err>
+   60b95:	48 83 ec 08          	sub    rsp,0x8
+   60b99:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60b9f:	b9 01 00 00 00       	mov    ecx,0x1
+   60ba4:	49 89 c1             	mov    r9,rax
+   60ba7:	48 8d 05 47 4b 04 00 	lea    rax,[rip+0x44b47]        # a56f5 <__func__.1+0x1c5>
+   60bae:	ba 76 01 00 00       	mov    edx,0x176
+   60bb3:	50                   	push   rax
+--
+   60bd0:	e8 ab 5e fd ff       	call   36a80 <ssh_err>
+   60bd5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60bdb:	b9 01 00 00 00       	mov    ecx,0x1
+   60be0:	ba 7d 01 00 00       	mov    edx,0x17d
+   60be5:	49 89 c1             	mov    r9,rax
+   60be8:	48 8d 05 13 4b 04 00 	lea    rax,[rip+0x44b13]        # a5702 <__func__.1+0x1d2>
+   60bef:	56                   	push   rsi
+   60bf0:	48 8d 3d 4c 49 04 00 	lea    rdi,[rip+0x4494c]        # a5543 <__func__.1+0x13>
+--
+   60c08:	e8 73 5e fd ff       	call   36a80 <ssh_err>
+   60c0d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60c13:	b9 01 00 00 00       	mov    ecx,0x1
+   60c18:	ba 62 01 00 00       	mov    edx,0x162
+   60c1d:	49 89 c1             	mov    r9,rax
+   60c20:	48 8d 05 2f d1 03 00 	lea    rax,[rip+0x3d12f]        # 9dd56 <__func__.29+0x56>
+   60c27:	41 52                	push   r10
+   60c29:	48 8d 35 e0 48 04 00 	lea    rsi,[rip+0x448e0]        # a5510 <__func__.0>
+--
+   60c41:	e8 3a 5e fd ff       	call   36a80 <ssh_err>
+   60c46:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60c4c:	b9 01 00 00 00       	mov    ecx,0x1
+   60c51:	ba 4a 00 00 00       	mov    edx,0x4a
+   60c56:	49 89 c1             	mov    r9,rax
+   60c59:	48 8d 05 4c 49 04 00 	lea    rax,[rip+0x4494c]        # a55ac <__func__.1+0x7c>
+   60c60:	48 8d 35 a9 48 04 00 	lea    rsi,[rip+0x448a9]        # a5510 <__func__.0>
+   60c67:	50                   	push   rax
+--
+   60c80:	e8 fb 5d fd ff       	call   36a80 <ssh_err>
+   60c85:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60c8b:	b9 01 00 00 00       	mov    ecx,0x1
+   60c90:	ba 41 00 00 00       	mov    edx,0x41
+   60c95:	49 89 c1             	mov    r9,rax
+   60c98:	48 8d 05 f7 48 04 00 	lea    rax,[rip+0x448f7]        # a5596 <__func__.1+0x66>
+   60c9f:	48 8d 35 6a 48 04 00 	lea    rsi,[rip+0x4486a]        # a5510 <__func__.0>
+   60ca6:	50                   	push   rax
+--
+   60cbf:	e8 bc 5d fd ff       	call   36a80 <ssh_err>
+   60cc4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60cca:	ba 85 01 00 00       	mov    edx,0x185
+   60ccf:	48 8d 35 3a 48 04 00 	lea    rsi,[rip+0x4483a]        # a5510 <__func__.0>
+   60cd6:	49 89 c1             	mov    r9,rax
+   60cd9:	48 8d 05 49 4a 04 00 	lea    rax,[rip+0x44a49]        # a5729 <__func__.1+0x1f9>
+   60ce0:	51                   	push   rcx
+   60ce1:	b9 01 00 00 00       	mov    ecx,0x1
+--
+   60cf7:	e8 84 5d fd ff       	call   36a80 <ssh_err>
+   60cfc:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60d02:	b9 01 00 00 00       	mov    ecx,0x1
+   60d07:	ba 73 00 00 00       	mov    edx,0x73
+   60d0c:	49 89 c1             	mov    r9,rax
+   60d0f:	48 8d 05 fd 48 04 00 	lea    rax,[rip+0x448fd]        # a5613 <__func__.1+0xe3>
+   60d16:	48 8d 35 f3 47 04 00 	lea    rsi,[rip+0x447f3]        # a5510 <__func__.0>
+   60d1d:	50                   	push   rax
+--
+   60d36:	e8 45 5d fd ff       	call   36a80 <ssh_err>
+   60d3b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60d41:	b9 01 00 00 00       	mov    ecx,0x1
+   60d46:	ba 3d 00 00 00       	mov    edx,0x3d
+   60d4b:	49 89 c1             	mov    r9,rax
+   60d4e:	48 8d 05 23 48 04 00 	lea    rax,[rip+0x44823]        # a5578 <__func__.1+0x48>
+   60d55:	48 8d 35 b4 47 04 00 	lea    rsi,[rip+0x447b4]        # a5510 <__func__.0>
+   60d5c:	50                   	push   rax
+--
+   60d75:	e8 06 5d fd ff       	call   36a80 <ssh_err>
+   60d7a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60d80:	b9 01 00 00 00       	mov    ecx,0x1
+   60d85:	ba 6e 00 00 00       	mov    edx,0x6e
+   60d8a:	49 89 c1             	mov    r9,rax
+   60d8d:	48 8d 05 6d 48 04 00 	lea    rax,[rip+0x4486d]        # a5601 <__func__.1+0xd1>
+   60d94:	48 8d 35 75 47 04 00 	lea    rsi,[rip+0x44775]        # a5510 <__func__.0>
+   60d9b:	50                   	push   rax
+--
+   60db4:	e8 c7 5c fd ff       	call   36a80 <ssh_err>
+   60db9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60dbf:	b9 01 00 00 00       	mov    ecx,0x1
+   60dc4:	ba 6f 00 00 00       	mov    edx,0x6f
+   60dc9:	49 89 c1             	mov    r9,rax
+   60dcc:	48 8d 05 34 48 04 00 	lea    rax,[rip+0x44834]        # a5607 <__func__.1+0xd7>
+   60dd3:	48 8d 35 36 47 04 00 	lea    rsi,[rip+0x44736]        # a5510 <__func__.0>
+   60dda:	50                   	push   rax
+--
+   60df3:	e8 88 5c fd ff       	call   36a80 <ssh_err>
+   60df8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60dfe:	b9 01 00 00 00       	mov    ecx,0x1
+   60e03:	ba 4d 00 00 00       	mov    edx,0x4d
+   60e08:	49 89 c1             	mov    r9,rax
+   60e0b:	48 8d 05 a7 47 04 00 	lea    rax,[rip+0x447a7]        # a55b9 <__func__.1+0x89>
+   60e12:	48 8d 35 f7 46 04 00 	lea    rsi,[rip+0x446f7]        # a5510 <__func__.0>
+   60e19:	50                   	push   rax
+--
+   60e32:	e8 49 5c fd ff       	call   36a80 <ssh_err>
+   60e37:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60e3d:	b9 01 00 00 00       	mov    ecx,0x1
+   60e42:	ba 53 00 00 00       	mov    edx,0x53
+   60e47:	49 89 c1             	mov    r9,rax
+   60e4a:	48 8d 05 6e 47 04 00 	lea    rax,[rip+0x4476e]        # a55bf <__func__.1+0x8f>
+   60e51:	48 8d 35 b8 46 04 00 	lea    rsi,[rip+0x446b8]        # a5510 <__func__.0>
+   60e58:	50                   	push   rax
+--
+   60e71:	e8 0a 5c fd ff       	call   36a80 <ssh_err>
+   60e76:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60e7c:	b9 01 00 00 00       	mov    ecx,0x1
+   60e81:	ba 56 00 00 00       	mov    edx,0x56
+   60e86:	49 89 c1             	mov    r9,rax
+   60e89:	48 8d 05 38 47 04 00 	lea    rax,[rip+0x44738]        # a55c8 <__func__.1+0x98>
+   60e90:	48 8d 35 79 46 04 00 	lea    rsi,[rip+0x44679]        # a5510 <__func__.0>
+   60e97:	50                   	push   rax
+--
+   60eb0:	e8 cb 5b fd ff       	call   36a80 <ssh_err>
+   60eb5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60ebb:	b9 01 00 00 00       	mov    ecx,0x1
+   60ec0:	ba 59 00 00 00       	mov    edx,0x59
+   60ec5:	49 89 c1             	mov    r9,rax
+   60ec8:	48 8d 05 01 47 04 00 	lea    rax,[rip+0x44701]        # a55d0 <__func__.1+0xa0>
+   60ecf:	48 8d 35 3a 46 04 00 	lea    rsi,[rip+0x4463a]        # a5510 <__func__.0>
+   60ed6:	50                   	push   rax
+--
+   60eef:	e8 8c 5b fd ff       	call   36a80 <ssh_err>
+   60ef4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60efa:	b9 01 00 00 00       	mov    ecx,0x1
+   60eff:	ba 65 00 00 00       	mov    edx,0x65
+   60f04:	49 89 c1             	mov    r9,rax
+   60f07:	48 8d 05 c9 46 04 00 	lea    rax,[rip+0x446c9]        # a55d7 <__func__.1+0xa7>
+   60f0e:	48 8d 35 fb 45 04 00 	lea    rsi,[rip+0x445fb]        # a5510 <__func__.0>
+   60f15:	50                   	push   rax
+--
+   60f2e:	e8 4d 5b fd ff       	call   36a80 <ssh_err>
+   60f33:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60f39:	b9 01 00 00 00       	mov    ecx,0x1
+   60f3e:	ba 69 00 00 00       	mov    edx,0x69
+   60f43:	49 89 c1             	mov    r9,rax
+   60f46:	48 8d 05 93 46 04 00 	lea    rax,[rip+0x44693]        # a55e0 <__func__.1+0xb0>
+   60f4d:	48 8d 35 bc 45 04 00 	lea    rsi,[rip+0x445bc]        # a5510 <__func__.0>
+   60f54:	50                   	push   rax
+--
+   60f6d:	e8 0e 5b fd ff       	call   36a80 <ssh_err>
+   60f72:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60f78:	b9 01 00 00 00       	mov    ecx,0x1
+   60f7d:	ba 6a 00 00 00       	mov    edx,0x6a
+   60f82:	49 89 c1             	mov    r9,rax
+   60f85:	48 8d 05 5b 46 04 00 	lea    rax,[rip+0x4465b]        # a55e7 <__func__.1+0xb7>
+   60f8c:	48 8d 35 7d 45 04 00 	lea    rsi,[rip+0x4457d]        # a5510 <__func__.0>
+   60f93:	50                   	push   rax
+--
+   60fac:	e8 cf 5a fd ff       	call   36a80 <ssh_err>
+   60fb1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60fb7:	b9 01 00 00 00       	mov    ecx,0x1
+   60fbc:	ba 6b 00 00 00       	mov    edx,0x6b
+   60fc1:	49 89 c1             	mov    r9,rax
+   60fc4:	48 8d 05 23 46 04 00 	lea    rax,[rip+0x44623]        # a55ee <__func__.1+0xbe>
+   60fcb:	48 8d 35 3e 45 04 00 	lea    rsi,[rip+0x4453e]        # a5510 <__func__.0>
+   60fd2:	50                   	push   rax
+--
+   60feb:	e8 90 5a fd ff       	call   36a80 <ssh_err>
+   60ff0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   60ff6:	b9 01 00 00 00       	mov    ecx,0x1
+   60ffb:	ba 4b 00 00 00       	mov    edx,0x4b
+   61000:	49 89 c1             	mov    r9,rax
+   61003:	48 8d 05 a9 45 04 00 	lea    rax,[rip+0x445a9]        # a55b3 <__func__.1+0x83>
+   6100a:	48 8d 35 ff 44 04 00 	lea    rsi,[rip+0x444ff]        # a5510 <__func__.0>
+   61011:	50                   	push   rax
+--
+   6102a:	e8 51 5a fd ff       	call   36a80 <ssh_err>
+   6102f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61035:	b9 01 00 00 00       	mov    ecx,0x1
+   6103a:	ba 75 00 00 00       	mov    edx,0x75
+   6103f:	49 89 c1             	mov    r9,rax
+   61042:	48 8d 05 d5 45 04 00 	lea    rax,[rip+0x445d5]        # a561e <__func__.1+0xee>
+   61049:	48 8d 35 c0 44 04 00 	lea    rsi,[rip+0x444c0]        # a5510 <__func__.0>
+   61050:	50                   	push   rax
+--
+   61069:	e8 12 5a fd ff       	call   36a80 <ssh_err>
+   6106e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61074:	b9 01 00 00 00       	mov    ecx,0x1
+   61079:	ba 77 00 00 00       	mov    edx,0x77
+   6107e:	49 89 c1             	mov    r9,rax
+   61081:	48 8d 05 9c 45 04 00 	lea    rax,[rip+0x4459c]        # a5624 <__func__.1+0xf4>
+   61088:	48 8d 35 81 44 04 00 	lea    rsi,[rip+0x44481]        # a5510 <__func__.0>
+   6108f:	50                   	push   rax
+--
+   610a8:	e8 d3 59 fd ff       	call   36a80 <ssh_err>
+   610ad:	41 b8 01 00 00 00    	mov    r8d,0x1
+   610b3:	b9 01 00 00 00       	mov    ecx,0x1
+   610b8:	ba 85 00 00 00       	mov    edx,0x85
+   610bd:	49 89 c1             	mov    r9,rax
+   610c0:	48 8d 05 a2 45 04 00 	lea    rax,[rip+0x445a2]        # a5669 <__func__.1+0x139>
+   610c7:	48 8d 35 42 44 04 00 	lea    rsi,[rip+0x44442]        # a5510 <__func__.0>
+   610ce:	50                   	push   rax
+--
+   610e7:	e8 94 59 fd ff       	call   36a80 <ssh_err>
+   610ec:	41 b8 01 00 00 00    	mov    r8d,0x1
+   610f2:	b9 01 00 00 00       	mov    ecx,0x1
+   610f7:	ba 3e 00 00 00       	mov    edx,0x3e
+   610fc:	49 89 c1             	mov    r9,rax
+   610ff:	48 8d 05 83 44 04 00 	lea    rax,[rip+0x44483]        # a5589 <__func__.1+0x59>
+   61106:	48 8d 35 03 44 04 00 	lea    rsi,[rip+0x44403]        # a5510 <__func__.0>
+   6110d:	50                   	push   rax
+--
+   61126:	e8 55 59 fd ff       	call   36a80 <ssh_err>
+   6112b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61131:	b9 01 00 00 00       	mov    ecx,0x1
+   61136:	ba 3f 00 00 00       	mov    edx,0x3f
+   6113b:	49 89 c1             	mov    r9,rax
+   6113e:	48 8d 05 4a 44 04 00 	lea    rax,[rip+0x4444a]        # a558f <__func__.1+0x5f>
+   61145:	48 8d 35 c4 43 04 00 	lea    rsi,[rip+0x443c4]        # a5510 <__func__.0>
+   6114c:	50                   	push   rax
+--
+   61165:	e8 16 59 fd ff       	call   36a80 <ssh_err>
+   6116a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61170:	b9 01 00 00 00       	mov    ecx,0x1
+   61175:	ba 48 00 00 00       	mov    edx,0x48
+   6117a:	49 89 c1             	mov    r9,rax
+   6117d:	48 8d 05 22 44 04 00 	lea    rax,[rip+0x44422]        # a55a6 <__func__.1+0x76>
+   61184:	48 8d 35 85 43 04 00 	lea    rsi,[rip+0x44385]        # a5510 <__func__.0>
+   6118b:	50                   	push   rax
+--
+   611a4:	e8 d7 58 fd ff       	call   36a80 <ssh_err>
+   611a9:	41 b8 01 00 00 00    	mov    r8d,0x1
+   611af:	b9 01 00 00 00       	mov    ecx,0x1
+   611b4:	ba 6c 00 00 00       	mov    edx,0x6c
+   611b9:	49 89 c1             	mov    r9,rax
+   611bc:	48 8d 05 31 44 04 00 	lea    rax,[rip+0x44431]        # a55f4 <__func__.1+0xc4>
+   611c3:	48 8d 35 46 43 04 00 	lea    rsi,[rip+0x44346]        # a5510 <__func__.0>
+   611ca:	50                   	push   rax
+--
+   611e3:	e8 98 58 fd ff       	call   36a80 <ssh_err>
+   611e8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   611ee:	b9 01 00 00 00       	mov    ecx,0x1
+   611f3:	ba 6d 00 00 00       	mov    edx,0x6d
+   611f8:	49 89 c1             	mov    r9,rax
+   611fb:	48 8d 05 f9 43 04 00 	lea    rax,[rip+0x443f9]        # a55fb <__func__.1+0xcb>
+   61202:	48 8d 35 07 43 04 00 	lea    rsi,[rip+0x44307]        # a5510 <__func__.0>
+   61209:	50                   	push   rax
+--
+   61222:	e8 59 58 fd ff       	call   36a80 <ssh_err>
+   61227:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6122d:	b9 01 00 00 00       	mov    ecx,0x1
+   61232:	ba 43 00 00 00       	mov    edx,0x43
+   61237:	49 89 c1             	mov    r9,rax
+   6123a:	48 8d 05 5b 43 04 00 	lea    rax,[rip+0x4435b]        # a559c <__func__.1+0x6c>
+   61241:	48 8d 35 c8 42 04 00 	lea    rsi,[rip+0x442c8]        # a5510 <__func__.0>
+   61248:	50                   	push   rax
+--
+   61261:	e8 1a 58 fd ff       	call   36a80 <ssh_err>
+   61266:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6126c:	b9 01 00 00 00       	mov    ecx,0x1
+   61271:	ba 74 00 00 00       	mov    edx,0x74
+   61276:	49 89 c1             	mov    r9,rax
+   61279:	48 8d 05 98 43 04 00 	lea    rax,[rip+0x44398]        # a5618 <__func__.1+0xe8>
+   61280:	48 8d 35 89 42 04 00 	lea    rsi,[rip+0x44289]        # a5510 <__func__.0>
+   61287:	50                   	push   rax
+--
+   612a0:	e8 db 57 fd ff       	call   36a80 <ssh_err>
+   612a5:	41 b8 01 00 00 00    	mov    r8d,0x1
+   612ab:	b9 01 00 00 00       	mov    ecx,0x1
+   612b0:	ba 71 00 00 00       	mov    edx,0x71
+   612b5:	49 89 c1             	mov    r9,rax
+   612b8:	48 8d 05 4e 43 04 00 	lea    rax,[rip+0x4434e]        # a560d <__func__.1+0xdd>
+   612bf:	48 8d 35 4a 42 04 00 	lea    rsi,[rip+0x4424a]        # a5510 <__func__.0>
+   612c6:	50                   	push   rax
+--
+   612df:	e8 9c 57 fd ff       	call   36a80 <ssh_err>
+   612e4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   612ea:	b9 01 00 00 00       	mov    ecx,0x1
+   612ef:	ba 45 00 00 00       	mov    edx,0x45
+   612f4:	49 89 c1             	mov    r9,rax
+   612f7:	48 8d 05 a3 42 04 00 	lea    rax,[rip+0x442a3]        # a55a1 <__func__.1+0x71>
+   612fe:	48 8d 35 0b 42 04 00 	lea    rsi,[rip+0x4420b]        # a5510 <__func__.0>
+   61305:	50                   	push   rax
+--
+   6131e:	e8 5d 57 fd ff       	call   36a80 <ssh_err>
+   61323:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61329:	b9 01 00 00 00       	mov    ecx,0x1
+   6132e:	ba a9 00 00 00       	mov    edx,0xa9
+   61333:	49 89 c1             	mov    r9,rax
+   61336:	48 8d 05 92 43 04 00 	lea    rax,[rip+0x44392]        # a56cf <__func__.1+0x19f>
+   6133d:	48 8d 35 cc 41 04 00 	lea    rsi,[rip+0x441cc]        # a5510 <__func__.0>
+   61344:	50                   	push   rax
+--
+   6135d:	e8 1e 57 fd ff       	call   36a80 <ssh_err>
+   61362:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61368:	b9 01 00 00 00       	mov    ecx,0x1
+   6136d:	ba a0 00 00 00       	mov    edx,0xa0
+   61372:	49 89 c1             	mov    r9,rax
+   61375:	48 8d 05 37 43 04 00 	lea    rax,[rip+0x44337]        # a56b3 <__func__.1+0x183>
+   6137c:	48 8d 35 8d 41 04 00 	lea    rsi,[rip+0x4418d]        # a5510 <__func__.0>
+   61383:	50                   	push   rax
+--
+   6139c:	e8 df 56 fd ff       	call   36a80 <ssh_err>
+   613a1:	41 b8 01 00 00 00    	mov    r8d,0x1
+   613a7:	b9 01 00 00 00       	mov    ecx,0x1
+   613ac:	ba a8 00 00 00       	mov    edx,0xa8
+   613b1:	49 89 c1             	mov    r9,rax
+   613b4:	48 8d 05 0d 43 04 00 	lea    rax,[rip+0x4430d]        # a56c8 <__func__.1+0x198>
+   613bb:	48 8d 35 4e 41 04 00 	lea    rsi,[rip+0x4414e]        # a5510 <__func__.0>
+   613c2:	50                   	push   rax
+--
+   613db:	e8 a0 56 fd ff       	call   36a80 <ssh_err>
+   613e0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   613e6:	b9 01 00 00 00       	mov    ecx,0x1
+   613eb:	ba 9d 00 00 00       	mov    edx,0x9d
+   613f0:	49 89 c1             	mov    r9,rax
+   613f3:	48 8d 05 b3 42 04 00 	lea    rax,[rip+0x442b3]        # a56ad <__func__.1+0x17d>
+   613fa:	48 8d 35 0f 41 04 00 	lea    rsi,[rip+0x4410f]        # a5510 <__func__.0>
+   61401:	50                   	push   rax
+--
+   6141a:	e8 61 56 fd ff       	call   36a80 <ssh_err>
+   6141f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61425:	b9 01 00 00 00       	mov    ecx,0x1
+   6142a:	ba a7 00 00 00       	mov    edx,0xa7
+   6142f:	49 89 c1             	mov    r9,rax
+   61432:	48 8d 05 8b 42 04 00 	lea    rax,[rip+0x4428b]        # a56c4 <__func__.1+0x194>
+   61439:	48 8d 35 d0 40 04 00 	lea    rsi,[rip+0x440d0]        # a5510 <__func__.0>
+   61440:	50                   	push   rax
+--
+   61459:	e8 22 56 fd ff       	call   36a80 <ssh_err>
+   6145e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61464:	b9 01 00 00 00       	mov    ecx,0x1
+   61469:	ba 9a 00 00 00       	mov    edx,0x9a
+   6146e:	49 89 c1             	mov    r9,rax
+   61471:	48 8d 05 2f 42 04 00 	lea    rax,[rip+0x4422f]        # a56a7 <__func__.1+0x177>
+   61478:	48 8d 35 91 40 04 00 	lea    rsi,[rip+0x44091]        # a5510 <__func__.0>
+   6147f:	50                   	push   rax
+--
+   61498:	e8 e3 55 fd ff       	call   36a80 <ssh_err>
+   6149d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   614a3:	b9 01 00 00 00       	mov    ecx,0x1
+   614a8:	ba a6 00 00 00       	mov    edx,0xa6
+   614ad:	49 89 c1             	mov    r9,rax
+   614b0:	48 8d 05 09 42 04 00 	lea    rax,[rip+0x44209]        # a56c0 <__func__.1+0x190>
+   614b7:	48 8d 35 52 40 04 00 	lea    rsi,[rip+0x44052]        # a5510 <__func__.0>
+   614be:	50                   	push   rax
+--
+   614d7:	e8 a4 55 fd ff       	call   36a80 <ssh_err>
+   614dc:	41 b8 01 00 00 00    	mov    r8d,0x1
+   614e2:	b9 01 00 00 00       	mov    ecx,0x1
+   614e7:	ba 80 00 00 00       	mov    edx,0x80
+   614ec:	49 89 c1             	mov    r9,rax
+   614ef:	48 8d 05 5c 41 04 00 	lea    rax,[rip+0x4415c]        # a5652 <__func__.1+0x122>
+   614f6:	48 8d 35 13 40 04 00 	lea    rsi,[rip+0x44013]        # a5510 <__func__.0>
+   614fd:	50                   	push   rax
+--
+   61516:	e8 65 55 fd ff       	call   36a80 <ssh_err>
+   6151b:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61521:	b9 01 00 00 00       	mov    ecx,0x1
+   61526:	ba 8c 00 00 00       	mov    edx,0x8c
+   6152b:	49 89 c1             	mov    r9,rax
+   6152e:	48 8d 05 50 41 04 00 	lea    rax,[rip+0x44150]        # a5685 <__func__.1+0x155>
+   61535:	48 8d 35 d4 3f 04 00 	lea    rsi,[rip+0x43fd4]        # a5510 <__func__.0>
+   6153c:	50                   	push   rax
+--
+   61555:	e8 26 55 fd ff       	call   36a80 <ssh_err>
+   6155a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61560:	b9 01 00 00 00       	mov    ecx,0x1
+   61565:	ba 7d 00 00 00       	mov    edx,0x7d
+   6156a:	49 89 c1             	mov    r9,rax
+   6156d:	48 8d 05 d2 40 04 00 	lea    rax,[rip+0x440d2]        # a5646 <__func__.1+0x116>
+   61574:	48 8d 35 95 3f 04 00 	lea    rsi,[rip+0x43f95]        # a5510 <__func__.0>
+   6157b:	50                   	push   rax
+--
+   61594:	e8 e7 54 fd ff       	call   36a80 <ssh_err>
+   61599:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6159f:	b9 01 00 00 00       	mov    ecx,0x1
+   615a4:	ba 87 00 00 00       	mov    edx,0x87
+   615a9:	49 89 c1             	mov    r9,rax
+   615ac:	48 8d 05 c4 40 04 00 	lea    rax,[rip+0x440c4]        # a5677 <__func__.1+0x147>
+   615b3:	48 8d 35 56 3f 04 00 	lea    rsi,[rip+0x43f56]        # a5510 <__func__.0>
+   615ba:	50                   	push   rax
+--
+   615d3:	e8 a8 54 fd ff       	call   36a80 <ssh_err>
+   615d8:	41 b8 01 00 00 00    	mov    r8d,0x1
+   615de:	b9 01 00 00 00       	mov    ecx,0x1
+   615e3:	ba 83 00 00 00       	mov    edx,0x83
+   615e8:	49 89 c1             	mov    r9,rax
+   615eb:	48 8d 05 6b 40 04 00 	lea    rax,[rip+0x4406b]        # a565d <__func__.1+0x12d>
+   615f2:	48 8d 35 17 3f 04 00 	lea    rsi,[rip+0x43f17]        # a5510 <__func__.0>
+   615f9:	50                   	push   rax
+--
+   61612:	e8 69 54 fd ff       	call   36a80 <ssh_err>
+   61617:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6161d:	b9 01 00 00 00       	mov    ecx,0x1
+   61622:	ba 92 00 00 00       	mov    edx,0x92
+   61627:	49 89 c1             	mov    r9,rax
+   6162a:	48 8d 05 63 40 04 00 	lea    rax,[rip+0x44063]        # a5694 <__func__.1+0x164>
+   61631:	48 8d 35 d8 3e 04 00 	lea    rsi,[rip+0x43ed8]        # a5510 <__func__.0>
+   61638:	50                   	push   rax
+--
+   61651:	e8 2a 54 fd ff       	call   36a80 <ssh_err>
+   61656:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6165c:	b9 01 00 00 00       	mov    ecx,0x1
+   61661:	ba 7a 00 00 00       	mov    edx,0x7a
+   61666:	49 89 c1             	mov    r9,rax
+   61669:	48 8d 05 d0 3f 04 00 	lea    rax,[rip+0x43fd0]        # a5640 <__func__.1+0x110>
+   61670:	48 8d 35 99 3e 04 00 	lea    rsi,[rip+0x43e99]        # a5510 <__func__.0>
+   61677:	50                   	push   rax
+--
+   61690:	e8 eb 53 fd ff       	call   36a80 <ssh_err>
+   61695:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6169b:	b9 01 00 00 00       	mov    ecx,0x1
+   616a0:	ba 86 00 00 00       	mov    edx,0x86
+   616a5:	49 89 c1             	mov    r9,rax
+   616a8:	48 8d 05 c1 3f 04 00 	lea    rax,[rip+0x43fc1]        # a5670 <__func__.1+0x140>
+   616af:	48 8d 35 5a 3e 04 00 	lea    rsi,[rip+0x43e5a]        # a5510 <__func__.0>
+   616b6:	50                   	push   rax
+--
+   616cf:	e8 ac 53 fd ff       	call   36a80 <ssh_err>
+   616d4:	41 b8 01 00 00 00    	mov    r8d,0x1
+   616da:	b9 01 00 00 00       	mov    ecx,0x1
+   616df:	ba 82 00 00 00       	mov    edx,0x82
+   616e4:	49 89 c1             	mov    r9,rax
+   616e7:	48 8d 05 6a 3f 04 00 	lea    rax,[rip+0x43f6a]        # a5658 <__func__.1+0x128>
+   616ee:	48 8d 35 1b 3e 04 00 	lea    rsi,[rip+0x43e1b]        # a5510 <__func__.0>
+   616f5:	50                   	push   rax
+--
+   6170e:	e8 6d 53 fd ff       	call   36a80 <ssh_err>
+   61713:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61719:	b9 01 00 00 00       	mov    ecx,0x1
+   6171e:	ba 8f 00 00 00       	mov    edx,0x8f
+   61723:	49 89 c1             	mov    r9,rax
+   61726:	48 8d 05 60 3f 04 00 	lea    rax,[rip+0x43f60]        # a568d <__func__.1+0x15d>
+   6172d:	48 8d 35 dc 3d 04 00 	lea    rsi,[rip+0x43ddc]        # a5510 <__func__.0>
+   61734:	50                   	push   rax
+--
+   6174d:	e8 2e 53 fd ff       	call   36a80 <ssh_err>
+   61752:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61758:	b9 01 00 00 00       	mov    ecx,0x1
+   6175d:	ba 7e 00 00 00       	mov    edx,0x7e
+   61762:	49 89 c1             	mov    r9,rax
+   61765:	48 8d 05 df 3e 04 00 	lea    rax,[rip+0x43edf]        # a564b <__func__.1+0x11b>
+   6176c:	48 8d 35 9d 3d 04 00 	lea    rsi,[rip+0x43d9d]        # a5510 <__func__.0>
+   61773:	50                   	push   rax
+--
+   6178c:	e8 ef 52 fd ff       	call   36a80 <ssh_err>
+   61791:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61797:	b9 01 00 00 00       	mov    ecx,0x1
+   6179c:	ba 89 00 00 00       	mov    edx,0x89
+   617a1:	49 89 c1             	mov    r9,rax
+   617a4:	48 8d 05 d3 3e 04 00 	lea    rax,[rip+0x43ed3]        # a567e <__func__.1+0x14e>
+   617ab:	48 8d 35 5e 3d 04 00 	lea    rsi,[rip+0x43d5e]        # a5510 <__func__.0>
+   617b2:	50                   	push   rax
+--
+   617cb:	e8 b0 52 fd ff       	call   36a80 <ssh_err>
+   617d0:	41 b8 01 00 00 00    	mov    r8d,0x1
+   617d6:	b9 01 00 00 00       	mov    ecx,0x1
+   617db:	ba 84 00 00 00       	mov    edx,0x84
+   617e0:	49 89 c1             	mov    r9,rax
+   617e3:	48 8d 05 79 3e 04 00 	lea    rax,[rip+0x43e79]        # a5663 <__func__.1+0x133>
+   617ea:	48 8d 35 1f 3d 04 00 	lea    rsi,[rip+0x43d1f]        # a5510 <__func__.0>
+   617f1:	50                   	push   rax
+--
+   6180a:	e8 71 52 fd ff       	call   36a80 <ssh_err>
+   6180f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61815:	b9 01 00 00 00       	mov    ecx,0x1
+   6181a:	ba 95 00 00 00       	mov    edx,0x95
+   6181f:	49 89 c1             	mov    r9,rax
+   61822:	48 8d 05 72 3e 04 00 	lea    rax,[rip+0x43e72]        # a569b <__func__.1+0x16b>
+   61829:	48 8d 35 e0 3c 04 00 	lea    rsi,[rip+0x43ce0]        # a5510 <__func__.0>
+   61830:	50                   	push   rax
+--
+   61849:	e8 32 52 fd ff       	call   36a80 <ssh_err>
+   6184e:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61854:	b9 01 00 00 00       	mov    ecx,0x1
+   61859:	ba 97 00 00 00       	mov    edx,0x97
+   6185e:	49 89 c1             	mov    r9,rax
+   61861:	48 8d 05 39 3e 04 00 	lea    rax,[rip+0x43e39]        # a56a1 <__func__.1+0x171>
+   61868:	48 8d 35 a1 3c 04 00 	lea    rsi,[rip+0x43ca1]        # a5510 <__func__.0>
+   6186f:	50                   	push   rax
+--
+   61888:	e8 f3 51 fd ff       	call   36a80 <ssh_err>
+   6188d:	41 b8 01 00 00 00    	mov    r8d,0x1
+   61893:	b9 01 00 00 00       	mov    ecx,0x1
+   61898:	ba a3 00 00 00       	mov    edx,0xa3
+   6189d:	49 89 c1             	mov    r9,rax
+   618a0:	48 8d 05 12 3e 04 00 	lea    rax,[rip+0x43e12]        # a56b9 <__func__.1+0x189>
+   618a7:	48 8d 35 62 3c 04 00 	lea    rsi,[rip+0x43c62]        # a5510 <__func__.0>
+   618ae:	50                   	push   rax
+--
+   636f7:	e8 84 33 fd ff       	call   36a80 <ssh_err>
+   636fc:	48 83 ec 08          	sub    rsp,0x8
+   63700:	41 b8 01 00 00 00    	mov    r8d,0x1
+   63706:	b9 01 00 00 00       	mov    ecx,0x1
+   6370b:	49 89 c1             	mov    r9,rax
+   6370e:	48 8d 05 bc 26 04 00 	lea    rax,[rip+0x426bc]        # a5dd1 <__func__.3+0x1e1>
+   63715:	ba 3b 05 00 00       	mov    edx,0x53b
+   6371a:	50                   	push   rax
+--
+   63795:	e8 e6 32 fd ff       	call   36a80 <ssh_err>
+   6379a:	41 b8 01 00 00 00    	mov    r8d,0x1
+   637a0:	b9 01 00 00 00       	mov    ecx,0x1
+   637a5:	ba 4a 05 00 00       	mov    edx,0x54a
+   637aa:	49 89 c1             	mov    r9,rax
+   637ad:	48 8d 05 2e 26 04 00 	lea    rax,[rip+0x4262e]        # a5de2 <__func__.3+0x1f2>
+   637b4:	56                   	push   rsi
+   637b5:	48 8d 3d a3 25 04 00 	lea    rdi,[rip+0x425a3]        # a5d5f <__func__.3+0x16f>
+--
+   637cd:	e8 ae 32 fd ff       	call   36a80 <ssh_err>
+   637d2:	b9 01 00 00 00       	mov    ecx,0x1
+   637d7:	ba 2c 05 00 00       	mov    edx,0x52c
+   637dc:	48 89 df             	mov    rdi,rbx
+   637df:	49 89 c1             	mov    r9,rax
+   637e2:	48 8d 05 d9 25 04 00 	lea    rax,[rip+0x425d9]        # a5dc2 <__func__.3+0x1d2>
+   637e9:	41 50                	push   r8
+   637eb:	48 8d 35 8e 32 04 00 	lea    rsi,[rip+0x4328e]        # a6a80 <__func__.18>
+--
+   668cf:	48 83 ec 08          	sub    rsp,0x8
+   668d3:	e8 68 44 fa ff       	call   ad40 <getenv@plt>
+   668d8:	48 85 c0             	test   rax,rax
+   668db:	74 2e                	je     6690b <mktemp_proto+0x4b>
+   668dd:	49 89 c1             	mov    r9,rax
+   668e0:	4c 8d 05 4b f7 03 00 	lea    r8,[rip+0x3f74b]        # a6032 <__func__.3+0x442>
+   668e7:	31 c0                	xor    eax,eax
+   668e9:	48 89 de             	mov    rsi,rbx
+--
+   674f3:	e8 88 f5 fc ff       	call   36a80 <ssh_err>
+   674f8:	48 83 ec 08          	sub    rsp,0x8
+   674fc:	41 b8 01 00 00 00    	mov    r8d,0x1
+   67502:	b9 01 00 00 00       	mov    ecx,0x1
+   67507:	49 89 c1             	mov    r9,rax
+   6750a:	48 8d 05 e1 1e 03 00 	lea    rax,[rip+0x31ee1]        # 993f2 <__func__.13+0x1492>
+   67511:	ba 65 08 00 00       	mov    edx,0x865
+   67516:	50                   	push   rax
+--
+   67646:	e8 35 f4 fc ff       	call   36a80 <ssh_err>
+   6764b:	48 83 ec 08          	sub    rsp,0x8
+   6764f:	41 b8 01 00 00 00    	mov    r8d,0x1
+   67655:	b9 01 00 00 00       	mov    ecx,0x1
+   6765a:	49 89 c1             	mov    r9,rax
+   6765d:	48 8d 05 10 6a 03 00 	lea    rax,[rip+0x36a10]        # 9e074 <__func__.29+0x374>
+   67664:	ba 6b 08 00 00       	mov    edx,0x86b
+   67669:	50                   	push   rax
+--
+   6e413:	e8 68 86 fc ff       	call   36a80 <ssh_err>
+   6e418:	48 83 ec 08          	sub    rsp,0x8
+   6e41c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   6e422:	b9 01 00 00 00       	mov    ecx,0x1
+   6e427:	49 89 c1             	mov    r9,rax
+   6e42a:	48 8d 05 07 fc 02 00 	lea    rax,[rip+0x2fc07]        # 9e038 <__func__.29+0x338>
+   6e431:	ba 57 00 00 00       	mov    edx,0x57
+   6e436:	50                   	push   rax
+--
+   6e56e:	e8 0d 85 fc ff       	call   36a80 <ssh_err>
+   6e573:	41 b8 01 00 00 00    	mov    r8d,0x1
+   6e579:	b9 01 00 00 00       	mov    ecx,0x1
+   6e57e:	ba 79 00 00 00       	mov    edx,0x79
+   6e583:	49 89 c1             	mov    r9,rax
+   6e586:	50                   	push   rax
+   6e587:	48 8d 05 45 8a 03 00 	lea    rax,[rip+0x38a45]        # a6fd3 <__func__.1+0x13>
+   6e58e:	48 8d 35 5b 8b 03 00 	lea    rsi,[rip+0x38b5b]        # a70f0 <__func__.1>
+--
+   7a938:	e8 43 c1 fb ff       	call   36a80 <ssh_err>
+   7a93d:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7a943:	b9 01 00 00 00       	mov    ecx,0x1
+   7a948:	ba c7 00 00 00       	mov    edx,0xc7
+   7a94d:	49 89 c1             	mov    r9,rax
+   7a950:	48 8d 05 06 8c 04 00 	lea    rax,[rip+0x48c06]        # c355d <sc25519_m+0x71d>
+   7a957:	41 56                	push   r14
+   7a959:	50                   	push   rax
+--
+   7aa83:	e8 f8 bf fb ff       	call   36a80 <ssh_err>
+   7aa88:	48 83 ec 08          	sub    rsp,0x8
+   7aa8c:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7aa92:	b9 01 00 00 00       	mov    ecx,0x1
+   7aa97:	49 89 c1             	mov    r9,rax
+   7aa9a:	48 8d 05 b5 32 02 00 	lea    rax,[rip+0x232b5]        # 9dd56 <__func__.29+0x56>
+   7aaa1:	ba cf 00 00 00       	mov    edx,0xcf
+   7aaa6:	50                   	push   rax
+--
+   7aab2:	e8 c9 bf fb ff       	call   36a80 <ssh_err>
+   7aab7:	48 83 ec 08          	sub    rsp,0x8
+   7aabb:	b9 01 00 00 00       	mov    ecx,0x1
+   7aac0:	48 8d 35 01 92 04 00 	lea    rsi,[rip+0x49201]        # c3cc8 <__func__.29>
+   7aac7:	49 89 c1             	mov    r9,rax
+   7aaca:	48 8d 05 7d 8a 04 00 	lea    rax,[rip+0x48a7d]        # c354e <sc25519_m+0x70e>
+   7aad1:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7aad7:	ba c1 00 00 00       	mov    edx,0xc1
+--
+   7b214:	e8 67 b8 fb ff       	call   36a80 <ssh_err>
+   7b219:	48 83 ec 08          	sub    rsp,0x8
+   7b21d:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7b223:	b9 01 00 00 00       	mov    ecx,0x1
+   7b228:	49 89 c1             	mov    r9,rax
+   7b22b:	48 8d 05 9d 43 02 00 	lea    rax,[rip+0x2439d]        # 9f5cf <__func__.34+0x15f>
+   7b232:	ba 46 01 00 00       	mov    edx,0x146
+   7b237:	50                   	push   rax
+--
+   7b3d4:	e8 a7 b6 fb ff       	call   36a80 <ssh_err>
+   7b3d9:	48 83 ec 08          	sub    rsp,0x8
+   7b3dd:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7b3e3:	b9 01 00 00 00       	mov    ecx,0x1
+   7b3e8:	49 89 c1             	mov    r9,rax
+   7b3eb:	48 8d 05 dd 41 02 00 	lea    rax,[rip+0x241dd]        # 9f5cf <__func__.34+0x15f>
+   7b3f2:	ba 38 01 00 00       	mov    edx,0x138
+   7b3f7:	50                   	push   rax
+--
+   7b503:	e8 78 b5 fb ff       	call   36a80 <ssh_err>
+   7b508:	48 83 ec 08          	sub    rsp,0x8
+   7b50c:	b9 01 00 00 00       	mov    ecx,0x1
+   7b511:	48 8d 35 18 86 04 00 	lea    rsi,[rip+0x48618]        # c3b30 <__func__.16>
+   7b518:	49 89 c1             	mov    r9,rax
+   7b51b:	48 8d 05 4b 81 04 00 	lea    rax,[rip+0x4814b]        # c366d <sc25519_m+0x82d>
+   7b522:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7b528:	ba 59 02 00 00       	mov    edx,0x259
+--
+   7b7b5:	e8 c6 b2 fb ff       	call   36a80 <ssh_err>
+   7b7ba:	48 83 ec 08          	sub    rsp,0x8
+   7b7be:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7b7c4:	b9 01 00 00 00       	mov    ecx,0x1
+   7b7c9:	49 89 c1             	mov    r9,rax
+   7b7cc:	48 8d 05 0c 7f 04 00 	lea    rax,[rip+0x47f0c]        # c36df <sc25519_m+0x89f>
+   7b7d3:	ba 77 02 00 00       	mov    edx,0x277
+   7b7d8:	50                   	push   rax
+--
+   7bd55:	e8 26 ad fb ff       	call   36a80 <ssh_err>
+   7bd5a:	48 83 ec 08          	sub    rsp,0x8
+   7bd5e:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7bd64:	b9 01 00 00 00       	mov    ecx,0x1
+   7bd69:	49 89 c1             	mov    r9,rax
+   7bd6c:	48 8d 05 7b 79 04 00 	lea    rax,[rip+0x4797b]        # c36ee <sc25519_m+0x8ae>
+   7bd73:	ba 7d 02 00 00       	mov    edx,0x27d
+   7bd78:	50                   	push   rax
+--
+   7d18a:	e8 f1 98 fb ff       	call   36a80 <ssh_err>
+   7d18f:	48 83 ec 08          	sub    rsp,0x8
+   7d193:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7d199:	b9 01 00 00 00       	mov    ecx,0x1
+   7d19e:	49 89 c1             	mov    r9,rax
+   7d1a1:	48 8d 05 1e 67 04 00 	lea    rax,[rip+0x4671e]        # c38c6 <sc25519_m+0xa86>
+   7d1a8:	ba fa 04 00 00       	mov    edx,0x4fa
+   7d1ad:	50                   	push   rax
+--
+   7d22a:	e8 51 98 fb ff       	call   36a80 <ssh_err>
+   7d22f:	48 83 ec 08          	sub    rsp,0x8
+   7d233:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7d239:	b9 01 00 00 00       	mov    ecx,0x1
+   7d23e:	49 89 c1             	mov    r9,rax
+   7d241:	48 8d 05 39 c1 01 00 	lea    rax,[rip+0x1c139]        # 99381 <__func__.13+0x1421>
+   7d248:	ba ec 04 00 00       	mov    edx,0x4ec
+   7d24d:	50                   	push   rax
+--
+   7d54d:	e8 2e 95 fb ff       	call   36a80 <ssh_err>
+   7d552:	48 83 ec 08          	sub    rsp,0x8
+   7d556:	41 b8 02 00 00 00    	mov    r8d,0x2
+   7d55c:	48 8d 3d 04 5f 04 00 	lea    rdi,[rip+0x45f04]        # c3467 <sc25519_m+0x627>
+   7d563:	49 89 c1             	mov    r9,rax
+   7d566:	48 8d 05 00 bd 01 00 	lea    rax,[rip+0x1bd00]        # 9926d <__func__.13+0x130d>
+   7d56d:	b9 01 00 00 00       	mov    ecx,0x1
+   7d572:	ba 3d 05 00 00       	mov    edx,0x53d
+--
+   8374a:	e8 31 33 fb ff       	call   36a80 <ssh_err>
+   8374f:	48 83 ec 08          	sub    rsp,0x8
+   83753:	ba 3b 04 00 00       	mov    edx,0x43b
+   83758:	41 b8 02 00 00 00    	mov    r8d,0x2
+   8375e:	49 89 c1             	mov    r9,rax
+   83761:	48 8d 05 26 0a 04 00 	lea    rax,[rip+0x40a26]        # c418e <__func__.3+0x76>
+   83768:	b9 01 00 00 00       	mov    ecx,0x1
+   8376d:	50                   	push   rax
+--
+   84052:	e8 29 2a fb ff       	call   36a80 <ssh_err>
+   84057:	55                   	push   rbp
+   84058:	41 b8 05 00 00 00    	mov    r8d,0x5
+   8405e:	48 89 de             	mov    rsi,rbx
+   84061:	49 89 c1             	mov    r9,rax
+   84064:	48 8d 05 eb 9c 01 00 	lea    rax,[rip+0x19ceb]        # 9dd56 <__func__.29+0x56>
+   8406b:	b9 01 00 00 00       	mov    ecx,0x1
+   84070:	ba f8 03 00 00       	mov    edx,0x3f8
+--
+   8432c:	e8 4f 27 fb ff       	call   36a80 <ssh_err>
+   84331:	b9 01 00 00 00       	mov    ecx,0x1
+   84336:	48 89 ee             	mov    rsi,rbp
+   84339:	ba 44 03 00 00       	mov    edx,0x344
+   8433e:	49 89 c1             	mov    r9,rax
+   84341:	48 8d 05 0e 9a 01 00 	lea    rax,[rip+0x19a0e]        # 9dd56 <__func__.29+0x56>
+   84348:	41 50                	push   r8
+   8434a:	48 8d 3d d6 fd 03 00 	lea    rdi,[rip+0x3fdd6]        # c4127 <__func__.3+0xf>
+--
+   84723:	e8 58 23 fb ff       	call   36a80 <ssh_err>
+   84728:	48 83 ec 08          	sub    rsp,0x8
+   8472c:	31 c9                	xor    ecx,ecx
+   8472e:	ba 29 05 00 00       	mov    edx,0x529
+   84733:	49 89 c1             	mov    r9,rax
+   84736:	48 8d 05 fc fa 03 00 	lea    rax,[rip+0x3fafc]        # c4239 <__func__.3+0x121>
+   8473d:	41 b8 02 00 00 00    	mov    r8d,0x2
+   84743:	50                   	push   rax
+--
+   8a40b:	e8 e0 a3 00 00       	call   947f0 <__addvdi3>
+   8a410:	be 02 00 00 00       	mov    esi,0x2
+   8a415:	48 89 c7             	mov    rdi,rax
+   8a418:	e8 53 a4 00 00       	call   94870 <__mulvdi3>
+   8a41d:	49 89 c1             	mov    r9,rax
+   8a420:	48 8b 45 a0          	mov    rax,QWORD PTR [rbp-0x60]
+   8a424:	49 39 c1             	cmp    r9,rax
+   8a427:	0f 8c 53 01 00 00    	jl     8a580 <Decode+0x330>
