@@ -1,0 +1,50 @@
+
+template<typename T>
+__u64 ElfExt::ParseRela(T *r) {
+	ElfRelaCtx ctx = {};
+	Elf_Shdr *got = elf->GOT(), *plt = elf->PLT();
+
+	ctx.P = rtab.symtab->elf.sym64[ELF64_R_SYM(r->r_info)].st_value,
+	if (!!got) ctx.G	= got->sh_offset;
+	if (!!got) ctx.GOT	= got->sh_addr;
+	if (!!plt) ctx.L	= plt->sh_addr;
+	if ((sizeof(*r) == sizeof(Elf_Rela)))
+		ctx.A = r->r_addend,
+	if (!!r->r_offset)
+		ctx.S = *(__u64*)elf->ptr(r->r_offset);
+	return RVal(ctx, r);
+}
+
+template<typename T> __u64 ElfExt::RVal(ElfRelaCtx& ctx, T *r) {
+	switch (ELF64_R_TYPE((Elf_Rel*)r->r_info)) {
+		case R_X86_64_PC32:			return ctx.S + ctx.A - ctx.P;
+		case R_X86_64_GOT32:		return ctx.G + ctx.A;
+		case R_X86_64_PLT32:		return ctx.L + ctx.A - ctx.P;
+		case R_X86_64_GLOB_DAT:		return ctx.S;
+		case R_X86_64_JUMP_SLOT:	return ctx.S;
+		case R_X86_64_RELATIVE:		return ctx.B + ctx.A;
+		case R_X86_64_GOTPCREL:		return ctx.G + ctx.GOT + ctx.A - ctx.P;
+		case R_X86_64_PC64:			return ctx.S + ctx.A - ctx.P;
+		case R_X86_64_GOTOFF64:		return ctx.S + ctx.A - ctx.GOT;
+		case R_X86_64_GOTPC32:		return ctx.GOT + ctx.A - ctx.P;
+
+		case R_X86_64_PC16:
+		case R_X86_64_16:			return ctx.S + ctx.A - ctx.P;
+		
+		case R_X86_64_64:		
+		case R_X86_64_32:
+		case R_X86_64_32S:
+		case R_X86_64_8:
+		case R_X86_64_PC8:			return ctx.S + ctx.A;
+		
+		case R_X86_64_DTPMOD64:
+		case R_X86_64_DTPOFF64:
+		case R_X86_64_TPOFF64:
+		case R_X86_64_TLSGD:
+		case R_X86_64_TLSLD:
+		case R_X86_64_DTPOFF32:
+		case R_X86_64_GOTTPOFF:
+		case R_X86_64_TPOFF32:		return r->r_offset;
+	}
+	return 0;
+}

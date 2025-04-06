@@ -1,0 +1,183 @@
+#include <linux/types.h>
+#include <stdio.h>
+#include <errno.h>
+#include <vector>
+#include <algorithm>
+#include <x86disass/disass.hpp>
+#include <elflib/elf.hpp>
+
+#define err(s) { die(s); }
+
+#define errf(s, ...) {								\
+	__u64 sz = snprintf(NULL, 0, s, __VA_ARGS__);	\
+	char *str = new char[sz];						\
+	sprintf(str, s, __VA_ARGS__);					\
+	die(str);										\
+}
+
+void die(char *str) {
+	printf("[DEAD]  %s\n", str);
+	printf("  - errno %u - %s\n", errno, strerror(errno));
+	exit(-1);
+}
+
+struct BasicBlock {
+	__u8	*name;
+	__u64	off, size;
+
+	BasicBlock(__u64 offset, __u64 sz)
+	: name{nullptr}, off{offset}, size{sz} {}
+
+	BasicBlock(__u8 *str, __u64 offset, __u64 sz)
+	: name{str}, off{offset}, size{sz} {}
+
+	bool operator<(BasicBlock& b) { return off < b.off; }
+};
+
+
+static auto d = Disass();
+
+class BBlock {
+	Elf *elf;
+	std::vector<__u64>		next;
+	std::vector<BasicBlock>	bb;
+
+public:
+	BBlock() = delete;
+	BBlock(Elf& ref);
+	void Make();
+	__u64 size(__u64 off);
+	void sort_blocks() {
+		std::sort(bb.begin(), bb.end());
+	}
+	BasicBlock *Get(__u64 off) {
+		for (auto& b : bb)
+			if (_contain_(b.off, b.size, off))
+				return &b;
+		return NULL;
+	}
+
+private:
+	template<typename Xhdr> void fill_in(Xhdr *x);
+};
+
+
+__u64 BBlock::size(__u64 off) {
+	for (__u64 i : next) if (i > off) {
+		__u64 sz = 0;
+		d.iter(elf->off<void*>(off), i - off-1, [&sz](__u64 i, insn_t& in){
+			sz = (in.IsNull()) ? (sz+1) : 0;
+		});
+		return i - off - sz-1;
+	}
+	return 0;
+}
+
+BBlock::BBlock(Elf& ref) : elf{&ref} {
+	foreach_phdr(elf, p) next.push_back(p->p_offset);
+	foreach_shdr(elf, s) next.push_back(s->sh_offset);
+
+	for (auto& stab : elf->symtab) {
+		if (!(stab.t & SHT_SYMTAB)) continue;
+
+		foreach_sym(&stab, sym) if (!!sym->st_value)
+			next.push_back(elf->vtof(sym->st_value));
+	}
+
+	foreach_rela_tab(elf, rtab, r)	next.push_back(r->r_offset);
+	foreach_rel_tab(elf, rtab, r)	next.push_back(r->r_offset);
+
+	std::sort(next.begin(), next.end());
+}
+
+void BBlock::Make() {
+	foreach_sym_tab(elf, stab, s) {
+		__u64 virt	= s->st_value;
+		__u64 off	= elf->vtof(virt);
+		__u64 sz	= size(off);
+
+		if (!!sz && !!virt && (elf->VirtPerm(virt) & PF_X))
+			bb.emplace_back(&stab.str[s->st_name], off, sz);
+	}
+	sort_blocks();
+
+	if (elf->has_shdr())
+		foreach_shdr(elf, sec)
+			if (sec->Is(PF_X)) fill_in(sec);
+
+	if (elf->has_phdr())
+		foreach_phdr(elf, p)
+			if (p->Is(PF_X)) fill_in(p);
+
+	insn_t in{};
+	__u64 last = 0, sz = bb.size();
+	for (__u64 i = 0; i < sz; i++) {
+		_disasm(elf->map, bb[i].off, bb[i].size, l, in) {
+			if (in.IsRet()) {
+				bb.emplace(bb.begin(), bb[i].off + last, l - last);
+				last = l;
+			};
+		}
+		if (last >= bb[i].size) {
+			memset(&bb[i], 0, sizeof(bb[i]));
+		} else {
+			bb[i].off	= last;
+			bb[i].size	= bb[i].size - last;
+		}
+	}
+	sort_blocks();
+}
+
+template<typename Xhdr>
+void BBlock::fill_in(Xhdr *x) {
+	__u64 i		= 0;
+	__u64 last	= x->Offset();
+
+	for (; i < bb.size(); i++)
+		if (x->hasOff(bb[i].off)) break;
+
+	for (; x->hasOff(bb[i].off); i++) {
+		BasicBlock& b = bb[i];
+
+		if (last < b.off) {
+			bb.emplace(bb.begin(), last, b.off - last);
+			last = b.off;
+			i++;
+		}
+	}
+
+	sort_blocks();
+}
+
+class ElfExt : public Elf {
+	BBlock block;
+public:
+	template<typename T>
+	ElfExt(T *file) : Elf(file), block{*this} {
+		block.Make();
+	}
+	~ElfExt() {}
+	BasicBlock *GetBasicBlock(__u64 v) {
+		return block.Get(v);
+	}
+};
+
+int main(int argc, char *argv[]) {
+	char *file = argv[1];
+	if (argc < 2) errf("usage: %s <binary>", argv[0]);
+
+	ElfExt elf(file);
+	if (!elf.ok()) errf("Failed to load ELF (%s)", file);
+
+	auto b = elf.GetBasicBlock(elf.ehdr->e_entry);
+
+	Elf_Ehdr *ehdr = elf.ehdr;
+	// std::vector<__u64 off> off_list = { ehdr->e_entry, ehdr->e_shoff, ehdr->e_phoff };
+	// foreach_rela_tab(&elf, rtab, r) off_list.push_back(r->r_offset);
+	
+	// insn_t in;
+	// _disasm(elf.map, b->off, b->size, i, in) {
+	// }
+}
+
+
