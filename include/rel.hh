@@ -1,3 +1,4 @@
+#include <assert.h>
 #include <elflib/elf.hpp>
 
 #ifndef FREAK_REL_H
@@ -44,6 +45,7 @@ struct rel_patch_t {
     struct {
         __u64 off, sz;
     } orig;
+    std::list<struct rel_patch_t>   ll;
 };
 
 struct elf_bblock_t {
@@ -105,12 +107,17 @@ public:
                 .sz     = size,
             },
         };
+        
         return ll.emplace_back(rx);
+    }
+    struct rel_patch_t *_rx_(__u64 off) {
+        return get_patch(s_tup.elf, off);
     }
     bool has(__u64 off);
     mmsz_t *init() { return init(0); }
     mmsz_t *init(__u64 align);
-    void sort_patches();
+    void each_px(mmsz_t *mm, std::list<struct rel_patch_t>& ll);
+    void sort_patches(std::list<struct rel_patch_t>& ll);
     void auto_patch();  // Exec PHDR > BBlocks to ll_px
     __u64 offset(Elf *elf, __u64 v);
     __u64 offset(std::shared_ptr<Elf> elf, __u64 v);
@@ -124,6 +131,7 @@ public:
     struct rel_patch_t *get_patch(std::shared_ptr<Elf> elf, __u64 orig);
     __s64 off_align(__u64 v);
     __s64 off_align(struct rel_patch_t *rp, __u64 v);
+    __s64 each_off_align(std::list<struct rel_patch_t>& ll, struct rel_patch_t *rp, __u64 v);
     mmsz_t *mm_make_ret();
 };
 

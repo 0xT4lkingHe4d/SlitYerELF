@@ -1,3 +1,5 @@
+#include <linux/types.h>
+#include <assert.h>
 #include <algorithm>
 #include <x86disass/disass.hpp>
 #include "../include/rel.hh"
@@ -21,14 +23,13 @@ struct rel_patch_t& RelInstr::_rel_(RelT t, void *ptr, __u64 dst, __u64 size, __
 
 struct elf_bblock_t *RelInstr::get_elf_bb(std::shared_ptr<Elf> elf) {
     for (auto& tup : elf_tup) {
-        if (tup.elf == elf)
-            return &tup;
+        if (tup.elf == elf) return &tup;
     }
     return nullptr;
 }
 
-void RelInstr::sort_patches() {
-    patches.sort([](struct rel_patch_t& a, struct rel_patch_t& b) {
+void RelInstr::sort_patches(std::list<struct rel_patch_t>& px) {
+    px.sort([](struct rel_patch_t& a, struct rel_patch_t& b) {
         return (a.out.off < b.out.off);
     });
 }
@@ -43,68 +44,27 @@ void RelInstr::auto_patch() {
 static x_t_c xtc();
 
 mmsz_t *RelInstr::init(__u64 align) {
-    auto mm_src = &mm_base;
     auto mm_ret = mm_make_ret();
-
-    sort_patches();
-    xtc_insn();
-    for (auto& px : patches) {
-        switch (REL_TYPE(px.t)) {
-            case RelTypeT::Ins:
-                switch (REL_PATCH(px.t)) {
-                    case RelPatchT::Rel:    rel_instr(mm_ret, px);  break;
-                    case RelPatchT::Insert: ins_instr(mm_ret, px);  break;
-                }
-            case RelTypeT::Buf: rel_buffer(mm_ret, px);    break;
-        }
-    }
+    each_px(mm_ret, patches);
     _hexdump(mm_ret->mem, mm_ret->sz);
     return mm_ret;
 }
 
-void RelInstr::xtc_insn() {
-    // for (auto& px : patches) {
-    //     auto elf = px.s_elf;
-    //     if (REL_TYPE(px.t) == RelTypeT::Ins) {
-    //         // switch (REL_PATCH(px.t)) {
-    //         //     case RelPatchT::Rel:
-    //         //     {
-    //         d.iter(px.src.mem, px.src.sz, [&](__u64 i, insn_t& in) {
-    //             if (!in.IsPtr() && !in.IsRip()) return;
-    //             /**
-    //              * Where was it supposed to be */
-    //             __u64 imm_virt  = in.PtrAddr(elf->ftov(px.orig.off + i));
-    //             __u64 imm_off   = elf->vtof(imm_virt);
-
-    //             __u64 src_align = off_align(&px, px.out.off+i);
-    //             // __u64 off = px.out.off - mm_base.off + i + src_align;
-    //             auto dst_px     = get_patch(elf, imm_off);
-    //             if (!!dst_px) {
-    //                 __u64 dst_align = off_align(dst_px, imm_off);
-    //                 for (__u8 i = 0; i < in.OperCount(); i++)
-    //                     if (in[i]->IsType(OperType::PTR)) {
-    //                         __u32 sz = in[i]->size();
-    //                         __u64 align = (src_align > dst_align) ? src_align - dst_align : dst_align - src_align;
-    //                         __s64 imm = in.PtrAddr();
-
-    //                         // if (    (imm > 0 && imm + align > (1llu << (sz-1)))
-    //                         //     ||  (imm <= 0 && imm - align < -(1llu << (sz-1))-1)) {
-    //                             prf(BYLW"IMM[%lx] SRC ALIGN[%lx] , DST ALIGN[%lx] MAX[%lx]\n"CRST, imm, src_align, dst_align, 1-(1llu << (sz-1)));
-    //                             in.Print();
-    //                             pr("");
-    //                         // }
-    //                         break;
-    //                     }
-    //             }
-    //         });
-    //         //     }
-    //         //     break;
-    //         //     default: asm("int3");
-    //         // }
-    //     }
-    // }
+void RelInstr::each_px(mmsz_t *mm, std::list<struct rel_patch_t>& ll) {
+    sort_patches(ll);
+    for (auto& px : ll) {
+        if (!px.ll.empty()) each_px(mm, px.ll);
+        switch (REL_TYPE(px.t)) {
+            case RelTypeT::Ins:
+                switch (REL_PATCH(px.t)) {
+                    case RelPatchT::Rel:    rel_instr(mm, px);  break;
+                    case RelPatchT::Insert: ins_instr(mm, px);  break;
+                }
+            break;
+            case RelTypeT::Buf: rel_buffer(mm, px);    break;
+        }
+    }
 }
-
 typedef RelBits R;
 
 void RelInstr::rel_instr(mmsz_t *mm_ret, struct rel_patch_t& px) {
@@ -141,6 +101,7 @@ void RelInstr::rel_instr(mmsz_t *mm_ret, struct rel_patch_t& px) {
 void RelInstr::ins_instr(mmsz_t *mm_ret, struct rel_patch_t& px) {
     d.iter(px.src.mem, px.src.sz, [&](__u64 i, insn_t& in) {
         auto ctx = R::Ctx(*this, px, in, i) << mm_ret->mem;
+        prf(BRED "[+++]" CRST "0x%lx\n", R::out_off(ctx));
         memset(ctx.ptr, u'\x90', in.size());
     });
     pr("BLANK FOR NOW");
@@ -167,19 +128,24 @@ __s64 RelInstr::off_align(__u64 v) {
     return off_align(nullptr, v);
 }
 __s64 RelInstr::off_align(struct rel_patch_t *rp, __u64 v) {
+    return each_off_align(patches, rp, v);
+}
+
+__s64 RelInstr::each_off_align(std::list<struct rel_patch_t>& ll, struct rel_patch_t *rp, __u64 v) {
     __s64 r = 0;
-    sort_patches();
-    for (auto& p : patches)
+    sort_patches(ll);
+    for (auto& p : ll) {
+        if (!p.ll.empty()) r += each_off_align(p.ll, rp, v);
         if (    (!rp || (!!rp && !!memcmp(&p, rp, sizeof(p))))
-            &&  p.out.off <= v) {
+            &&  p.out.off <= v && (!rp || (!!rp && REL_PATCH(rp->t) != RelPatchT::Insert))) {
             switch (REL_PATCH(p.t)) {
                 case RelPatchT::Insert: r += p.src.sz; break;
                 case RelPatchT::Remove: r -= p.src.sz; break;
             }
         }
+    }
     return r;
 }
-
 struct rel_patch_t *RelInstr::get_patch(std::shared_ptr<Elf> elf, __u64 orig) {
     for (auto& p : patches) if (p.s_elf == elf) {
         if (_contain_(p.orig.off, p.orig.sz, orig))

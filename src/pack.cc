@@ -1,3 +1,4 @@
+#include <assert.h>
 #include "../include/pack.hh"
 
 #define DO_DEBUG_H
@@ -81,7 +82,7 @@ void pack::shift(__u64 off, __u64 sz) {
 void pack::init() {
     for (auto& r : rel) {
         auto ret = slit_sub_px(r.src.off, r.src.sz);
-        if (!ret) asm("int3");
+        assert(!!ret);
         shift(r.src.off + r.src.sz, ret->mm.sz - r.src.sz);
         ret->mm = *r.init();
     }
@@ -152,14 +153,9 @@ void pack::patch_elf() {
         if (p.mm.is_alloc()) p.mm.alloc();
 
         switch (p.src.hdr_type) {
-            case ElfHdrT::Relatab:
-                PackPatch::rela(*this, p);
-                break;
-
-            case ElfHdrT::Dyntab:
-                PackPatch::dyn(*this, p);
-                break;
-            }
+            case ElfHdrT::Relatab:  PackPatch::rela(*this, p);  break;
+            case ElfHdrT::Dyntab:   PackPatch::dyn(*this, p);   break;
+        }
     }
 }
 
