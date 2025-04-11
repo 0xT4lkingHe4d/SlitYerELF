@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/mman.h>
 #include <iostream>
+#include <elflib/elf.hpp>
 
 #ifndef FREAK_UTILS_H
 #define FREAK_UTILS_H
@@ -28,6 +29,7 @@ typedef struct {
 
 #define each(ll, e) for (auto& e : ll)
 
+#define ALIGN(n, sz)        ((sz & ~((n)-1)) + (n))
 #define __PAGE_ALIGN(sz)    ((sz & ~0xfff) + 0x1000)
 
 void *map_anon(__u64 sz);
@@ -36,14 +38,23 @@ void die(char *str);
 enum class PackPtrT { Elf, SC, HEAP, MMAP };
 #define PPTR_T(x)   (x >= 0x1000 ? PackPtrT::MMAP : PackPtrT::HEAP)
 
+template <typename T> struct acon_st {
+    T       *ptr;
+    __u64   num;
+};
+
 struct mmsz_t {
     PackPtrT    t;
     void        *mem;
     __u64       sz, alloc_size, off;
     
     ~mmsz_t() {
-        if (t==PackPtrT::HEAP) free(mem);
-        if (t==PackPtrT::MMAP) munmap(mem, alloc_size);
+        free_mem();
+    }
+    void free_mem() { free_mem(t, mem, alloc_size); }
+    void free_mem(PackPtrT type, void *ptr, __u64 sz) {
+        if (type==PackPtrT::HEAP) free(ptr);
+        if (type==PackPtrT::MMAP) munmap(ptr, sz);
     }
     
     bool is_alloc() {
@@ -55,6 +66,36 @@ struct mmsz_t {
             memcpy(dat, mem, sz);
             mem = dat;
         }
+    }
+    void extend(__u64 add) {
+        __u64 size = sz + add;
+        PackPtrT type = PPTR_T(size);
+        __u64 asz = alloc_size;
+        void *ptr = _alloc(type, size);
+        memcpy(ptr, mem, sz);
+
+        free_mem(t, mem, asz);
+        t   = type;
+        mem = ptr;
+        sz  = size;
+    }
+    
+    bool merge(__u64 off, mmsz_t *mm) {
+        if (!mm || !mm->mem || !mm->sz)
+            return false;
+        __u64 size = sz;
+        extend(mm->sz);
+        
+        memcpy(mem + off + mm->sz, mem + off, size - off);
+        memcpy(mem + off, mm->mem, mm->sz);
+
+        return true;
+    }
+    template <typename T> acon_st<T> ptr() {
+        return acon_st<T>{
+            .ptr = reinterpret_cast<T*>(mem),
+            .num = sz / sizeof(T)
+        };
     }
 
 protected:

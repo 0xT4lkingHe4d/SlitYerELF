@@ -16,6 +16,11 @@
 #ifndef FREAK_PACK_H
 #define FREAK_PACK_H
 
+enum class MemT : __u8
+{
+    Virt, Off
+};
+
 enum class ElfHdrT : __u8
 {
     Ehdr, Phdr, Shdr, Symtab, Dyntab, Note, Reltab, Relatab, Strtab,
@@ -98,6 +103,9 @@ public:
     RelInstr *get_rel(std::shared_ptr<Elf> _elf, __u64 off);
     RelInstr *get_rel(Elf *_elf, __u64 off);
     void patch_elf();
+    template<typename T> T *_px_(ElfHdrT type);
+    struct patch_st *_px_(ElfHdrT type);
+    bool ins_hdr(ElfHdrT t, __u64 off, mmsz_t *mm);
     void merge_elf(Elf *elf);
     void fill();
     bool rel_exec();
@@ -109,5 +117,30 @@ public:
     void init();
     void shift(__u64 off, __u64 sz);
     __s8 make(char *file);
+    __u64 vtov(struct patch_st& p, __u64 v) { auto r=_vtov(p, v); return (r!=-1) ? r : v; }
+    __u64 vtof(struct patch_st& p, __u64 v) { auto r=_vtof(p, v); return (r!=-1) ? r : p.src.elf->vtof(v); }
+    __u64 ftof(struct patch_st& p, __u64 v) { auto r=_ftof(p, v); return (r!=-1) ? r : v; }
+    __u64 ftov(struct patch_st& p, __u64 v) { auto r=_ftov(p, v); return (r!=-1) ? r : p.src.elf->ftov(v); }
+    __u64 _vtov(struct patch_st& p, __u64 v) { return mem_conv(MemT::Virt, p.src.elf, MemT::Virt, v); }
+    __u64 _vtof(struct patch_st& p, __u64 v) { return mem_conv(MemT::Virt, p.src.elf, MemT::Off, v); }
+    __u64 _ftof(struct patch_st& p, __u64 v) { return mem_conv(MemT::Off, p.src.elf, MemT::Off, v); }
+    __u64 _ftov(struct patch_st& p, __u64 v) { return mem_conv(MemT::Off, p.src.elf, MemT::Virt, v); }
+private:
+    __u64 mem_conv(MemT in_t, std::shared_ptr<Elf>& elf, MemT out_t, __u64 v) {
+        __u64 off=0;
+        switch (in_t) {
+            case MemT::Virt:    off = elf->vtof(v); break;
+            case MemT::Off:     off = v;            break;
+            default: return -1;
+        }
+        RelInstr *r = get_rel(elf, off);
+        if (!!r) {
+            switch (out_t) {
+                case MemT::Virt:   return r->virt(elf, off);
+                case MemT::Off:    return r->offset(elf, off);
+            }
+        }
+        return -1;
+    }
 };
 #endif

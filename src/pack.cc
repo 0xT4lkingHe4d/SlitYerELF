@@ -11,6 +11,16 @@
 #define dbgf(fmt, ...)
 #endif
 
+#define __each_elf(mem, _n_, T, _e_)         \
+        for (T *_e_ = (T*)(mem); (__u64)_e_ < (__u64)((__u64)(mem) + (_n_*sizeof(T))); _e_++)
+
+#define each_dyn(mem, _n_, _e_)      __each_elf(mem, _n_, Elf_Dyn, _e_) if (_e_->d_tag == DT_NULL) break; else
+#define each_sym(mem, _n_, _e_)      __each_elf(mem, _n_, Elf_Sym, _e_)
+#define each_phdr(mem, _n_, _e_)      __each_elf(mem, _n_, Elf_Phdr, _e_)
+#define each_shdr(mem, _n_, _e_)      __each_elf(mem, _n_, Elf_Shdr, _e_)
+#define each_rela(mem, _n_, _e_)     __each_elf(mem, _n_, Elf_Rela, _e_)
+#define each_rel(mem, _n_, _e_)      __each_elf(mem, _n_, Elf_Rel, _e_)
+
 void pack::sort_px() {
     px.sort([](struct patch_st& a, struct patch_st& b) {
         return a.dst.off < b.dst.off;
@@ -23,8 +33,7 @@ void pack::fill() {
     __u64 l = 0;
     for (auto& p : px) {
         __s64 sz = p.dst.off - l;
-        if (!!l && sz > 0)
-            ll.emplace_back(l, sz);
+        if (!!l && sz > 0) ll.emplace_back(l, sz);
         l = p.dst.off + p.mm.sz;
     }
     ll.emplace_back(l, s_elf->size - l);
@@ -74,7 +83,63 @@ struct patch_st *pack::slit_sub_px(__u64 off, __u64 sz) {
     return nullptr;
 }
 
-void pack::shift(__u64 off, __u64 sz) {
+void pack::shift(__u64 off, __u64 sz) { // all the fucking headers
+    for (auto& p : px) {
+        std::shared_ptr<Elf> elf = p.src.elf;
+        __u64 virt = elf->ftov(off);
+
+        switch (p.src.hdr_type) {
+            case ElfHdrT::Ehdr:
+            {
+                auto [ehdr, _] = p.mm.ptr<Elf_Ehdr>();
+                if (ehdr->e_phoff >= off) ehdr->e_phoff += sz;
+                if (ehdr->e_shoff >= off) ehdr->e_shoff += sz;
+            };
+            break;
+            case ElfHdrT::Phdr:
+            {
+                auto [phdr, n] = p.mm.ptr<Elf_Phdr>();
+                each_phdr(phdr, n, p) {
+                    __u64 align_sz = ALIGN(p->p_align, sz);
+                    if ((static_cast<ElfX_Phdr*>(p))->hasOff(off)) {
+                        p->p_memsz  += align_sz;
+                        p->p_filesz += align_sz;
+                    } else if (p->p_offset > off) {
+                        p->p_offset += sz;
+                        p->p_vaddr  += sz;
+                        p->p_paddr  += sz;
+                    }
+                }
+            };
+            break;
+            case ElfHdrT::Shdr:
+            {
+                auto [shdr, n] = p.mm.ptr<Elf_Shdr>();
+                each_shdr(shdr, n, sec) {
+                    if ((static_cast<ElfX_Shdr*>(sec))->hasOff(off)) {
+                        sec->sh_size    += sz;
+                    } else if (sec->sh_offset > off) {
+                        sec->sh_offset  += sz;
+                        sec->sh_addr    += sz;
+                    }
+                }
+            };
+            break;
+            case ElfHdrT::Symtab:
+            {
+                auto [stab, n] = p.mm.ptr<Elf_Sym>();
+                each_sym(stab, n, sym)
+                    if (sym->st_value >= virt) sym->st_value += sz;
+            };
+            break;
+            // case ElfHdrT::Dyntab:   break;
+            // case ElfHdrT::Note:     break;
+            // case ElfHdrT::Reltab:   break;
+            // case ElfHdrT::Relatab:  break;
+            // case ElfHdrT::Strtab:   break;
+
+        }
+    }
     for (auto& p : px)
         if (p.dst.off > off) p.dst.off += sz;
 }
@@ -98,61 +163,80 @@ RelInstr *pack::get_rel(Elf *_elf, __u64 off) {
     return nullptr;
 }
 
-#define __each_elf(mem, sz, T, _e_)         \
-        for (T *_e_ = (T*)(mem); (__u64)_e_ < (__u64)((__u64)(mem) + (sz)); _e_++)
-
-#define each_dyn(mem, sz, _e_)      __each_elf(mem, sz, Elf_Dyn, _e_) if (_e_->d_tag == DT_NULL) break; else
-#define each_sym(mem, sz, _e_)      __each_elf(mem, sz, Elf_Sym, _e_)
-#define each_rela(mem, sz, _e_)     __each_elf(mem, sz, Elf_Rela, _e_)
-#define each_rel(mem, sz, _e_)      __each_elf(mem, sz, Elf_Rel, _e_)
-
 namespace PackPatch {
+    void ehdr(pack& p, struct patch_st& px);
     void dyn(pack& p, struct patch_st& px);
     void rela(pack& p, struct patch_st& px);
 };
 
-void PackPatch::dyn(pack& p, struct patch_st& px) {
-    each_dyn(px.mm.mem, px.mm.sz, dyn) {
-        if (!!px.src.elf->dyn_is_ptr(dyn)) {
-            RelInstr *r = p.get_rel(px.src.elf, dyn->d_un.d_ptr);
-            if (!r) break;
 
-            dbgf("%lx --> +%lx", dyn->d_un.d_ptr, r->offset(px.src.elf, dyn->d_un.d_ptr));
-            dyn->d_un.d_ptr = r->offset(px.src.elf, dyn->d_un.d_ptr);
-        }
-    }
+void PackPatch::ehdr(pack& p, struct patch_st& px) {
+    Elf_Ehdr *ehdr = (Elf_Ehdr*)px.mm.mem;
+    ehdr->e_entry = p.vtov(px, ehdr->e_entry);
+    ehdr->e_shoff = p.ftof(px, ehdr->e_shoff);
+    ehdr->e_phoff = p.ftof(px, ehdr->e_phoff);
+}
+
+void PackPatch::dyn(pack& p, struct patch_st& px) {
+    auto [dtab, n] = px.mm.ptr<Elf_Dyn>();
+    each_dyn(dtab, n, dyn)
+        if (!!px.src.elf->dyn_is_ptr(dyn))
+            dyn->d_un.d_ptr = p.vtov(px, dyn->d_un.d_ptr);
 }
 
 void PackPatch::rela(pack& p, struct patch_st& px) {
-    each_rela(px.mm.mem, px.mm.sz, r) {
+    auto [rtab, n] = px.mm.ptr<Elf_Rela>();
+    each_rela(rtab, n, r) {
         __u64 v = 0;
         switch (ELF64_R_TYPE(r->r_info)) {
             case R_X86_64_RELATIVE:
-            {
-                RelInstr *rel = p.get_rel(px.src.elf, r->r_addend);
-                if (!rel) break;
-                dbgf("%lx -->> +%lx", r->r_addend, rel->offset(px.src.elf, r->r_addend));
-                r->r_addend = rel->offset(px.src.elf, r->r_addend);          
-            }
-            break;
+                r->r_addend = p.vtov(px, r->r_addend);
+                break;
             case R_X86_64_GLOB_DAT:
             case R_X86_64_JUMP_SLOT:
-            {
-                RelInstr *rel = p.get_rel(px.src.elf, r->r_offset);
-                if (!rel) break;
-                dbgf("%lx -->> +%lx", r->r_offset, rel->offset(px.src.elf, r->r_offset));
-                r->r_offset = rel->offset(px.src.elf, r->r_offset);           
-            }
-            break;
+                r->r_offset = p.vtov(px, r->r_offset);
+                break;
         }
     }
 }
+
+
+template<typename T> T *pack::_px_(ElfHdrT type) {
+    for (auto& p : px) {
+        if (p.src.hdr_type == type)
+            return reinterpret_cast<T*>(p.mm.mem);
+    }
+    return nullptr;
+}
+
+struct patch_st *pack::_px_(ElfHdrT type) {
+    for (auto& p : px) {
+        if (p.src.hdr_type == type)
+            return &p;
+    }
+    return nullptr;
+}
+
+bool pack::ins_hdr(ElfHdrT t, __u64 off, mmsz_t *mm) {
+    for (auto& p : px)
+        if (_contain_(p.dst.off, p.mm.sz, off)) {
+            assert(p.mm.merge(off - p.dst.off, mm));
+            // auto ehdr = _px_<Elf_Ehdr>(ElfHdrT::Ehdr);
+            // ehdr->e_shnum   +=2;
+            // ehdr->e_shstrndx+=2;
+            shift(p.dst.off + off, mm->sz);
+            return true;
+        }
+    return false;
+}
+
 
 void pack::patch_elf() {
     for (auto& p : px) {
         if (p.mm.is_alloc()) p.mm.alloc();
 
-        switch (p.src.hdr_type) {
+        switch (p.src.hdr_type) {   // entry
+            case ElfHdrT::Ehdr:     PackPatch::ehdr(*this, p);  break;
             case ElfHdrT::Relatab:  PackPatch::rela(*this, p);  break;
             case ElfHdrT::Dyntab:   PackPatch::dyn(*this, p);   break;
         }

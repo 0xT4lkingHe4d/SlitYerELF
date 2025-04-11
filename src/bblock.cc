@@ -97,9 +97,11 @@ void BBlock::del_double() {
 
 void BBlock::init_iter_vec() {
     q.add(elf->ehdr->e_entry);
+
     /* EACH exec Section */
     foreach_shdr(elf, sec) if (sec->Is(PF_X))
         q.add(sec->sh_offset);
+    
     /* EACH exec SYMBOL */
     for (auto& stab : elf->symtab)
         foreach_sym(&stab, sym) {
@@ -107,6 +109,7 @@ void BBlock::init_iter_vec() {
             if (!!v && elf->VirtPerm(v) & PF_X)
                 q.add(elf->vtof(v)); 
         }
+        
     /* EACH exec DYNAMIC */
     foreach_dynamic(elf, d) {
         __u64 v = d->d_un.d_val;

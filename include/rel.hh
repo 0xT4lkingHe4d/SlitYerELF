@@ -119,8 +119,8 @@ public:
     void each_px(mmsz_t *mm, std::list<struct rel_patch_t>& ll);
     void sort_patches(std::list<struct rel_patch_t>& ll);
     void auto_patch();  // Exec PHDR > BBlocks to ll_px
-    __u64 offset(Elf *elf, __u64 v);
     __u64 offset(std::shared_ptr<Elf> elf, __u64 v);
+    __u64 virt(std::shared_ptr<Elf> elf, __u64 v);
     struct elf_bblock_t *ptr_to_elf(void *ptr); // Find ELF containing ~ptr at ELF+?
     void xtc_insn();
     void rel_instr(mmsz_t *mm_ret, struct rel_patch_t& px);

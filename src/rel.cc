@@ -107,13 +107,14 @@ void RelInstr::ins_instr(mmsz_t *mm_ret, struct rel_patch_t& px) {
     pr("BLANK FOR NOW");
 }
 
-__u64 RelInstr::offset(Elf *elf, __u64 v) {
-    return off_align(v);
-}
-
 __u64 RelInstr::offset(std::shared_ptr<Elf> elf, __u64 v) {
     auto px = get_patch(elf, v);
     return ((!px) ? -1 : (v + off_align(px, v)));
+}
+
+__u64 RelInstr::virt(std::shared_ptr<Elf> elf, __u64 v) {
+    auto px = get_patch(elf, elf->vtof(v));
+    return ((!px) ? -1 : (v + off_align(px, elf->vtof(v))));
 }
 
 void RelInstr::rel_buffer(mmsz_t *mm_ret, struct rel_patch_t &px) {
@@ -137,7 +138,7 @@ __s64 RelInstr::each_off_align(std::list<struct rel_patch_t>& ll, struct rel_pat
     for (auto& p : ll) {
         if (!p.ll.empty()) r += each_off_align(p.ll, rp, v);
         if (    (!rp || (!!rp && !!memcmp(&p, rp, sizeof(p))))
-            &&  p.out.off <= v && (!rp || (!!rp && REL_PATCH(rp->t) != RelPatchT::Insert))) {
+            &&  p.out.off <= v) {   //  && (!rp || (!!rp && REL_PATCH(rp->t) != RelPatchT::Insert))
             switch (REL_PATCH(p.t)) {
                 case RelPatchT::Insert: r += p.src.sz; break;
                 case RelPatchT::Remove: r -= p.src.sz; break;
